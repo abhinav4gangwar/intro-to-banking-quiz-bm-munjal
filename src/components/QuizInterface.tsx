@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { quizQuestions, quizInfo } from '@/data/quizData';
 import { Clock, CheckCircle, AlertTriangle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 interface QuizInterfaceProps {
   studentInfo: { name: string; email: string };
@@ -23,6 +25,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(quizQuestions.length).fill(null));
   const [timeLeft, setTimeLeft] = useState(quizInfo.timeLimit * 60); // Convert minutes to seconds
   const [showSubmitWarning, setShowSubmitWarning] = useState(false);
+  const { toast } = useToast();
 
   const formatTime = (seconds: number): string => {
     const mins = Math.floor(seconds / 60);
@@ -47,8 +50,42 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
     };
   }, [answers, studentInfo, timeLeft]);
 
-  const handleSubmit = useCallback(() => {
+  const handleSubmit = useCallback(async () => {
     const results = calculateResults();
+    
+    try {
+      // Calculate percentage for database storage
+      const percentage = (results.score / quizInfo.totalMarks) * 100;
+      
+      // Save results to Supabase
+      const { error } = await supabase
+        .from('quiz_results')
+        .insert({
+          student_name: studentInfo.name,
+          student_email: studentInfo.email,
+          score: results.score,
+          total_marks: quizInfo.totalMarks,
+          percentage: percentage,
+          time_spent: results.timeSpent,
+          answers: results.answers
+        });
+
+      if (error) {
+        console.error('Error saving quiz results:', error);
+        toast({
+          title: "Warning",
+          description: "Results saved locally but couldn't sync to server.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error('Error saving quiz results:', error);
+      toast({
+        title: "Warning", 
+        description: "Results saved locally but couldn't sync to server.",
+        variant: "destructive"
+      });
+    }
     
     // Store email in localStorage to prevent re-submission
     const usedEmails = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
@@ -61,7 +98,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
     localStorage.setItem('quizResults', JSON.stringify(allResults));
     
     onComplete(results);
-  }, [calculateResults, studentInfo.email, onComplete]);
+  }, [calculateResults, studentInfo, toast, onComplete]);
 
   // Timer effect
   useEffect(() => {
