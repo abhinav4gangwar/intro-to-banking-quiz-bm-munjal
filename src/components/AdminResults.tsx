@@ -10,7 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 interface QuizResult {
   id: string;
   student_name: string;
-  student_email: string;
+  student_roll_number: string;
   score: number;
   total_marks: number;
   percentage: number;
@@ -96,10 +96,10 @@ const AdminResults: React.FC = () => {
 
   const exportToCSV = () => {
     const csvContent = [
-      ['Name', 'Email', 'Score', 'Total Marks', 'Percentage', 'Grade', 'Time Spent', 'Completed At'].join(','),
+      ['Name', 'Roll Number', 'Score', 'Total Marks', 'Percentage', 'Grade', 'Time Spent', 'Completed At'].join(','),
       ...results.map(result => [
         result.student_name,
-        result.student_email,
+        result.student_roll_number,
         result.score,
         result.total_marks,
         result.percentage.toFixed(1) + '%',
@@ -236,7 +236,7 @@ const AdminResults: React.FC = () => {
                   <TableHeader>
                     <TableRow>
                       <TableHead>Name</TableHead>
-                      <TableHead>Email</TableHead>
+                      <TableHead>Roll Number</TableHead>
                       <TableHead>Score</TableHead>
                       <TableHead>Percentage</TableHead>
                       <TableHead>Grade</TableHead>
@@ -248,7 +248,7 @@ const AdminResults: React.FC = () => {
                     {results.map((result) => (
                       <TableRow key={result.id}>
                         <TableCell className="font-medium">{result.student_name}</TableCell>
-                        <TableCell className="text-sm text-muted-foreground">{result.student_email}</TableCell>
+                        <TableCell className="text-sm text-muted-foreground font-mono">{result.student_roll_number}</TableCell>
                         <TableCell>
                           <span className="font-semibold">{result.score}</span>
                           <span className="text-muted-foreground">/{result.total_marks}</span>

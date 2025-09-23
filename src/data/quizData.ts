@@ -295,7 +295,7 @@ export const quizInfo = {
     "NO MOBILE AND CALCULATOR IS ALLOWED",
     "Each question carries 4 marks",
     "Total time allowed: 40 minutes",
-    "Only one submission per email ID allowed",
+    "Only one submission per roll number allowed",
     "Click 'Submit Quiz' to finish or quiz will auto-submit when time expires"
   ]
 };

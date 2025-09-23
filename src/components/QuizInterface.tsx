@@ -8,12 +8,12 @@ import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 
 interface QuizInterfaceProps {
-  studentInfo: { name: string; email: string };
+  studentInfo: { name: string; rollNumber: string };
   onComplete: (results: QuizResults) => void;
 }
 
 export interface QuizResults {
-  studentInfo: { name: string; email: string };
+  studentInfo: { name: string; rollNumber: string };
   answers: (number | null)[];
   score: number;
   timeSpent: number;
@@ -62,7 +62,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
         .from('quiz_results')
         .insert({
           student_name: studentInfo.name,
-          student_email: studentInfo.email,
+          student_roll_number: studentInfo.rollNumber,
           score: results.score,
           total_marks: quizInfo.totalMarks,
           percentage: percentage,
@@ -87,10 +87,10 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
       });
     }
     
-    // Store email in localStorage to prevent re-submission
-    const usedEmails = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
-    usedEmails.push(studentInfo.email);
-    localStorage.setItem('quizSubmissions', JSON.stringify(usedEmails));
+    // Store roll number in localStorage to prevent re-submission
+    const usedRollNumbers = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
+    usedRollNumbers.push(studentInfo.rollNumber);
+    localStorage.setItem('quizSubmissions', JSON.stringify(usedRollNumbers));
     
     // Store results for backend (in a real app, this would be sent to a server)
     const allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');

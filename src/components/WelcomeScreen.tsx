@@ -7,40 +7,40 @@ import { quizInfo } from '@/data/quizData';
 import { BookOpen, Clock, User } from 'lucide-react';
 
 interface WelcomeScreenProps {
-  onStart: (studentInfo: { name: string; email: string }) => void;
+  onStart: (studentInfo: { name: string; rollNumber: string }) => void;
 }
 
 const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
+  const [rollNumber, setRollNumber] = useState('');
+  const [errors, setErrors] = useState<{ name?: string; rollNumber?: string }>({});
 
   const validateAndStart = () => {
-    const newErrors: { name?: string; email?: string } = {};
-    
+    const newErrors: { name?: string; rollNumber?: string } = {};
+
     if (!name.trim()) {
       newErrors.name = 'Name is required';
     }
-    
-    if (!email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = 'Please enter a valid email address';
+
+    if (!rollNumber.trim()) {
+      newErrors.rollNumber = 'Roll number is required';
+    } else if (!/^[A-Za-z0-9]+$/.test(rollNumber.trim())) {
+      newErrors.rollNumber = 'Roll number should contain only letters and numbers';
     }
-    
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    
-    // Check if email has already been used
-    const usedEmails = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
-    if (usedEmails.includes(email.toLowerCase())) {
-      setErrors({ email: 'This email has already been used for the quiz' });
+
+    // Check if roll number has already been used
+    const usedRollNumbers = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
+    if (usedRollNumbers.includes(rollNumber.toUpperCase())) {
+      setErrors({ rollNumber: 'This roll number has already been used for the quiz' });
       return;
     }
-    
-    onStart({ name: name.trim(), email: email.toLowerCase().trim() });
+
+    onStart({ name: name.trim(), rollNumber: rollNumber.toUpperCase().trim() });
   };
 
   return (
@@ -112,22 +112,22 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 <p className="text-sm text-destructive">{errors.name}</p>
               )}
             </div>
-            
+
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address</Label>
+              <Label htmlFor="rollNumber">Roll Number</Label>
               <Input
-                id="email"
-                type="email"
-                value={email}
+                id="rollNumber"
+                type="text"
+                value={rollNumber}
                 onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (errors.email) setErrors({ ...errors, email: undefined });
+                  setRollNumber(e.target.value);
+                  if (errors.rollNumber) setErrors({ ...errors, rollNumber: undefined });
                 }}
-                placeholder="Enter your email address"
-                className={errors.email ? 'border-destructive' : ''}
+                placeholder="Enter your roll number"
+                className={errors.rollNumber ? 'border-destructive' : ''}
               />
-              {errors.email && (
-                <p className="text-sm text-destructive">{errors.email}</p>
+              {errors.rollNumber && (
+                <p className="text-sm text-destructive">{errors.rollNumber}</p>
               )}
             </div>
           </div>
