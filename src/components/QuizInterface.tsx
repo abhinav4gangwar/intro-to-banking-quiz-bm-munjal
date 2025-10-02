@@ -87,16 +87,6 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
       });
     }
     
-    // Store roll number in localStorage to prevent re-submission
-    const usedRollNumbers = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
-    usedRollNumbers.push(studentInfo.rollNumber);
-    localStorage.setItem('quizSubmissions', JSON.stringify(usedRollNumbers));
-    
-    // Store results for backend (in a real app, this would be sent to a server)
-    const allResults = JSON.parse(localStorage.getItem('quizResults') || '[]');
-    allResults.push(results);
-    localStorage.setItem('quizResults', JSON.stringify(allResults));
-    
     onComplete(results);
   }, [calculateResults, studentInfo, toast, onComplete]);
 

@@ -33,13 +33,6 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
       return;
     }
 
-    // Check if roll number has already been used
-    const usedRollNumbers = JSON.parse(localStorage.getItem('quizSubmissions') || '[]');
-    if (usedRollNumbers.includes(rollNumber.toUpperCase())) {
-      setErrors({ rollNumber: 'This roll number has already been used for the quiz' });
-      return;
-    }
-
     onStart({ name: name.trim(), rollNumber: rollNumber.toUpperCase().trim() });
   };
 
