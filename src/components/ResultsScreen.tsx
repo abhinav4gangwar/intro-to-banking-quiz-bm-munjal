@@ -67,7 +67,7 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">{studentInfo.email}</span>
+                <span className="text-sm">Roll Number: {studentInfo.rollNumber}</span>
               </div>
             </div>
           </CardHeader>

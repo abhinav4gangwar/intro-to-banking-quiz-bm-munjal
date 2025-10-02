@@ -8,276 +8,276 @@ export interface QuizQuestion {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "What is the function of a Teller?",
+    question: "A farmer takes a short-term loan for purchasing seeds and fertilizers. This loan falls under which category?",
     options: [
-      "Tells the customer about banking products.",
-      "Manages the operations of cash counter in branches.",
-      "Tells the staff members their daily functions.",
-      "Manages the customer complaints."
+      "Investment credit",
+      "Production credit",
+      "Consumption loan",
+      "Term loan"
     ],
     correctAnswer: 1
   },
   {
     id: 2,
-    question: "Interest on Current accounts is generally NIL because.",
+    question: "Crop loan under KCC is generally repayable within:",
     options: [
-      "Current account clients take loans.",
-      "Current account clients can take third party products like insurance.",
-      "Current account clients mainly deal in cash.",
-      "High volume of transactions in the account."
+      "3 months",
+      "6 months",
+      "12 months",
+      "36 months"
     ],
-    correctAnswer: 3
+    correctAnswer: 2
   },
   {
     id: 3,
-    question: "Which is a type of demand deposit.",
+    question: "A farmer needs ₹2 lakh for constructing a tube well. This is classified as:",
     options: [
-      "Current account",
-      "Savings bank account",
-      "Both current and savings bank account.",
-      "None of the above"
+      "Crop loan",
+      "Term loan",
+      "Consumption loan",
+      "Microcredit"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 4,
-    question: "Applicant of a letter of credit is.",
+    question: "Repayment of short-term agri loans is linked to:",
     options: [
-      "Banker of the customer.",
-      "Seller of goods/services.",
-      "None of the above",
-      "Buyer of goods/services."
+      "Crop harvesting",
+      "Monthly EMI",
+      "Annual festival season",
+      "Discretion of banker"
     ],
-    correctAnswer: 3
+    correctAnswer: 0
   },
   {
     id: 5,
-    question: "Which is not a type of advance.",
+    question: "A tenant farmer without land records requests a loan for sowing maize. What should the bank do?",
     options: [
-      "Cash Credit",
-      "Term Loan",
-      "Bill discounting",
-      "Net worth certificate issued by the bank."
+      "Reject application",
+      "Finance through Joint Liability Group (JLG)",
+      "Ask him to mortgage land",
+      "Advise him to go to moneylender"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
   },
   {
     id: 6,
-    question: "Which type of loan is given for purchase of stock.",
+    question: "A farmer has a KCC limit of ₹80,000. He asks if he can use part of it for household consumption. What will you do?",
     options: [
-      "Term Loan",
-      "Bill discounting",
-      "Cash credit or overdraft",
-      "Bank guarantee"
+      "Decline – KCC is only for inputs",
+      "Allow up to 10% as consumption component",
+      "Convert loan into term loan",
+      "Ask him to take personal loan"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 7,
-    question: "Funds under cash reserve ratio are kept with.",
+    question: "A dairy farmer needs ₹70,000 for 2 milch cows. He already has KCC for crops. Which is best source?",
     options: [
-      "Reserve Bank of India",
-      "Respective bank",
-      "Invested in Govt securities.",
-      "Govt of India"
+      "Extend KCC limit under investment credit",
+      "SHG loan",
+      "PACS short-term loan",
+      "Moneylender"
     ],
     correctAnswer: 0
   },
   {
     id: 8,
-    question: "A company holds a current account in your bank with ₹10 lakh balance. They request an overdraft facility of ₹5 lakh to meet short-term working capital. Which factor should weigh MOST in approving this request?",
+    question: "A PMJDY account holder has repaid a small loan on time and asks for overdraft facility. He is 45 years old. What is the correct solution?",
     options: [
-      "Company's credit history and repayment track",
-      "Bank's CRR/SLR position",
-      "Current interest rates in the market",
-      "Whether the account has cheque-book facility"
+      "Deny overdraft",
+      "Allow overdraft up to ₹10,000",
+      "Allow overdraft up to ₹5,000 only",
+      "Grant only if security is given"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 9,
-    question: "A farmer applies for a crop loan of ₹2 lakh under Kisan Credit Card (KCC). The land records show he already has a loan of ₹3 lakh from a cooperative bank. As a banker, what is your first step?",
+    question: "A farmer wants to deposit ₹60,000 cash in his PMJDY account. The account was opened as a Small Account. What should banker do?",
     options: [
-      "Sanction immediately since KCC is priority sector",
-      "Reject application",
-      "Check CIBIL/credit report and repayment history",
-      "Ask for collateral"
+      "Accept deposit fully",
+      "Decline, as balance limit is ₹50,000",
+      "Allow only ₹10,000 extra",
+      "Convert into FD"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 10,
-    question: "Positive Pay is mainly applicable to which banking instrument?",
+    question: "A farmer with 4 acres applies for KCC. Scale of finance is ₹15,000 per acre. Add 10% for household + 20% for post-harvest. What is his limit?",
     options: [
-      "Demand drafts",
-      "Fixed deposits",
-      "Cheques",
-      "Debit cards"
+      "₹60,000",
+      "₹72,000",
+      "₹75,000",
+      "₹80,000"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 11,
-    question: "A customer wants to open a savings account with an NBFC, but the NBFC refuses. Why?",
+    question: "An SHG has been saving ₹500 per member per month for 6 months. They now need bank credit. What should the banker check first?",
     options: [
-      "RBI has banned NBFCs from operating in cities",
-      "NBFCs cannot accept demand deposits",
-      "Only foreign NBFCs can accept deposits",
-      "NBFCs must issue currency instead"
+      "Land records of members",
+      "Regularity of savings and meetings",
+      "Gold collateral",
+      "NABARD approval"
     ],
     correctAnswer: 1
   },
   {
     id: 12,
-    question: "An RRB is facing shortage of funds to lend during crop season. Its sponsor bank steps in to provide refinance. What does this highlight?",
+    question: "A women's SHG requests ₹3 lakh loan. They have ₹60,000 savings. How will banker assess?",
     options: [
-      "RRBs operate fully independently of other banks",
-      "RRBs depend on sponsor banks for managerial and financial support",
-      "RRBs cannot lend without RBI permission",
-      "RRBs act like cooperative societies only"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 13,
-    question: "Who primarily owns RRBs?",
-    options: [
-      "Fully private shareholders",
-      "Joint ownership by Central Govt, State Govt, and Sponsor Bank",
-      "100% State Government",
-      "100% RBI"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 14,
-    question: "A rural branch of Bank of India is assigned 15 villages under Service area approach (SAA). A farmer from an unassigned nearby village approaches the branch for a loan. What should the branch do?",
-    options: [
-      "Reject the loan since village is not in its service area",
-      "Lend only if no other bank covers that village",
-      "Direct the farmer to the branch assigned for his village",
-      "Lend only under RBI permission"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 15,
-    question: "A small manufacturing unit with investment in plant & machinery worth ₹4 crore seeks a term loan of ₹2 crore. Does this qualify under PSL?",
-    options: [
-      "Yes, as MSME – Manufacturing sector",
-      "No, exceeds PSL limit",
-      "Only if unit exports goods",
-      "Only if unit is government approved"
+      "Loan = 4–5 times savings",
+      "Loan = equal to savings only",
+      "Loan only after NABARD refinance",
+      "Loan not possible"
     ],
     correctAnswer: 0
   },
   {
-    id: 16,
-    question: "An individual deposits ₹3 lakh in his Payment Bank account. What will happen?",
+    id: 13,
+    question: "A rickshaw puller asks for ₹1.5 lakh to buy an e-rickshaw. Which is correct?",
     options: [
-      "Accepted fully like any other bank",
-      "Only ₹2 lakh accepted, rest must be refused/returned",
-      "Entire amount rejected",
-      "Converted into a fixed deposit automatically"
+      "MUDRA Kishor loan",
+      "Tarun loan",
+      "Auto loan under retail banking",
+      "Not eligible under MUDRA"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 14,
+    question: "A beautician earns ₹15,000/month, spends ₹11,000. She applies for ₹3 lakh Kishor loan for 4 years (EMI ≈ ₹7,930). Decision?",
+    options: [
+      "Approve",
+      "Reject or reduce",
+      "Convert to Shishu",
+      "Ask for collateral"
     ],
     correctAnswer: 1
   },
   {
-    id: 17,
-    question: "A group of 10 rural women form a Self-Help Group (SHG) and approach an MFI for a ₹1 lakh loan. The MFI lends to the group instead of individuals. Why does the MFI prefer this method?",
+    id: 15,
+    question: "In a tribal belt, 10 landless farmers want a group loan. Who usually initiates JLGs here?",
     options: [
-      "To reduce paperwork",
-      "To reduce default risk through group guarantee",
-      "To comply with RBI's CRR mandate",
-      "To avoid collateral requirement"
+      "Moneylenders who already know the borrowers",
+      "Banks through their rural branches",
+      "NABARD through Farmers' Clubs/NGOs",
+      "State agriculture university"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 16,
+    question: "Loan = ₹5,00,000 for dairy. Subsidy = 25% back-ended. After 2 years, outstanding = ₹4,00,000. Subsidy is released. What is the new balance?",
+    options: [
+      "₹3,75,000",
+      "₹3,50,000",
+      "₹2,50,000",
+      "₹4,00,000 (no change)"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 17,
+    question: "Loan = ₹4,00,000 for irrigation equipment. Subsidy: 25% general / 40% SC/ST. Farmer (SC) repays ₹2,40,000 over 2 years. At subsidy release (after lock-in), what happens?",
+    options: [
+      "Outstanding = ₹1,60,000, subsidy = ₹1,00,000 → farmer owes ₹60,000",
+      "Outstanding = ₹1,60,000, subsidy = ₹1,60,000 → loan closed",
+      "Subsidy applied partially, balance ₹40,000",
+      "Subsidy not released since repayment not completed"
     ],
     correctAnswer: 1
   },
   {
     id: 18,
-    question: "A borrower complains that his MFI charges him 22% interest, whereas the nearby commercial bank charges only 12%. Why does the MFI charge a higher rate?",
+    question: "A woman under PMEGP says: \"Bank is cheating. I got 35% subsidy, but EMI is same as without subsidy.\"",
     options: [
-      "MFIs are free to exploit borrowers",
-      "MFIs serve small borrowers with high operating costs",
-      "MFIs must match bank rates",
-      "Banks subsidize MFIs"
+      "Bank is wrong, EMI must be reduced",
+      "Bank is correct, EMI is fixed on full loan; subsidy adjusts balance later",
+      "EMI is reduced only for women",
+      "EMI is reduced only for SC/ST"
     ],
     correctAnswer: 1
   },
   {
     id: 19,
-    question: "An MFI offers ₹15,000 loan for 1 year at 24% flat OR 24% reducing balance. Which option is costlier for the borrower?",
+    question: "A group of agri graduates ask: \"We want to open a custom hiring centre for farm machinery. Which scheme suits us?\"",
     options: [
-      "Flat interest",
-      "Reducing balance",
-      "Both same",
-      "Depends on repayment frequency"
+      "MUDRA loan up to ₹10 lakh",
+      "Agri Business Centre under ACABC",
+      "PM-Kisan cash support",
+      "PMJDY overdraft"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 20,
-    question: "A textile trader draws a bill on a buyer for ₹1,00,000 payable in 90 days. The buyer accepts it. Who is the drawee here?",
+    question: "A farmer asks: \"If I use e-NAM, will I get loan automatically?\"",
     options: [
-      "The trader",
-      "The buyer",
-      "The bank",
-      "RBI"
+      "Yes, crop loan is automatic",
+      "No, e-NAM is for marketing, not for loan",
+      "Yes, subsidy loan is linked",
+      "Only SHG members get loan"
     ],
     correctAnswer: 1
   },
   {
     id: 21,
-    question: "A textile buyer in Surat opens an LC through his bank in favor of a weaver in Varanasi. Which is the issuing bank?",
+    question: "A farmer says: \"If I take loan on e-NWR and prices crash, who bears loss?\"",
     options: [
-      "The weaver's bank in Varanasi",
-      "The buyer's bank in Surat",
-      "NABARD",
-      "SEBI"
+      "The bank bears the entire loss",
+      "The farmer bears the loss; e-NWR is just collateral",
+      "Government compensates the farmer",
+      "Loss is shared equally between bank and farmer"
     ],
     correctAnswer: 1
   },
   {
     id: 22,
-    question: "A rice miller in Haryana ships rice to a wholesaler in Kolkata under an LC. The buyer's bank refuses payment because the lorry receipt number doesn't match LC terms, even though goods were delivered. Why was the payment stopped?",
+    question: "A woman entrepreneur applies for Stand-Up India loan of ₹25 lakh. She has strong family support but no savings of her own. What is the officer's correct approach?",
     options: [
-      "Bank checks only buyer's confirmation",
-      "Bank checks only physical goods",
-      "Bank checks documents, not goods",
-      "RBI approval is needed for food trade"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 23,
-    question: "Mr. Sharma wants to transfer ₹15 lakh to his son's account in another bank urgently. Which mode is best?",
-    options: [
-      "UPI",
-      "NEFT",
-      "RTGS",
-      "Mobile Wallet"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 24,
-    question: "Mr. and Mrs. Sharma want an account where either of them can withdraw without the other's consent. Which operating instruction should they choose?",
-    options: [
-      "Jointly (Both must sign)",
-      "Either or Survivor",
-      "Former or Survivor",
-      "Mandate Holder Only"
+      "Reject because she has no personal capital",
+      "Ask her to bring required 10% margin money",
+      "Approve full project without margin",
+      "Tell her to join an SHG first"
     ],
     correctAnswer: 1
   },
   {
-    id: 25,
-    question: "A trader asks the bank to open an account with no interest, unlimited transactions, and overdraft facility. Which account suits him?",
+    id: 23,
+    question: "Borrower wants ₹8 lakh for a rice mill. Projected net profit = ₹50,000/month. EMI = ₹20,000. In the area, already 3 rice mills are operating. What is the correct approach?",
     options: [
-      "Savings Account",
-      "Current Account",
-      "Recurring Deposit Account",
-      "Fixed Deposit Account"
+      "Approve since DSCR is good",
+      "Evaluate market demand & local paddy availability before sanction",
+      "Reject because mills are risky",
+      "Sanction if subsidy is assured"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 24,
+    question: "A small farmer asks: \"Why should I use e-NWR instead of selling immediately?\"",
+    options: [
+      "It helps him store and wait for better prices",
+      "It gives subsidy on fertilisers",
+      "It guarantees higher MSP",
+      "It cancels repayment obligation"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 25,
+    question: "A woman entrepreneur says: \"I got Stand-Up India loan. Will subsidy reduce my EMI from day one?\"",
+    options: [
+      "Yes, EMI is on net loan",
+      "No, EMI on full loan; subsidy is credit guarantee, not upfront deduction",
+      "Yes, but only for SC/ST",
+      "Yes, after 2 years of repayment"
     ],
     correctAnswer: 1
   }
