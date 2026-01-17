@@ -22,8 +22,8 @@ export type Database = {
           id: string
           percentage: number
           score: number
-          student_roll_number: string
           student_name: string
+          student_roll_number: string
           time_spent: number
           total_marks: number
         }
@@ -34,8 +34,8 @@ export type Database = {
           id?: string
           percentage: number
           score: number
-          student_roll_number: string
           student_name: string
+          student_roll_number: string
           time_spent: number
           total_marks: number
         }
@@ -46,8 +46,8 @@ export type Database = {
           id?: string
           percentage?: number
           score?: number
-          student_roll_number?: string
           student_name?: string
+          student_roll_number?: string
           time_spent?: number
           total_marks?: number
         }
