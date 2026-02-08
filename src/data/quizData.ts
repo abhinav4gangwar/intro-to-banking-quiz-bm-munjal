@@ -8,111 +8,221 @@ export interface QuizQuestion {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Applicant: Reliance Industries Ltd (India), Beneficiary: BASF SE (Germany). Documents were found compliant yesterday. This morning, Reliance emails SBI requesting payment to be put on hold due to alleged quality defects. What should the bank do?",
+    question: "A mobile banking vendor asks for permanent production admin access \"for faster support.\" What is the best response?",
     options: [
-      "Hold payment till commercial issue is resolved",
-      "Re-check documents for latent discrepancies",
-      "Honour the LC as examined",
-      "Seek beneficiary's response before paying"
+      "Approve, but ask them not to misuse",
+      "Approve only during business hours",
+      "Provide access via PAM with time-bound approvals + session recording",
+      "Deny access completely forever"
     ],
     correctAnswer: 2
   },
   {
     id: 2,
-    question: "Applicant: Tata Motors Ltd, Beneficiary: Bosch GmbH. LC states: \"Available with Deutsche Bank, Frankfurt, by negotiation.\" Documents are negotiated by Commerzbank. Is this valid?",
+    question: "Customers report \"money debited but beneficiary not credited.\" CBS shows debit posted. What is the most likely issue area?",
     options: [
-      "Negotiation invalid due to bank mismatch",
-      "Negotiation valid unless expressly restricted",
-      "Valid only after issuing bank approval",
-      "Requires amendment before honour"
+      "CBS interest module",
+      "Digital Banking Platform / Payment switch reconciliation",
+      "Branch teller system",
+      "CRM"
     ],
     correctAnswer: 1
   },
   {
     id: 3,
-    question: "Applicant: JSW Steel Ltd, Beneficiary: Vale SA. LC requires model MX5000; invoice mentions MX-5000. How should this be treated?",
+    question: "A customer logs in from a new device at 2 AM and tries to transfer a large amount. What control is most appropriate?",
     options: [
-      "Accept as typographical variation",
-      "Accept if goods are identical",
-      "Treat as discrepancy",
-      "Accept subject to applicant comfort"
+      "Allow if password is correct",
+      "Block the customer permanently",
+      "Step-up authentication + FRM rule trigger",
+      "Only send SMS alert after transfer"
     ],
     correctAnswer: 2
   },
   {
     id: 4,
-    question: "Applicant: Adani Wilmar Ltd, Beneficiary: Cargill Inc. B/L reads \"Received for Shipment\"; LC calls for \"On Board Bill of Lading.\" What is the correct action?",
+    question: "A bank shows third-party insurance offers inside its app. Customer complains of mis-selling. What evidence protects the bank best?",
     options: [
-      "Accept since shipment date is shown",
-      "Accept if vessel is named",
-      "Reject as non-compliant",
-      "Accept based on trade usage"
+      "Fintech agreement copy",
+      "Consent logs + disclosure screen records + opt-in timestamp",
+      "Customer phone recording",
+      "Vendor's email confirmation"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 5,
-    question: "Applicant: JSW Energy Ltd, Beneficiary: Doosan Heavy Industries (Korea). LC issued under FOB Busan but business team expects insurance from exporter; no insurance document presented. What should be done?",
+    question: "MTTD increasing month-on-month indicates:",
     options: [
-      "Reject for missing insurance",
-      "Accept documents",
-      "Seek applicant waiver",
-      "Amend LC retrospectively"
+      "Bank is detecting incidents faster",
+      "Bank is detecting incidents slower",
+      "Bank has fewer incidents",
+      "Bank has better DR"
     ],
     correctAnswer: 1
   },
   {
     id: 6,
-    question: "Applicant: ITC Ltd, Beneficiary: Olam International. Electronic documents uploaded on expiry date; issuing bank accesses them next working day. LC is subject to eUCP. When does presentation occur?",
+    question: "MTTR is high even though incidents are low. This usually means:",
     options: [
-      "Upload date",
-      "Access date",
-      "LC expiry date",
-      "System validation timestamp"
+      "Bank has strong cybersecurity",
+      "Bank has slow recovery capability",
+      "Bank has too many vendors",
+      "Bank has good change management"
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "Issuing Bank: SBI, India. Reimbursement Bank: JPMorgan, New York. After negotiation, applicant raises dispute and asks SBI to stop reimbursement. What happens?",
+    question: "API traffic suddenly spikes 50× and payment switch begins to slow. Best control is:",
     options: [
-      "Reimbursement must stop",
-      "Reimbursement proceeds",
-      "Reimbursement awaits applicant approval",
-      "Reimbursement depends on court order"
+      "Increase limits immediately",
+      "Circuit breaker + rate limiting",
+      "Disable OTP",
+      "Ask customers to retry later"
     ],
     correctAnswer: 1
   },
   {
     id: 8,
-    question: "Applicant: Mahindra & Mahindra, Beneficiary: Hitachi Ltd. LC specifies \"Port of Yokohama\"; shipment loads from a different terminal within Yokohama port. What is the correct decision?",
+    question: "Cooling period is most useful when:",
     options: [
-      "Reject for deviation",
-      "Seek clarification",
-      "Honour LC",
-      "Ask for amendment"
+      "Customer changes mobile number",
+      "Customer adds a new beneficiary",
+      "Customer checks balance",
+      "Customer downloads statement"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 9,
-    question: "Applicant: NTPC Ltd, Beneficiary: GE Renewable Energy. SBLC demands wording: \"failure to pay.\" Demand states: \"failure to honour contractual obligations.\" What should be done?",
+    question: "Velocity limits are designed to stop:",
     options: [
-      "Honour due to substance",
-      "Honour with reservation",
-      "Reject demand",
-      "Seek applicant consent"
+      "Core banking interest calculation errors",
+      "Too many transfers/attempts in short time (bot/fraud behavior)",
+      "Deposit growth slowdown",
+      "Treasury MTM losses"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 10,
+    question: "Which is the clearest example of poor Segregation of Duties (SoD)?",
+    options: [
+      "RM and branch manager both meet customer",
+      "Same person develops code and deploys to production",
+      "Teller handles cash deposits",
+      "CFO approves budgets"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 11,
+    question: "Which is most accurate about CBS vs DBP?",
+    options: [
+      "CBS is customer experience layer",
+      "DBP is accounting system",
+      "CBS posts transactions, DBP manages digital journeys and controls",
+      "DBP is only a mobile app"
     ],
     correctAnswer: 2
   },
   {
-    id: 10,
-    question: "Applicant: Larsen & Toubro Ltd, Beneficiary: ABB Switzerland. All documents comply; commercial dispute is ongoing. What determines the bank's rights and obligations?",
+    id: 12,
+    question: "Biggest regulatory worry with CSPs is:",
     options: [
-      "Commercial fairness",
-      "Relationship management",
-      "Documentary compliance",
-      "Internal correspondence"
+      "Cloud is cheaper",
+      "Cloud has no storage",
+      "Concentration risk + third-party dependency",
+      "Cloud cannot run APIs"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 13,
+    question: "RTO = 2 hours, RPO = 15 minutes means:",
+    options: [
+      "Bank can lose 2 hours of data",
+      "Bank must restore within 2 hours and lose max 15 minutes of data",
+      "Bank must restore within 15 minutes and lose 2 hours of data",
+      "Bank has no DR"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 14,
+    question: "An RM pastes customer statement into a free AI tool. Biggest risk is:",
+    options: [
+      "AI will make grammar mistakes",
+      "Customer data leakage + compliance breach",
+      "CBS will crash",
+      "Treasury loss"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 15,
+    question: "A new release causes login failures. The most likely missing discipline is:",
+    options: [
+      "Treasury reconciliation",
+      "Staging/UAT + canary release + rollback readiness",
+      "Branch cash controls",
+      "CRM segmentation"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 16,
+    question: "Compliance team gets 20,000 AML alerts/month and misses true cases. Best improvement is:",
+    options: [
+      "Generate more alerts",
+      "Risk-based alert tuning + case management workflow",
+      "Stop monitoring",
+      "Increase branch targets"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 17,
+    question: "A bank's app downtime is always blamed on vendor. The best senior manager KPI is:",
+    options: [
+      "Blame vendor faster",
+      "End-to-end uptime ownership with vendor SLA enforcement",
+      "Ignore vendor performance",
+      "Remove all vendors"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 18,
+    question: "If the bank learns about outages mainly from customer calls, it indicates:",
+    options: [
+      "Strong SOC",
+      "Strong SIEM",
+      "Weak monitoring (no SOC/SIEM)",
+      "Excellent ITSM"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 19,
+    question: "A fintech partner needs \"full customer profile API.\" Best approach is:",
+    options: [
+      "Give full access for faster integration",
+      "Give minimum required data only + consent + purpose limitation",
+      "Give access but ask for NDA",
+      "Deny all fintech partnerships"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 20,
+    question: "Customer says: \"I never approved this transfer.\" What evidence is strongest?",
+    options: [
+      "Teller statement",
+      "Customer relationship history",
+      "Device binding + OTP logs + consent logs + transaction reference trail",
+      "Bank CEO assurance"
     ],
     correctAnswer: 2
   }
@@ -120,10 +230,9 @@ export const quizQuestions: QuizQuestion[] = [
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  date: "17.01.26",
   professor: "ANIL AGGARWAL",
-  totalQuestions: 10,
-  totalMarks: 40,
+  totalQuestions: 20,
+  totalMarks: 80,
   marksPerQuestion: 4,
   timeLimit: 40, // minutes
   rules: [
