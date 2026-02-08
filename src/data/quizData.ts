@@ -186,12 +186,12 @@ export const quizQuestions: QuizQuestion[] = [
     id: 17,
     question: "A bank's app downtime is always blamed on vendor. The best senior manager KPI is:",
     options: [
-      "Blame vendor faster",
-      "End-to-end uptime ownership with vendor SLA enforcement",
-      "Ignore vendor performance",
-      "Remove all vendors"
+      "Vendor name in incident report",
+      "SLA penalties only",
+      "Change failure rate + MTTR + root cause closure",
+      "Number of WhatsApp escalations"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 18,
