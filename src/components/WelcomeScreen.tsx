@@ -44,10 +44,11 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             <BookOpen className="w-8 h-8" />
           </div>
           <div>
-            <CardTitle className="text-2xl font-bold text-primary mb-2">
+          <CardTitle className="text-2xl font-bold text-primary mb-2">
               {quizInfo.title}
             </CardTitle>
-          <CardDescription className="text-base">
+          <CardDescription className="text-base space-y-1">
+              {quizInfo.subtitle && <div className="font-medium">{quizInfo.subtitle}</div>}
               <div><strong>Professor:</strong> {quizInfo.professor}</div>
             </CardDescription>
           </div>

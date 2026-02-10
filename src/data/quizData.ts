@@ -2,243 +2,124 @@ export interface QuizQuestion {
   id: number;
   question: string;
   options: string[];
-  correctAnswer: number; // 0-indexed
+  correctAnswer?: number; // Used in Structure 1 (0-indexed)
 }
+
+// Structure 2: Scoring weights by option index
+// A (index 0) = 4 points, B (index 1) = 3, C (index 2) = 2, D (index 3) = 1, E (index 4) = 0
+export const optionWeights = [4, 3, 2, 1, 0];
+
+export interface ScoreInterpretation {
+  range: string;
+  title: string;
+  description: string;
+  focusArea: string;
+}
+
+export const scoreInterpretations: ScoreInterpretation[] = [
+  {
+    range: "16–20",
+    title: "Future-Ready & Resilient",
+    description: "You are adaptable and emotionally stable.",
+    focusArea: "Keep improving and lead change confidently."
+  },
+  {
+    range: "11–15",
+    title: "Stable but Under Pressure",
+    description: "You are doing well, but stress may be affecting your energy.",
+    focusArea: "Stress management, balance, and delegation."
+  },
+  {
+    range: "6–10",
+    title: "High Stress / Resistance Zone",
+    description: "You may be reacting more than responding.",
+    focusArea: "Emotional control, adaptability, and mindset upgrade."
+  },
+  {
+    range: "0–5",
+    title: "Burnout / Rigid Mindset Risk",
+    description: "You may be overloaded or emotionally drained.",
+    focusArea: "Recovery, clarity, and confidence rebuilding."
+  }
+];
+
+export const getScoreInterpretation = (score: number): ScoreInterpretation => {
+  if (score >= 16) return scoreInterpretations[0];
+  if (score >= 11) return scoreInterpretations[1];
+  if (score >= 6) return scoreInterpretations[2];
+  return scoreInterpretations[3];
+};
 
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "A mobile banking vendor asks for permanent production admin access \"for faster support.\" What is the best response?",
+    question: "When I face sudden change at work, my first internal reaction is usually:",
     options: [
-      "Approve, but ask them not to misuse",
-      "Approve only during business hours",
-      "Provide access via PAM with time-bound approvals + session recording",
-      "Deny access completely forever"
-    ],
-    correctAnswer: 2
+      "\"Let's handle it. I'll figure it out.\"",
+      "\"Why is this happening again?\"",
+      "\"I feel anxious and pressured.\"",
+      "\"I get irritated and want to resist.\"",
+      "\"I freeze and avoid it initially.\""
+    ]
   },
   {
     id: 2,
-    question: "Customers report \"money debited but beneficiary not credited.\" CBS shows debit posted. What is the most likely issue area?",
+    question: "In the last 3 months, I have transferred my stress to others (team or family) by:",
     options: [
-      "CBS interest module",
-      "Digital Banking Platform / Payment switch reconciliation",
-      "Branch teller system",
-      "CRM"
-    ],
-    correctAnswer: 1
+      "Becoming silent and distant",
+      "Becoming impatient / short-tempered",
+      "Micromanaging and controlling",
+      "Overworking and ignoring people",
+      "I don't think I transfer stress"
+    ]
   },
   {
     id: 3,
-    question: "A customer logs in from a new device at 2 AM and tries to transfer a large amount. What control is most appropriate?",
+    question: "If a younger colleague teaches me a new digital process, my honest feeling is:",
     options: [
-      "Allow if password is correct",
-      "Block the customer permanently",
-      "Step-up authentication + FRM rule trigger",
-      "Only send SMS alert after transfer"
-    ],
-    correctAnswer: 2
+      "Respect — I like learning",
+      "Neutral — I accept it",
+      "Slight discomfort — I feel exposed",
+      "Defensive — I feel my authority reduces",
+      "I avoid it unless forced"
+    ]
   },
   {
     id: 4,
-    question: "A bank shows third-party insurance offers inside its app. Customer complains of mis-selling. What evidence protects the bank best?",
+    question: "When I make a mistake at work, I usually respond by:",
     options: [
-      "Fintech agreement copy",
-      "Consent logs + disclosure screen records + opt-in timestamp",
-      "Customer phone recording",
-      "Vendor's email confirmation"
-    ],
-    correctAnswer: 1
+      "Admit quickly, correct fast",
+      "Correct it quietly, avoid discussion",
+      "Justify it because pressure was high",
+      "Feel guilty and overthink",
+      "Blame process / people / situation"
+    ]
   },
   {
     id: 5,
-    question: "MTTD increasing month-on-month indicates:",
+    question: "If my current lifestyle continues for the next 5 years, I believe my:",
     options: [
-      "Bank is detecting incidents faster",
-      "Bank is detecting incidents slower",
-      "Bank has fewer incidents",
-      "Bank has better DR"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 6,
-    question: "MTTR is high even though incidents are low. This usually means:",
-    options: [
-      "Bank has strong cybersecurity",
-      "Bank has slow recovery capability",
-      "Bank has too many vendors",
-      "Bank has good change management"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 7,
-    question: "API traffic suddenly spikes 50× and payment switch begins to slow. Best control is:",
-    options: [
-      "Increase limits immediately",
-      "Circuit breaker + rate limiting",
-      "Disable OTP",
-      "Ask customers to retry later"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 8,
-    question: "Cooling period is most useful when:",
-    options: [
-      "Customer changes mobile number",
-      "Customer adds a new beneficiary",
-      "Customer checks balance",
-      "Customer downloads statement"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 9,
-    question: "Velocity limits are designed to stop:",
-    options: [
-      "Core banking interest calculation errors",
-      "Too many transfers/attempts in short time (bot/fraud behavior)",
-      "Deposit growth slowdown",
-      "Treasury MTM losses"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 10,
-    question: "Which is the clearest example of poor Segregation of Duties (SoD)?",
-    options: [
-      "RM and branch manager both meet customer",
-      "Same person develops code and deploys to production",
-      "Teller handles cash deposits",
-      "CFO approves budgets"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 11,
-    question: "Which is most accurate about CBS vs DBP?",
-    options: [
-      "CBS is customer experience layer",
-      "DBP is accounting system",
-      "CBS posts transactions, DBP manages digital journeys and controls",
-      "DBP is only a mobile app"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 12,
-    question: "Biggest regulatory worry with CSPs is:",
-    options: [
-      "Cloud is cheaper",
-      "Cloud has no storage",
-      "Concentration risk + third-party dependency",
-      "Cloud cannot run APIs"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 13,
-    question: "RTO = 2 hours, RPO = 15 minutes means:",
-    options: [
-      "Bank can lose 2 hours of data",
-      "Bank must restore within 2 hours and lose max 15 minutes of data",
-      "Bank must restore within 15 minutes and lose 2 hours of data",
-      "Bank has no DR"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 14,
-    question: "An RM pastes customer statement into a free AI tool. Biggest risk is:",
-    options: [
-      "AI will make grammar mistakes",
-      "Customer data leakage + compliance breach",
-      "CBS will crash",
-      "Treasury loss"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 15,
-    question: "A new release causes login failures. The most likely missing discipline is:",
-    options: [
-      "Treasury reconciliation",
-      "Staging/UAT + canary release + rollback readiness",
-      "Branch cash controls",
-      "CRM segmentation"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 16,
-    question: "Compliance team gets 20,000 AML alerts/month and misses true cases. Best improvement is:",
-    options: [
-      "Generate more alerts",
-      "Risk-based alert tuning + case management workflow",
-      "Stop monitoring",
-      "Increase branch targets"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 17,
-    question: "A bank's app downtime is always blamed on vendor. The best senior manager KPI is:",
-    options: [
-      "Vendor name in incident report",
-      "SLA penalties only",
-      "Change failure rate + MTTR + root cause closure",
-      "Number of WhatsApp escalations"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 18,
-    question: "If the bank learns about outages mainly from customer calls, it indicates:",
-    options: [
-      "Strong SOC",
-      "Strong SIEM",
-      "Weak monitoring (no SOC/SIEM)",
-      "Excellent ITSM"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 19,
-    question: "A fintech partner needs \"full customer profile API.\" Best approach is:",
-    options: [
-      "Give full access for faster integration",
-      "Give minimum required data only + consent + purpose limitation",
-      "Give access but ask for NDA",
-      "Deny all fintech partnerships"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 20,
-    question: "Customer says: \"I never approved this transfer.\" What evidence is strongest?",
-    options: [
-      "Teller statement",
-      "Customer relationship history",
-      "Device binding + OTP logs + consent logs + transaction reference trail",
-      "Bank CEO assurance"
-    ],
-    correctAnswer: 2
+      "Health will improve",
+      "Health will remain stable",
+      "Health will decline",
+      "Family life will suffer",
+      "Both health and family life will suffer"
+    ]
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
+  subtitle: "Change Readiness & Resilience – Self Reflection",
   professor: "ANIL AGGARWAL",
-  totalQuestions: 20,
-  totalMarks: 80,
+  totalQuestions: 5,
+  totalMarks: 20,
   marksPerQuestion: 4,
-  timeLimit: 40, // minutes
+  timeLimit: 10, // minutes
+  isStructure2: true, // Flag to indicate scoring type
   rules: [
-    "NO MOBILE AND CALCULATOR IS ALLOWED",
-    "Each question carries 4 marks",
-    "Total time allowed: 40 minutes",
+    "Please answer honestly. There is no right or wrong answer. This is only for your self-awareness.",
+    "Total time allowed: 10 minutes",
     "Only one submission per roll number allowed",
     "Click 'Submit Quiz' to finish or quiz will auto-submit when time expires"
   ]
