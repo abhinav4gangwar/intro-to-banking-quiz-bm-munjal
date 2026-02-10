@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-import { quizQuestions, quizInfo } from '@/data/quizData';
+import { quizQuestions, quizInfo, optionWeights } from '@/data/quizData';
 import { Clock, CheckCircle, AlertTriangle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
@@ -23,7 +23,7 @@ export interface QuizResults {
 const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(quizQuestions.length).fill(null));
-  const [timeLeft, setTimeLeft] = useState(quizInfo.timeLimit * 60); // Convert minutes to seconds
+  const [timeLeft, setTimeLeft] = useState(quizInfo.timeLimit * 60);
   const [showSubmitWarning, setShowSubmitWarning] = useState(false);
   const { toast } = useToast();
 
@@ -35,11 +35,21 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
 
   const calculateResults = useCallback((): QuizResults => {
     let score = 0;
-    answers.forEach((answer, index) => {
-      if (answer === quizQuestions[index].correctAnswer) {
-        score += quizInfo.marksPerQuestion;
-      }
-    });
+    if (quizInfo.isStructure2) {
+      // Structure 2: weighted scoring by option index
+      answers.forEach((answer) => {
+        if (answer !== null) {
+          score += optionWeights[answer] ?? 0;
+        }
+      });
+    } else {
+      // Structure 1: correct/incorrect scoring
+      answers.forEach((answer, index) => {
+        if (answer === quizQuestions[index].correctAnswer) {
+          score += quizInfo.marksPerQuestion;
+        }
+      });
+    }
 
     return {
       studentInfo,
@@ -54,10 +64,8 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
     const results = calculateResults();
     
     try {
-      // Calculate percentage for database storage
       const percentage = (results.score / quizInfo.totalMarks) * 100;
       
-      // Save results to Supabase
       const { error } = await supabase
         .from('quiz_results')
         .insert({
@@ -128,7 +136,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
 
   const progress = ((currentQuestion + 1) / quizQuestions.length) * 100;
   const answeredCount = getAnsweredCount();
-  const isTimeRunningOut = timeLeft <= 300; // 5 minutes warning
+  const isTimeRunningOut = timeLeft <= 120; // 2 minutes warning for 10-min quiz
 
   if (showSubmitWarning) {
     return (
@@ -143,7 +151,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
           <CardContent className="text-center space-y-4">
             <p>You have answered <strong>{answeredCount}</strong> out of <strong>{quizQuestions.length}</strong> questions.</p>
             <p className="text-sm text-muted-foreground">
-              Are you sure you want to submit your quiz? This action cannot be undone.
+              Are you sure you want to submit? This action cannot be undone.
             </p>
             <div className="flex gap-3">
               <Button 
@@ -151,7 +159,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
                 onClick={() => setShowSubmitWarning(false)}
                 className="flex-1"
               >
-                Continue Quiz
+                Continue
               </Button>
               <Button 
                 onClick={handleSubmit}
@@ -167,6 +175,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
   }
 
   const currentQ = quizQuestions[currentQuestion];
+  const optionLabels = ['A', 'B', 'C', 'D', 'E'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/20 p-4">
@@ -178,6 +187,9 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
               <div>
                 <h1 className="text-lg font-semibold text-primary">{studentInfo.name}</h1>
                 <p className="text-sm text-muted-foreground">{quizInfo.title}</p>
+                {quizInfo.subtitle && (
+                  <p className="text-xs text-muted-foreground">{quizInfo.subtitle}</p>
+                )}
               </div>
               
               <div className="flex items-center gap-4">
@@ -209,12 +221,11 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
         <Card className="shadow-[var(--shadow-card)]">
           <CardHeader>
             <CardTitle className="text-xl leading-relaxed">
-              {currentQ.question}
+              Q{currentQ.id}. {currentQ.question}
             </CardTitle>
           </CardHeader>
           
           <CardContent className="space-y-4">
-            {/* Answer Options */}
             <div className="space-y-3">
               {currentQ.options.map((option, index) => (
                 <button
@@ -227,12 +238,12 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                    <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 text-sm font-semibold ${
                       answers[currentQuestion] === index
                         ? 'border-primary bg-primary text-primary-foreground'
                         : 'border-muted-foreground'
                     }`}>
-                      {answers[currentQuestion] === index && <CheckCircle className="w-4 h-4" />}
+                      {answers[currentQuestion] === index ? <CheckCircle className="w-4 h-4" /> : optionLabels[index]}
                     </div>
                     <span className="text-sm leading-relaxed">{option}</span>
                   </div>
@@ -259,10 +270,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
                     Submit Quiz
                   </Button>
                 ) : (
-                  <Button
-                    onClick={handleNext}
-                    disabled={currentQuestion === quizQuestions.length - 1}
-                  >
+                  <Button onClick={handleNext}>
                     Next
                   </Button>
                 )}
@@ -279,7 +287,7 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
             <CardTitle className="text-lg">Question Navigation</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-5 sm:grid-cols-10 gap-2">
+            <div className="grid grid-cols-5 gap-2">
               {quizQuestions.map((_, index) => (
                 <button
                   key={index}
