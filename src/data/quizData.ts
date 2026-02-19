@@ -52,221 +52,221 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "SBI Mumbai is handling LC for Larsen & Toubro importing turbines from Siemens Energy Germany. Docs are clean. Applicant casually says: \"Goods quality doubtful… maybe hold payment?\" What should manager do?",
+    question: "SBI issues a performance BG for Larsen & Toubro in favour of Dubai Electricity Authority. Demand states: \"Contractor has not met performance expectations.\" Guarantee wording: \"Failure to perform contractual obligations.\" Applicant insists wording mismatch. Your approach?",
     options: [
-      "Hold payment",
-      "Honour LC if documents comply",
-      "Seek exporter clarification",
-      "Escalate legal dispute"
+      "Reject due to wording difference",
+      "Honour immediately",
+      "Examine whether wording conveys same default",
+      "Seek applicant written consent"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 2,
-    question: "Reliance Industries shares WhatsApp B/L copy before originals arrive: \"Just confirm no discrepancy.\" Manager should?",
+    question: "Infosys India SBLC under ISP98 issued to US telecom client. Demand signed by Acting CFO with board resolution attached. Credit specifies CFO signature. Decision?",
     options: [
-      "Confirm informally",
-      "Review but avoid commitment",
-      "Reject transaction",
-      "Treat copy as presentation"
+      "Reject strictly",
+      "Honour automatically",
+      "Verify authority before decision",
+      "Seek applicant waiver"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 3,
-    question: "LC in favour of ONGC. Invoice shows \"ONGC Ltd\" instead of full legal name. Your decision?",
+    question: "Performance BG issued for GMR Infrastructure Middle East project. Beneficiary sends invocation 2 days before expiry requesting: \"Extend or pay.\" Applicant financially stressed. Bank priority?",
     options: [
-      "Immediate discrepancy",
-      "Accept if identity clear",
-      "Seek verbal confirmation",
-      "Reject to avoid audit risk"
+      "Immediate honour",
+      "Negotiate extension first",
+      "Reject invocation",
+      "Wait for court order"
     ],
     correctAnswer: 1
   },
   {
     id: 4,
-    question: "HPCL commodity LC repeatedly amended, shipment still pending. Your instinct?",
+    question: "SBLC issued for Reliance Industries export payment assurance. Demand emailed from domain differing by one character from beneficiary domain. Best immediate action?",
     options: [
-      "Routine business",
-      "Possible financing rollover",
-      "Documentation delay",
-      "Ignore pattern"
+      "Honour quickly to avoid dispute",
+      "Reject automatically",
+      "Authenticate demand source",
+      "Ask applicant only"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 5,
-    question: "Adani Power LC insurance shows ICC(A) but claims payable outside India though LC requires India. Decision?",
+    question: "BG for Tata Projects Oman EPC contract requires: \"Proof of unsatisfactory performance.\" No document defined. Demand simply states non-performance. Bank stance?",
     options: [
-      "Minor detail",
-      "Discrepancy",
-      "Ignore if insurer strong",
-      "Applicant decides"
+      "Reject lack of proof",
+      "Honour if demand wording sufficient",
+      "Ask for project reports",
+      "Delay decision"
     ],
     correctAnswer: 1
   },
   {
     id: 6,
-    question: "Confirmed LC by HSBC London for Tata Steel. Issuing bank facing liquidity stress. Confirming bank should?",
+    question: "Counter-guarantee issued by SBI for ONGC overseas project. Foreign bank invokes despite applicant dispute. Bank obligation?",
     options: [
-      "Wait cautiously",
-      "Honour independently",
-      "Consult applicant",
-      "Delay quietly"
+      "Check project dispute first",
+      "Honour counter-guarantee independently",
+      "Delay payment",
+      "Seek applicant consent"
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "Infosys SBLC demand signed by acting CFO instead of named CFO; board resolution attached. Decision?",
+    question: "Multiple small BG invocations seen for Adani Ports subcontractor guarantees over 6 months. Manager interpretation?",
     options: [
-      "Reject immediately",
-      "Accept after verifying authority",
-      "Ignore resolution",
-      "Ask applicant consent"
+      "Routine operational issue",
+      "Early warning credit stress signal",
+      "Documentation lapse",
+      "Ignore pattern"
     ],
     correctAnswer: 1
   },
   {
     id: 8,
-    question: "Indian Oil eUCP LC documents uploaded before expiry; portal outage confirmed. Decision?",
+    question: "LC issued for overseas borrowing by Mahindra & Mahindra. Beneficiary demands payment citing loan covenant breach. SBLC wording: \"Failure to pay financial obligation.\" Decision?",
     options: [
-      "Late presentation",
-      "Accept if outage proven",
-      "Reject digital docs",
-      "Applicant decides"
+      "Honour if wording aligns",
+      "Reject because covenant breach differs",
+      "Seek borrower clarification",
+      "Delay payment"
     ],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
     id: 9,
-    question: "JSW Steel LC invoice vs packing list weight slightly different. Manager judgement?",
+    question: "BG expiry date unclear (date only, no time). Invocation received late evening on expiry date. Manager safest interpretation?",
     options: [
-      "Automatic refusal",
-      "Assess materiality carefully",
-      "Ignore difference",
-      "Amend LC first"
+      "Reject late hour",
+      "Accept same-day presentation",
+      "Delay decision",
+      "Seek applicant waiver"
     ],
     correctAnswer: 1
   },
   {
     id: 10,
-    question: "NTPC import LC — unknown carrier but third-party transport allowed. Approach?",
+    question: "SBLC issued for Dr Reddy's pharma supply contract. Demand accompanied by additional documents not required. Manager approach?",
     options: [
-      "Reject unknown carrier",
-      "Accept if LC permits",
-      "Cancel LC",
-      "Ask applicant"
+      "Reject extra documents",
+      "Ignore additional documents, check required ones",
+      "Delay decision",
+      "Seek amendment"
     ],
     correctAnswer: 1
   },
   {
     id: 11,
-    question: "Reliance export LC freely negotiable; negotiated by unfamiliar bank. Applicant uneasy. Correct stance?",
+    question: "A BG is issued by SBI for Tata Projects Ltd without margin because the borrower was strong. Six months later, rating drops sharply and limits are tight. What is the immediate risk?",
     options: [
-      "Invalid negotiation",
-      "Allowed",
-      "Applicant approval needed",
-      "Reject docs"
+      "Documentation issue",
+      "Potential funded exposure spike",
+      "Legal dispute only",
+      "Operational delay"
     ],
     correctAnswer: 1
   },
   {
     id: 12,
-    question: "BPCL LC AIS vessel route inconsistent with B/L port. Manager should?",
+    question: "An ISP98 SBLC for Infosys Ltd expires on 30 June. Beneficiary dispatches demand by courier on 29 June, but SBI receives it on 1 July. What drives the decision?",
     options: [
-      "Ignore AIS",
-      "Treat as fraud signal",
-      "Immediate refusal",
-      "Honour blindly"
+      "Dispatch date",
+      "Receipt date per credit",
+      "Applicant consent",
+      "Beneficiary explanation"
     ],
     correctAnswer: 1
   },
   {
     id: 13,
-    question: "Vedanta LC amended tenor but reimbursement authorization unchanged. Risk?",
+    question: "A URDG BG issued for L&T is in favour of Kenya Roads Authority. Beneficiary \"assigns\" the BG to a subcontractor. BG is silent on transfer. SBI should:",
     options: [
-      "Customer dispute",
-      "Interbank settlement issue",
-      "Documentary discrepancy",
-      "Insurance issue"
+      "Accept transfer",
+      "Reject assignment",
+      "Honour demand anyway",
+      "Amend automatically"
     ],
     correctAnswer: 1
   },
   {
     id: 14,
-    question: "Mahindra LC silent on electronic signature; exporter submits e-signed invoice. Best stance?",
+    question: "ISP98 SBLC issued for Reliance Industries payment assurance. Beneficiary demands payment citing \"market price collapse risk.\" SBLC trigger is \"failure to pay.\" Manager response?",
     options: [
-      "Accept automatically",
-      "Refuse automatically",
-      "Evaluate authenticity",
-      "Ignore signature"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 15,
-    question: "Coal India LC collateral suspected pledged to multiple banks. Manager action?",
-    options: [
-      "Ignore rumours",
-      "Verify independently",
-      "Finance immediately",
-      "Cancel LC"
+      "Honour demand",
+      "Reject non-trigger event",
+      "Delay payment",
+      "Seek applicant waiver"
     ],
     correctAnswer: 1
   },
   {
-    id: 16,
-    question: "GAIL India LC applicant verbally waives discrepancy before checking. Correct approach?",
+    id: 15,
+    question: "A URDG invocation is received under a country with active sanctions screening risk. Best immediate step?",
     options: [
-      "Accept verbal waiver",
-      "Require formal waiver",
-      "Ignore waiver",
-      "Cancel LC"
+      "Honour automatically",
+      "Reject outright",
+      "Compliance screening before action",
+      "Seek applicant advice"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 16,
+    question: "SBI issues an amendment to an ISP98 SBLC reducing amount. Beneficiary later claims they never received it and presents demand for original amount. Best manager approach?",
+    options: [
+      "Assume received",
+      "Confirm receipt before relying",
+      "Ignore issue",
+      "Honour demand anyway"
     ],
     correctAnswer: 1
   },
   {
     id: 17,
-    question: "UltraTech Cement LC invoice lower than LC amount. Decision?",
+    question: "A URDG performance BG for GMR Infrastructure is repeatedly extended because project timelines keep slipping. What should worry a senior manager most?",
     options: [
-      "Discrepancy",
-      "Partial drawing allowed",
-      "Amend LC first",
-      "Reject docs"
+      "Routine extension",
+      "Long-tail contingent exposure risk",
+      "Documentation issue",
+      "Ignore trend"
     ],
     correctAnswer: 1
   },
   {
     id: 18,
-    question: "Dr Reddy's LC inspection certificate genuine but location slightly different. Decision?",
+    question: "Under ISP98 SBLC, demand is commercially fair but documentary statement is ambiguous. What should dominate the decision?",
     options: [
-      "Immediate refusal",
-      "Assess material impact",
-      "Ignore location",
-      "Cancel LC"
+      "Commercial fairness",
+      "Documentary compliance",
+      "Applicant relationship",
+      "Market practice"
     ],
     correctAnswer: 1
   },
   {
     id: 19,
-    question: "Power Grid LC documents compliant but compliance team flags sanctions risk. Immediate step?",
+    question: "SBI issues counter-guarantee to a foreign bank for ONGC project BG. Counter-guarantee wording is weaker than the primary BG. Biggest risk?",
     options: [
-      "Honour quickly",
-      "Refuse automatically",
-      "Escalate before decision",
-      "Ignore compliance"
+      "None",
+      "Interbank dispute risk",
+      "Applicant dispute only",
+      "Documentation issue"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 20,
-    question: "Tata Motors LC FCA contract but LC requires ocean B/L. Manager understanding?",
+    question: "After URDG BG invocation, applicant requests SBI to take a \"friendly interpretation\" to protect relationship. Best stance?",
     options: [
-      "Exporter error",
-      "LC drafting mismatch",
-      "Carrier mistake",
-      "Insurance issue"
+      "Accommodate relationship",
+      "Stick to guarantee wording strictly",
+      "Delay decision",
+      "Seek arbitration"
     ],
     correctAnswer: 1
   }
@@ -274,7 +274,7 @@ export const quizQuestions: QuizQuestion[] = [
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Trade Finance & LC Decision Making",
+  subtitle: "SBLC & Bank Guarantee Decision Making",
   professor: "ANIL AGGARWAL",
   totalQuestions: 20,
   totalMarks: 80,
