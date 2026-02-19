@@ -48,7 +48,6 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
               {quizInfo.title}
             </CardTitle>
           <CardDescription className="text-base space-y-1">
-              {quizInfo.subtitle && <div className="font-medium">{quizInfo.subtitle}</div>}
               <div><strong>Professor:</strong> {quizInfo.professor}</div>
             </CardDescription>
           </div>

@@ -52,229 +52,229 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "A borrower took home loan. For 2 months, EMI is paid. Suddenly, he requests 6-month moratorium saying: \"Buyer of my land backed out.\" Best decision?",
+    question: "SBI Mumbai is handling LC for Larsen & Toubro importing turbines from Siemens Energy Germany. Docs are clean. Applicant casually says: \"Goods quality doubtful… maybe hold payment?\" What should manager do?",
     options: [
-      "Allow moratorium because borrower has collateral",
-      "Allow only if salary/rent cashflow is verified",
-      "Allow because EMI was regular earlier",
-      "Reject and classify as NPA immediately"
+      "Hold payment",
+      "Honour LC if documents comply",
+      "Seek exporter clarification",
+      "Escalate legal dispute"
     ],
     correctAnswer: 1
   },
   {
     id: 2,
-    question: "SME borrower says: \"Most sales are cash, so deposits won't show.\" Best credit approach?",
+    question: "Reliance Industries shares WhatsApp B/L copy before originals arrive: \"Just confirm no discrepancy.\" Manager should?",
     options: [
-      "Reject because no routing",
-      "Approve full based on turnover certificate",
-      "Approve smaller + condition on deposit behavior + step-up",
-      "Approve full if collateral is 2x"
+      "Confirm informally",
+      "Review but avoid commitment",
+      "Reject transaction",
+      "Treat copy as presentation"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 3,
-    question: "Importer's documents are clean. But the same overseas supplier appears in multiple borrowers in your district. Best risk lens?",
+    question: "LC in favour of ONGC. Invoice shows \"ONGC Ltd\" instead of full legal name. Your decision?",
     options: [
-      "Ignore because documents are fine",
-      "Treat as ecosystem risk; do deeper invoice + shipment checks",
-      "Reject all LCs",
-      "Approve but increase margin money"
+      "Immediate discrepancy",
+      "Accept if identity clear",
+      "Seek verbal confirmation",
+      "Reject to avoid audit risk"
     ],
     correctAnswer: 1
   },
   {
     id: 4,
-    question: "Borrower wants takeover. He says: \"Your bank is fast, disburse first.\" Best decision?",
+    question: "HPCL commodity LC repeatedly amended, shipment still pending. Your instinct?",
     options: [
-      "Disburse to win customer",
-      "Sanction but disburse only after charge release",
-      "Reject takeover completely",
-      "Disburse and ask for documents later"
+      "Routine business",
+      "Possible financing rollover",
+      "Documentation delay",
+      "Ignore pattern"
     ],
     correctAnswer: 1
   },
   {
     id: 5,
-    question: "You can meet target by sanctioning one big loan or 10 smaller secured loans. What is most prudent?",
+    question: "Adani Power LC insurance shows ICC(A) but claims payable outside India though LC requires India. Decision?",
     options: [
-      "Big loan saves time",
-      "Smaller secured loans reduce concentration risk",
-      "Big loan is better if collateral is high",
-      "Either is fine"
+      "Minor detail",
+      "Discrepancy",
+      "Ignore if insurer strong",
+      "Applicant decides"
     ],
     correctAnswer: 1
   },
   {
     id: 6,
-    question: "Borrower pays OD interest on time, but principal reduction is not happening and stock is falling. Best view?",
+    question: "Confirmed LC by HSBC London for Tata Steel. Issuing bank facing liquidity stress. Confirming bank should?",
     options: [
-      "Account is healthy",
-      "Account is stressed but hidden",
-      "No issue until overdue",
-      "Increase limit to support business"
+      "Wait cautiously",
+      "Honour independently",
+      "Consult applicant",
+      "Delay quietly"
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "CIC report is clean, but borrower delays supplier payments and suppliers call the branch. Best interpretation?",
+    question: "Infosys SBLC demand signed by acting CFO instead of named CFO; board resolution attached. Decision?",
     options: [
-      "Supplier is trying to disturb relationship",
-      "Informal debt / liquidity stress exists",
-      "Borrower is expanding fast",
-      "Supplier is lying"
+      "Reject immediately",
+      "Accept after verifying authority",
+      "Ignore resolution",
+      "Ask applicant consent"
     ],
     correctAnswer: 1
   },
   {
     id: 8,
-    question: "Builder offers property worth NPR 12 Cr for a NPR 4 Cr loan. Repayment depends on unit sales. Market is slow. Best decision?",
+    question: "Indian Oil eUCP LC documents uploaded before expiry; portal outage confirmed. Decision?",
     options: [
-      "Approve because collateral is 3x",
-      "Approve but reduce rate to help sales",
-      "Approve only if clear cashflow (rent/other income) supports EMI",
-      "Approve because builder is known"
+      "Late presentation",
+      "Accept if outage proven",
+      "Reject digital docs",
+      "Applicant decides"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 9,
-    question: "A factory offers salary accounts for 250 staff if you approve a working capital limit. Best senior decision?",
+    question: "JSW Steel LC invoice vs packing list weight slightly different. Manager judgement?",
     options: [
-      "Approve full limit to win salary business",
-      "Approve based on credit quality + use salary as additional comfort",
-      "Reject because it's cross-selling pressure",
-      "Approve quickly and monitor later"
+      "Automatic refusal",
+      "Assess materiality carefully",
+      "Ignore difference",
+      "Amend LC first"
     ],
     correctAnswer: 1
   },
   {
     id: 10,
-    question: "Branch sees remittance credits reducing for 3 months (Gulf slowdown trend). How should branch adjust growth plan?",
+    question: "NTPC import LC — unknown carrier but third-party transport allowed. Approach?",
     options: [
-      "Increase unsecured loans to meet target",
-      "Increase secured SME + salary + granular loans",
-      "Focus only on real estate",
-      "Stop lending"
+      "Reject unknown carrier",
+      "Accept if LC permits",
+      "Cancel LC",
+      "Ask applicant"
     ],
     correctAnswer: 1
   },
   {
     id: 11,
-    question: "Trader wants OD NPR 1.2 Cr. Your analysis supports NPR 70 lakh. Best decision?",
+    question: "Reliance export LC freely negotiable; negotiated by unfamiliar bank. Applicant uneasy. Correct stance?",
     options: [
-      "Approve 1.2 to retain client",
-      "Approve 70 lakh with step-up after routing improves",
-      "Reject",
-      "Approve 1.2 but take more collateral"
+      "Invalid negotiation",
+      "Allowed",
+      "Applicant approval needed",
+      "Reject docs"
     ],
     correctAnswer: 1
   },
   {
     id: 12,
-    question: "Borrower agrees verbally to route sales after sanction but refuses written covenant. Best decision?",
+    question: "BPCL LC AIS vessel route inconsistent with B/L port. Manager should?",
     options: [
-      "Approve because borrower is cooperative",
-      "Approve but keep strong collateral",
-      "Do not approve until measurable commitment is documented",
-      "Approve and monitor"
+      "Ignore AIS",
+      "Treat as fraud signal",
+      "Immediate refusal",
+      "Honour blindly"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 13,
-    question: "LAP borrower starts paying late but still within grace period. He says: \"Business is seasonal.\" Best action?",
+    question: "Vedanta LC amended tenor but reimbursement authorization unchanged. Risk?",
     options: [
-      "Ignore because not overdue",
-      "Trigger EWS: visit + cashflow check + early correction",
-      "Send legal notice",
-      "Give top-up loan"
+      "Customer dispute",
+      "Interbank settlement issue",
+      "Documentary discrepancy",
+      "Insurance issue"
     ],
     correctAnswer: 1
   },
   {
     id: 14,
-    question: "Branch has only 1 credit officer. HO pushes 12 new SME files. Best approach?",
+    question: "Mahindra LC silent on electronic signature; exporter submits e-signed invoice. Best stance?",
     options: [
-      "Process all quickly",
-      "Prioritize 3 best files with clean routing and reject rest",
-      "Prioritize top 4 files + stagger disbursal + set controls",
-      "Stop SME lending"
+      "Accept automatically",
+      "Refuse automatically",
+      "Evaluate authenticity",
+      "Ignore signature"
     ],
     correctAnswer: 2
   },
   {
     id: 15,
-    question: "Borrower is stressed and asks for top-up: \"If you give more, I will recover.\" Best decision?",
+    question: "Coal India LC collateral suspected pledged to multiple banks. Manager action?",
     options: [
-      "Give top-up to protect existing exposure",
-      "Give top-up only after promoter brings margin + clear plan",
-      "Reject always",
-      "Give top-up if collateral is enough"
+      "Ignore rumours",
+      "Verify independently",
+      "Finance immediately",
+      "Cancel LC"
     ],
     correctAnswer: 1
   },
   {
     id: 16,
-    question: "Borrower is 60 DPD but is a high-fee trade customer. Best approach?",
+    question: "GAIL India LC applicant verbally waives discrepancy before checking. Correct approach?",
     options: [
-      "Give more time because of fee income",
-      "Separate credit discipline from fee business; recover with plan",
-      "Stop all trade business immediately",
-      "Ignore until 90 DPD"
+      "Accept verbal waiver",
+      "Require formal waiver",
+      "Ignore waiver",
+      "Cancel LC"
     ],
     correctAnswer: 1
   },
   {
     id: 17,
-    question: "What is the most useful \"simulation\" for a branch head?",
+    question: "UltraTech Cement LC invoice lower than LC amount. Decision?",
     options: [
-      "Monte Carlo model",
-      "If sales fall 20%, can borrower still pay EMI?",
-      "GDP forecast model",
-      "Basel capital formula"
+      "Discrepancy",
+      "Partial drawing allowed",
+      "Amend LC first",
+      "Reject docs"
     ],
     correctAnswer: 1
   },
   {
     id: 18,
-    question: "Borrower gives VAT returns showing growth, but bank statement shows flat deposits. Best action?",
+    question: "Dr Reddy's LC inspection certificate genuine but location slightly different. Decision?",
     options: [
-      "Trust VAT because it is official",
-      "Trust bank statement only",
-      "Cross-check: purchases, supplier confirmation, inventory, routing",
-      "Approve because collateral is good"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 19,
-    question: "In the next 30 days, what credit strategy is most realistic and safe?",
-    options: [
-      "One large builder loan",
-      "Bulk small secured loans + renewals + salary tie-ups",
-      "Aggressive unsecured micro business",
-      "Only takeovers"
+      "Immediate refusal",
+      "Assess material impact",
+      "Ignore location",
+      "Cancel LC"
     ],
     correctAnswer: 1
   },
   {
-    id: 20,
-    question: "Which statement is most correct?",
+    id: 19,
+    question: "Power Grid LC documents compliant but compliance team flags sanctions risk. Immediate step?",
     options: [
-      "\"Growth is sanctioning.\"",
-      "\"Collateral is everything.\"",
-      "\"Growth must be measurable, monitorable, and cashflow-backed.\"",
-      "\"Recovery is HO's job.\""
+      "Honour quickly",
+      "Refuse automatically",
+      "Escalate before decision",
+      "Ignore compliance"
     ],
     correctAnswer: 2
+  },
+  {
+    id: 20,
+    question: "Tata Motors LC FCA contract but LC requires ocean B/L. Manager understanding?",
+    options: [
+      "Exporter error",
+      "LC drafting mismatch",
+      "Carrier mistake",
+      "Insurance issue"
+    ],
+    correctAnswer: 1
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "High Impact Decision Making",
+  subtitle: "Trade Finance & LC Decision Making",
   professor: "ANIL AGGARWAL",
   totalQuestions: 20,
   totalMarks: 80,
