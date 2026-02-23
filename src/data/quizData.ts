@@ -52,221 +52,111 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "SBI issues a performance BG for Larsen & Toubro in favour of Dubai Electricity Authority. Demand states: \"Contractor has not met performance expectations.\" Guarantee wording: \"Failure to perform contractual obligations.\" Applicant insists wording mismatch. Your approach?",
+    question: "\"Inventory levels increased 35% in last 6 months, but sales growth only 12%. Borrower explains it as 'strategic stocking due to raw material price volatility.'\"\n\nWhich question should a credit manager ideally ask next?",
     options: [
-      "Reject due to wording difference",
-      "Honour immediately",
-      "Examine whether wording conveys same default",
-      "Seek applicant written consent"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 2,
-    question: "Infosys India SBLC under ISP98 issued to US telecom client. Demand signed by Acting CFO with board resolution attached. Credit specifies CFO signature. Decision?",
-    options: [
-      "Reject strictly",
-      "Honour automatically",
-      "Verify authority before decision",
-      "Seek applicant waiver"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 3,
-    question: "Performance BG issued for GMR Infrastructure Middle East project. Beneficiary sends invocation 2 days before expiry requesting: \"Extend or pay.\" Applicant financially stressed. Bank priority?",
-    options: [
-      "Immediate honour",
-      "Negotiate extension first",
-      "Reject invocation",
-      "Wait for court order"
+      "\"Is additional storage space being leased?\"",
+      "\"How is inventory ageing trending, and what proportion is slow-moving?\"",
+      "\"Can you provide updated stock insurance copies?\"",
+      "\"Are suppliers offering extended credit terms?\""
     ],
     correctAnswer: 1
   },
   {
-    id: 4,
-    question: "SBLC issued for Reliance Industries export payment assurance. Demand emailed from domain differing by one character from beneficiary domain. Best immediate action?",
+    id: 2,
+    question: "\"Turnover up 22%, but gross margins reduced from 18% to 13%. Borrower says 'competitive pricing to capture market share.'\"\n\nWhich question should be asked next?",
     options: [
-      "Honour quickly to avoid dispute",
-      "Reject automatically",
-      "Authenticate demand source",
-      "Ask applicant only"
+      "\"Is this margin compression temporary or structural in nature?\"",
+      "\"Have fixed costs reduced proportionately?\"",
+      "\"Are promoters comfortable with lower profitability?\"",
+      "\"Can collateral cover be enhanced?\""
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 3,
+    question: "\"Top two customers now contribute 48% of total receivables. Earlier it was 28%.\"\n\nWhat should you ask next?",
+    options: [
+      "\"Are these customers investment-grade entities?\"",
+      "\"What are the credit terms negotiated with these two customers?\"",
+      "\"Is ECGC or credit insurance available?\"",
+      "\"What happens to liquidity if either of these customers delays payment by 30 days?\""
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 4,
+    question: "\"Significant sales (18%) routed through a group entity.\"\n\nWhat question should follow?",
+    options: [
+      "\"Are these transactions at arm's length pricing?\"",
+      "\"Is GST being paid correctly?\"",
+      "\"What is the payment cycle from this related entity versus third parties?\"",
+      "\"Is there board approval for related transactions?\""
     ],
     correctAnswer: 2
   },
   {
     id: 5,
-    question: "BG for Tata Projects Oman EPC contract requires: \"Proof of unsatisfactory performance.\" No document defined. Demand simply states non-performance. Bank stance?",
+    question: "\"CC utilisation remains 98–100% for 8 months; account technically standard.\"\n\nWhich question should be asked?",
     options: [
-      "Reject lack of proof",
-      "Honour if demand wording sufficient",
-      "Ask for project reports",
-      "Delay decision"
+      "\"Is drawing power calculation correct?\"",
+      "\"Has promoter infusion been reduced?\"",
+      "\"What is the buffer available if receivables delay by 15–20 days?\"",
+      "\"Are stock statements submitted on time?\""
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 6,
-    question: "Counter-guarantee issued by SBI for ONGC overseas project. Foreign bank invokes despite applicant dispute. Bank obligation?",
+    question: "\"Promoter infused ₹3 Cr unsecured loan before renewal discussion.\"\n\nBest next question?",
     options: [
-      "Check project dispute first",
-      "Honour counter-guarantee independently",
-      "Delay payment",
-      "Seek applicant consent"
+      "\"Is this infusion permanent or expected to be withdrawn?\"",
+      "\"Was this infusion funded by another borrowing?\"",
+      "\"Is the loan subordinated contractually?\"",
+      "\"Was this required by previous sanction condition?\""
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "Multiple small BG invocations seen for Adani Ports subcontractor guarantees over 6 months. Manager interpretation?",
+    question: "\"Borrower cites strong sector growth and new policy tailwinds.\"\n\nWhich question should you ask?",
     options: [
-      "Routine operational issue",
-      "Early warning credit stress signal",
-      "Documentation lapse",
-      "Ignore pattern"
+      "\"How is your company positioned relative to peers?\"",
+      "\"What was last year's growth rate?\"",
+      "\"Are competitors also expanding capacity?\"",
+      "\"How has this sector growth translated into actual order execution and collections so far?\""
     ],
-    correctAnswer: 1
+    correctAnswer: 3
   },
   {
     id: 8,
-    question: "LC issued for overseas borrowing by Mahindra & Mahindra. Beneficiary demands payment citing loan covenant breach. SBLC wording: \"Failure to pay financial obligation.\" Decision?",
+    question: "\"One operational account not disclosed initially; low average balance.\"\n\nNext best question?",
     options: [
-      "Honour if wording aligns",
-      "Reject because covenant breach differs",
-      "Seek borrower clarification",
-      "Delay payment"
+      "\"Why was this not disclosed earlier?\"",
+      "\"What inflows and outflows pass through this account?\"",
+      "\"Is this linked to specific customers?\"",
+      "\"Can this account be closed?\""
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 9,
-    question: "BG expiry date unclear (date only, no time). Invocation received late evening on expiry date. Manager safest interpretation?",
+    question: "\"EBITDA stable, but PAT fluctuates due to interest and other expenses.\"\n\nBest next question?",
     options: [
-      "Reject late hour",
-      "Accept same-day presentation",
-      "Delay decision",
-      "Seek applicant waiver"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 10,
-    question: "SBLC issued for Dr Reddy's pharma supply contract. Demand accompanied by additional documents not required. Manager approach?",
-    options: [
-      "Reject extra documents",
-      "Ignore additional documents, check required ones",
-      "Delay decision",
-      "Seek amendment"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 11,
-    question: "A BG is issued by SBI for Tata Projects Ltd without margin because the borrower was strong. Six months later, rating drops sharply and limits are tight. What is the immediate risk?",
-    options: [
-      "Documentation issue",
-      "Potential funded exposure spike",
-      "Legal dispute only",
-      "Operational delay"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 12,
-    question: "An ISP98 SBLC for Infosys Ltd expires on 30 June. Beneficiary dispatches demand by courier on 29 June, but SBI receives it on 1 July. What drives the decision?",
-    options: [
-      "Dispatch date",
-      "Receipt date per credit",
-      "Applicant consent",
-      "Beneficiary explanation"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 13,
-    question: "A URDG BG issued for L&T is in favour of Kenya Roads Authority. Beneficiary \"assigns\" the BG to a subcontractor. BG is silent on transfer. SBI should:",
-    options: [
-      "Accept transfer",
-      "Reject assignment",
-      "Honour demand anyway",
-      "Amend automatically"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 14,
-    question: "ISP98 SBLC issued for Reliance Industries payment assurance. Beneficiary demands payment citing \"market price collapse risk.\" SBLC trigger is \"failure to pay.\" Manager response?",
-    options: [
-      "Honour demand",
-      "Reject non-trigger event",
-      "Delay payment",
-      "Seek applicant waiver"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 15,
-    question: "A URDG invocation is received under a country with active sanctions screening risk. Best immediate step?",
-    options: [
-      "Honour automatically",
-      "Reject outright",
-      "Compliance screening before action",
-      "Seek applicant advice"
+      "\"Are interest costs rising?\"",
+      "\"What is the break-even sales level?\"",
+      "\"How sensitive is profitability to interest rate increase of 1–2%?\"",
+      "\"Are depreciation methods consistent?\""
     ],
     correctAnswer: 2
   },
   {
-    id: 16,
-    question: "SBI issues an amendment to an ISP98 SBLC reducing amount. Beneficiary later claims they never received it and presents demand for original amount. Best manager approach?",
+    id: 10,
+    question: "\"Borrower highlights confirmed order book ₹85 Cr, but past 2 years execution achieved only 60% of projected orders.\"\n\nWhich question should be asked next?",
     options: [
-      "Assume received",
-      "Confirm receipt before relying",
-      "Ignore issue",
-      "Honour demand anyway"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 17,
-    question: "A URDG performance BG for GMR Infrastructure is repeatedly extended because project timelines keep slipping. What should worry a senior manager most?",
-    options: [
-      "Routine extension",
-      "Long-tail contingent exposure risk",
-      "Documentation issue",
-      "Ignore trend"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 18,
-    question: "Under ISP98 SBLC, demand is commercially fair but documentary statement is ambiguous. What should dominate the decision?",
-    options: [
-      "Commercial fairness",
-      "Documentary compliance",
-      "Applicant relationship",
-      "Market practice"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 19,
-    question: "SBI issues counter-guarantee to a foreign bank for ONGC project BG. Counter-guarantee wording is weaker than the primary BG. Biggest risk?",
-    options: [
-      "None",
-      "Interbank dispute risk",
-      "Applicant dispute only",
-      "Documentation issue"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 20,
-    question: "After URDG BG invocation, applicant requests SBI to take a \"friendly interpretation\" to protect relationship. Best stance?",
-    options: [
-      "Accommodate relationship",
-      "Stick to guarantee wording strictly",
-      "Delay decision",
-      "Seek arbitration"
+      "\"Are these orders firm or indicative?\"",
+      "\"What is execution capacity versus committed order size?\"",
+      "\"Is there mobilisation advance?\"",
+      "\"Are orders backed by performance guarantees?\""
     ],
     correctAnswer: 1
   }
@@ -274,10 +164,10 @@ export const quizQuestions: QuizQuestion[] = [
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "SBLC & Bank Guarantee Decision Making",
+  subtitle: "Credit Assessment & Working Capital",
   professor: "ANIL AGGARWAL",
-  totalQuestions: 20,
-  totalMarks: 80,
+  totalQuestions: 10,
+  totalMarks: 40,
   marksPerQuestion: 4,
   timeLimit: 40,
   isStructure2: false,
