@@ -52,122 +52,232 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "\"Inventory levels increased 35% in last 6 months, but sales growth only 12%. Borrower explains it as 'strategic stocking due to raw material price volatility.'\"\n\nWhich question should a credit manager ideally ask next?",
+    question: "M/s Orion Metals\n\nStock rises 80%, creditors rise proportionately, GST inward matches purchases, but power consumption drops 35%. What is your first action?",
     options: [
-      "\"Is additional storage space being leased?\"",
-      "\"How is inventory ageing trending, and what proportion is slow-moving?\"",
-      "\"Can you provide updated stock insurance copies?\"",
-      "\"Are suppliers offering extended credit terms?\""
+      "Reduce DP immediately",
+      "Order stock audit immediately",
+      "Verify production capacity utilisation",
+      "Freeze LC limits"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 2,
-    question: "\"Turnover up 22%, but gross margins reduced from 18% to 13%. Borrower says 'competitive pricing to capture market share.'\"\n\nWhich question should be asked next?",
+    question: "M/s Zenith Polymers\n\nDebtors under 90 days = ₹8 cr. But 60% belong to 3 newly onboarded customers. No past payment history. What is your DP stance?",
     options: [
-      "\"Is this margin compression temporary or structural in nature?\"",
-      "\"Have fixed costs reduced proportionately?\"",
-      "\"Are promoters comfortable with lower profitability?\"",
-      "\"Can collateral cover be enhanced?\""
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 3,
-    question: "\"Top two customers now contribute 48% of total receivables. Earlier it was 28%.\"\n\nWhat should you ask next?",
-    options: [
-      "\"Are these customers investment-grade entities?\"",
-      "\"What are the credit terms negotiated with these two customers?\"",
-      "\"Is ECGC or credit insurance available?\"",
-      "\"What happens to liquidity if either of these customers delays payment by 30 days?\""
+      "Fully eligible",
+      "Exclude new customers",
+      "Allow 50% with caution",
+      "Seek debtor confirmation before eligibility"
     ],
     correctAnswer: 3
   },
   {
-    id: 4,
-    question: "\"Significant sales (18%) routed through a group entity.\"\n\nWhat question should follow?",
+    id: 3,
+    question: "M/s Arjun Engineering\n\nLC ₹4 cr due next month. Cash realisation expected ₹4.5 cr. But ₹2 cr debtor is under dispute. Your risk assessment?",
     options: [
-      "\"Are these transactions at arm's length pricing?\"",
-      "\"Is GST being paid correctly?\"",
-      "\"What is the payment cycle from this related entity versus third parties?\"",
-      "\"Is there board approval for related transactions?\""
+      "LC safe",
+      "LC partially stressed",
+      "LC high risk of devolvement",
+      "No impact unless >90 days"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 4,
+    question: "M/s Silver Agro\n\nStock in transit ₹3 cr shown. E-way bills valid. But insurance policy does not cover SIT. Eligible for DP?",
+    options: [
+      "Fully eligible",
+      "Eligible after 10% haircut",
+      "Ineligible",
+      "Eligible if LC backed"
     ],
     correctAnswer: 2
   },
   {
     id: 5,
-    question: "\"CC utilisation remains 98–100% for 8 months; account technically standard.\"\n\nWhich question should be asked?",
+    question: "M/s Vortex Cables\n\nRepeated month-end large RTGS credits reversed in 3 days. Narration: \"Advance adjustment.\" Interpretation?",
     options: [
-      "\"Is drawing power calculation correct?\"",
-      "\"Has promoter infusion been reduced?\"",
-      "\"What is the buffer available if receivables delay by 15–20 days?\"",
-      "\"Are stock statements submitted on time?\""
+      "Working capital rotation",
+      "Temporary accommodation entry",
+      "Customer refund cycle",
+      "Inter-branch funding"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 6,
-    question: "\"Promoter infused ₹3 Cr unsecured loan before renewal discussion.\"\n\nBest next question?",
+    question: "M/s Nova Chemicals\n\nCreditors ₹6 cr; stock ₹6.5 cr. GST inward ₹1.2 cr for month. What concerns you most?",
     options: [
-      "\"Is this infusion permanent or expected to be withdrawn?\"",
-      "\"Was this infusion funded by another borrowing?\"",
-      "\"Is the loan subordinated contractually?\"",
-      "\"Was this required by previous sanction condition?\""
+      "Low stock turnover",
+      "Creditor–GST mismatch",
+      "Power usage anomaly",
+      "Pricing volatility"
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "\"Borrower cites strong sector growth and new policy tailwinds.\"\n\nWhich question should you ask?",
+    question: "M/s Apex Components\n\nTerm loan disbursed 60%. Project progress 30%. Borrower seeks next tranche. Your decision?",
     options: [
-      "\"How is your company positioned relative to peers?\"",
-      "\"What was last year's growth rate?\"",
-      "\"Are competitors also expanding capacity?\"",
-      "\"How has this sector growth translated into actual order execution and collections so far?\""
+      "Disburse to avoid delay",
+      "Part disburse against CA certificate",
+      "Hold till physical verification",
+      "Convert to CC"
     ],
-    correctAnswer: 3
+    correctAnswer: 2
   },
   {
     id: 8,
-    question: "\"One operational account not disclosed initially; low average balance.\"\n\nNext best question?",
+    question: "M/s Crest Textiles\n\nFinished goods stable 6 months despite rising sales. Inference?",
     options: [
-      "\"Why was this not disclosed earlier?\"",
-      "\"What inflows and outflows pass through this account?\"",
-      "\"Is this linked to specific customers?\"",
-      "\"Can this account be closed?\""
+      "High turnover",
+      "Sales booked before dispatch",
+      "Efficient logistics",
+      "Conservative valuation"
     ],
     correctAnswer: 1
   },
   {
     id: 9,
-    question: "\"EBITDA stable, but PAT fluctuates due to interest and other expenses.\"\n\nBest next question?",
+    question: "M/s Delta Pipes\n\nDP computed ₹12 cr. CC utilisation ₹15 cr for 3 days before stock submission. Interpretation?",
     options: [
-      "\"Are interest costs rising?\"",
-      "\"What is the break-even sales level?\"",
-      "\"How sensitive is profitability to interest rate increase of 1–2%?\"",
-      "\"Are depreciation methods consistent?\""
+      "Seasonal spike",
+      "System glitch",
+      "Window dressing reversed",
+      "Temporary excess allowed"
     ],
     correctAnswer: 2
   },
   {
     id: 10,
-    question: "\"Borrower highlights confirmed order book ₹85 Cr, but past 2 years execution achieved only 60% of projected orders.\"\n\nWhich question should be asked next?",
+    question: "M/s Elite Motors\n\nUsance LC rollovers for 4 cycles. Sales stagnant. Your key risk?",
     options: [
-      "\"Are these orders firm or indicative?\"",
-      "\"What is execution capacity versus committed order size?\"",
-      "\"Is there mobilisation advance?\"",
-      "\"Are orders backed by performance guarantees?\""
+      "Margin erosion",
+      "Inventory risk",
+      "Rollover chain",
+      "Insurance lapse"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 11,
+    question: "M/s Falcon Alloys\n\nStock audit finds 20% obsolete. Borrower disputes valuation. Immediate action?",
+    options: [
+      "Accept borrower valuation",
+      "Apply haircut in DP",
+      "Wait for next audit",
+      "Seek forensic review"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 12,
+    question: "M/s Genesis Foods\n\nInsurance ₹4 cr; stock ₹8 cr; collateral adequate. DP stance?",
+    options: [
+      "Full DP",
+      "DP restricted to insured value",
+      "DP 75% of 8 cr",
+      "Allow temporarily"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 13,
+    question: "M/s Horizon Steel\n\nSupplier confirms ₹20 lakh balance; books show ₹2 cr. Implication?",
+    options: [
+      "Timing difference",
+      "Accounting error",
+      "Bogus creditor",
+      "LC misclassification"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 14,
+    question: "M/s Insight Plastics\n\nGST outward ₹3 cr; bank credits ₹1 cr; debtors stable. Your conclusion?",
+    options: [
+      "Cash sales high",
+      "Routing outside bank",
+      "Payment delays",
+      "Seasonality"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 15,
+    question: "M/s Jupiter Auto\n\nLC due ₹5 cr. Sensitivity shows debtor stretch +15 days = cash gap ₹1.2 cr. Your action?",
+    options: [
+      "Increase CC",
+      "Allow rollover",
+      "Seek margin infusion",
+      "Ignore minor gap"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 16,
+    question: "M/s Keystone Infra\n\nWIP ₹7 cr; no BOM, no stage record. DP treatment?",
+    options: [
+      "Fully eligible",
+      "50% eligible",
+      "Exclude entirely",
+      "Include after CA certificate"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 17,
+    question: "M/s Lotus Exports\n\nExport receivable ₹4 cr; no BRC yet; 75 days passed. Eligible?",
+    options: [
+      "Yes",
+      "No",
+      "Yes if insured",
+      "Yes if LC backed"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 18,
+    question: "M/s Metro Engineering\n\nInspection finds 2 machines idle; sales rising sharply. Concern?",
+    options: [
+      "Automation",
+      "Outsourcing",
+      "Inflated sales",
+      "Energy saving"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 19,
+    question: "M/s Nimbus Pharma\n\nLarge cash withdrawals for \"supplier settlement.\" No supplier ledger reduction. Inference?",
+    options: [
+      "Informal procurement",
+      "Fraud risk",
+      "Pricing arbitrage",
+      "Vendor credit terms"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 20,
+    question: "M/s Orion Traders\n\nLC limit available ₹3 cr; old LC devolved ₹2 cr. Borrower seeks new LC ₹2 cr. Your prudent view?",
+    options: [
+      "Approve to support business",
+      "Approve with margin",
+      "Reject till devolved cleared",
+      "Convert to TL"
+    ],
+    correctAnswer: 2
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Credit Assessment & Working Capital",
+  subtitle: "Post Sanction Credit Monitoring",
   professor: "ANIL AGGARWAL",
-  totalQuestions: 10,
-  totalMarks: 40,
+  totalQuestions: 20,
+  totalMarks: 80,
   marksPerQuestion: 4,
   timeLimit: 40,
   isStructure2: false,
