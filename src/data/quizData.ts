@@ -52,232 +52,177 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "M/s Orion Metals\n\nStock rises 80%, creditors rise proportionately, GST inward matches purchases, but power consumption drops 35%. What is your first action?",
+    question: "Customer Acceptance Policy\n\nA new current account is proposed for M/s Silverline Commodities LLP. Documents are complete, GST is active, and the introducer is an existing top-rated customer. However, the firm wants to start with expected monthly turnover of ₹18 crore, while its partners' past ITRs reflect very modest business history. The branch head says, \"This is a growth opportunity; we can monitor later.\"\n\nWhat is the most defensible audit view?",
     options: [
-      "Reduce DP immediately",
-      "Order stock audit immediately",
-      "Verify production capacity utilisation",
-      "Freeze LC limits"
+      "Escalate for enhanced onboarding review before acceptance, because scale is not supported by demonstrated business capacity",
+      "Open the account and place it under post-facto enhanced monitoring",
+      "Accept the account because documents and introducer quality are satisfactory",
+      "Reject the account immediately as a suspected shell concern"
     ],
-    correctAnswer: 2
+    correctAnswer: 0
   },
   {
     id: 2,
-    question: "M/s Zenith Polymers\n\nDebtors under 90 days = ₹8 cr. But 60% belong to 3 newly onboarded customers. No past payment history. What is your DP stance?",
+    question: "Beneficial Ownership\n\nM/s Horizon Urban Projects Pvt Ltd has 5 shareholders, each below the usual ownership threshold. During review, auditors note that all major funding, vendor finalization, and pricing decisions are taken only after verbal approval from Mr. Ritesh Malhotra, who is neither director nor shareholder but is named in side letters and management emails.\n\nWhat should audit conclude?",
     options: [
-      "Fully eligible",
-      "Exclude new customers",
-      "Allow 50% with caution",
-      "Seek debtor confirmation before eligibility"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 3,
-    question: "M/s Arjun Engineering\n\nLC ₹4 cr due next month. Cash realisation expected ₹4.5 cr. But ₹2 cr debtor is under dispute. Your risk assessment?",
-    options: [
-      "LC safe",
-      "LC partially stressed",
-      "LC high risk of devolvement",
-      "No impact unless >90 days"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 4,
-    question: "M/s Silver Agro\n\nStock in transit ₹3 cr shown. E-way bills valid. But insurance policy does not cover SIT. Eligible for DP?",
-    options: [
-      "Fully eligible",
-      "Eligible after 10% haircut",
-      "Ineligible",
-      "Eligible if LC backed"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 5,
-    question: "M/s Vortex Cables\n\nRepeated month-end large RTGS credits reversed in 3 days. Narration: \"Advance adjustment.\" Interpretation?",
-    options: [
-      "Working capital rotation",
-      "Temporary accommodation entry",
-      "Customer refund cycle",
-      "Inter-branch funding"
+      "BO cannot be identified because ownership is fragmented",
+      "Mr. Ritesh Malhotra should be treated as beneficial owner/controller based on actual control",
+      "Only directors should be treated as BO for branch-level purposes",
+      "The matter is corporate-governance related, not KYC related"
     ],
     correctAnswer: 1
   },
   {
-    id: 6,
-    question: "M/s Nova Chemicals\n\nCreditors ₹6 cr; stock ₹6.5 cr. GST inward ₹1.2 cr for month. What concerns you most?",
+    id: 3,
+    question: "PEP Screening\n\nMrs. Meera Suri was onboarded as a normal customer three years ago. She is not a PEP. During re-KYC, it emerges that her son has recently become a Member of Parliament. Her account activity remains modest, but a new inward remittance of ₹42 lakh is received from an overseas source.\n\nWhat is the best audit position?",
     options: [
-      "Low stock turnover",
-      "Creditor–GST mismatch",
-      "Power usage anomaly",
-      "Pricing volatility"
+      "No change is needed because the account holder herself is not a PEP",
+      "Mark as high risk only if frequent remittances continue",
+      "File STR immediately because foreign remittance to a PEP-related account is automatically suspicious",
+      "Reclassify as PEP-related, apply EDD, and review source of funds before concluding further action"
+    ],
+    correctAnswer: 3
+  },
+  {
+    id: 4,
+    question: "Transaction Monitoring\n\nM/s RapidServe Solutions is described as a back-office processing company. Over six months, turnover rises from ₹1.8 crore to ₹14 crore per month. Funds come from multiple unrelated entities and move out to a changing set of beneficiaries within the same day. Books show very low margins, but the company provides invoices when asked.\n\nWhat is the most defensible audit response?",
+    options: [
+      "Accept, because invoices support the transactions",
+      "Seek independent validation of actual value addition and customer relationship trail",
+      "File STR immediately because same-day transfers are always suspicious",
+      "Restrict operations unless customer proves margins above industry average"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 5,
+    question: "Mule Accounts\n\nA branch-level review finds 14 savings accounts opened through a financial inclusion drive. Over the last two months, 6 of them show repeated inward credits of ₹1.5–₹3 lakh, followed by ATM withdrawals in other states. The account holders are real individuals, but two admit that \"someone else helps operate the account.\"\n\nWhat is the strongest audit conclusion?",
+    options: [
+      "This is primarily a financial literacy issue",
+      "These are high-risk accounts but not necessarily mule accounts",
+      "The pattern indicates likely mule-account misuse through third-party control",
+      "Since account holders are genuine, the issue is operational rather than AML-related"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 6,
+    question: "V-CIP Credibility\n\nThe central onboarding team cleared 37 V-CIP accounts in one week. KYC records are complete. On review, auditors notice similar room settings, repeated phrasing in customer responses, and the same device signature in several sessions.\n\nWhat should be the audit stance?",
+    options: [
+      "Treat it as acceptable because identity documents matched",
+      "Escalate as possible organized assisted onboarding, even though file compliance is complete",
+      "Wait for suspicious transactions before drawing any conclusion",
+      "Mark only the repeated-device cases as exception and close the rest"
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "M/s Apex Components\n\nTerm loan disbursed 60%. Project progress 30%. Borrower seeks next tranche. Your decision?",
+    question: "Data Privacy\n\nAt a busy branch, scanned sanction letters containing PAN, address, and bank statement extracts are temporarily stored in a common folder accessible to all branch staff for two days. No evidence of misuse is found.\n\nWhat is the most defensible audit position?",
     options: [
-      "Disburse to avoid delay",
-      "Part disburse against CA certificate",
-      "Hold till physical verification",
-      "Convert to CC"
+      "Treat it as a breach of least-privilege control and data exposure risk",
+      "Treat it as acceptable temporary sharing due to business necessity",
+      "Ignore because no customer complaint or download evidence exists",
+      "Note it only as a documentation housekeeping issue"
     ],
-    correctAnswer: 2
+    correctAnswer: 0
   },
   {
     id: 8,
-    question: "M/s Crest Textiles\n\nFinished goods stable 6 months despite rising sales. Inference?",
+    question: "Staff Conduct\n\nA relationship manager, Mr. Aditya Sharma, is not directly linked to any borrower financially. However, multiple borrowers state that he strongly pushes them to use M/s PrimeTax Advisors, and one borrower says approval \"becomes smoother\" if that advisor is engaged.\n\nHow should audit view this?",
     options: [
-      "High turnover",
-      "Sales booked before dispatch",
-      "Efficient logistics",
-      "Conservative valuation"
+      "As a soft service recommendation with no control implications",
+      "As a possible conflict-of-interest/influence risk requiring disclosure and review",
+      "As a vigilance matter only if commission proof emerges",
+      "As acceptable branch-level market practice unless customer complains formally"
     ],
     correctAnswer: 1
   },
   {
     id: 9,
-    question: "M/s Delta Pipes\n\nDP computed ₹12 cr. CC utilisation ₹15 cr for 3 days before stock submission. Interpretation?",
+    question: "Interest Rate Risk\n\nA bank's treasury portfolio remains within approved duration limits. However, stress scenarios used by ALCO have not been updated for 11 months despite a rapidly rising interest rate environment. Large MTM losses later emerge.\n\nWhat is the best audit observation?",
     options: [
-      "Seasonal spike",
-      "System glitch",
-      "Window dressing reversed",
-      "Temporary excess allowed"
+      "No adverse observation, since approved limits were complied with",
+      "The issue is market volatility, not a control weakness",
+      "The core failure is stale stress testing and weak anticipatory governance",
+      "The portfolio should be shifted entirely to HTM immediately"
     ],
     correctAnswer: 2
   },
   {
     id: 10,
-    question: "M/s Elite Motors\n\nUsance LC rollovers for 4 cycles. Sales stagnant. Your key risk?",
+    question: "Equity Price Risk\n\nA loan of ₹320 crore is secured by listed shares of three companies. The combined collateral cover is strong at sanction. Later, auditors realize all three companies belong to the same promoter group and move almost identically in the market.\n\nWhat should audit conclude?",
     options: [
-      "Margin erosion",
-      "Inventory risk",
-      "Rollover chain",
-      "Insurance lapse"
+      "Diversification exists because there are three separate securities",
+      "Margin is enough, so concentration is not material",
+      "The main issue is valuation frequency, not concentration",
+      "The bank is exposed to correlated collateral risk despite apparent diversification"
     ],
-    correctAnswer: 2
+    correctAnswer: 3
   },
   {
     id: 11,
-    question: "M/s Falcon Alloys\n\nStock audit finds 20% obsolete. Borrower disputes valuation. Immediate action?",
+    question: "Commodity Price Risk\n\nA steel trader enjoys a working capital limit against inventory. Stock statements are timely and quantity is verified. However, the borrower's inventory consists of a specialized grade whose market price has fallen sharply, while DP calculations continue using last quarter's average rate.\n\nWhat is the most defensible audit view?",
     options: [
-      "Accept borrower valuation",
-      "Apply haircut in DP",
-      "Wait for next audit",
-      "Seek forensic review"
+      "Quantity verification is sufficient unless default occurs",
+      "DP should reflect current realizable value, not stale benchmark pricing",
+      "This is mainly a credit-monitoring issue, not market risk",
+      "Continue existing DP until next formal stock audit cycle"
     ],
     correctAnswer: 1
   },
   {
     id: 12,
-    question: "M/s Genesis Foods\n\nInsurance ₹4 cr; stock ₹8 cr; collateral adequate. DP stance?",
+    question: "Foreign Exchange Risk\n\nM/s Sapphire Imports claims a natural hedge because it has both import payables and export receivables in USD. Audit finds that payables fall due in 30 days, but receivables are from one weak overseas buyer who usually pays after 120 days.\n\nWhat is the strongest audit conclusion?",
     options: [
-      "Full DP",
-      "DP restricted to insured value",
-      "DP 75% of 8 cr",
-      "Allow temporarily"
+      "The hedge is incomplete because timing and counterparty reliability are mismatched",
+      "A natural hedge exists, so no further concern arises",
+      "The branch should insist on closing all open FX exposure immediately",
+      "This is the borrower's business decision, not a bank risk concern"
     ],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
     id: 13,
-    question: "M/s Horizon Steel\n\nSupplier confirms ₹20 lakh balance; books show ₹2 cr. Implication?",
+    question: "CFT Risk\n\nA small charitable trust receives 1,400 donations of ₹1,000–₹4,000 in a quarter. Thereafter, money is repeatedly remitted to two individuals and one small entity in a sensitive district. Utilization certificates are generic and project descriptions are vague.\n\nWhat should audit do?",
     options: [
-      "Timing difference",
-      "Accounting error",
-      "Bogus creditor",
-      "LC misclassification"
+      "Accept it as normal crowdfunding behavior",
+      "Ask the branch to keep the account under watch without escalation",
+      "Validate beneficiary identity, purpose, and geographic risk before deciding next steps",
+      "Freeze outward remittances immediately"
     ],
     correctAnswer: 2
   },
   {
     id: 14,
-    question: "M/s Insight Plastics\n\nGST outward ₹3 cr; bank credits ₹1 cr; debtors stable. Your conclusion?",
+    question: "KYC Documentation\n\nFor M/s Eastline Traders, all KYC documents are valid, site visit confirms office existence, and GST is active. Yet the office appears to be a co-working desk with no employees, no records on-site, and no meaningful business activity visible. The branch says many modern firms operate lean.\n\nWhat is the most defensible audit stance?",
     options: [
-      "Cash sales high",
-      "Routing outside bank",
-      "Payment delays",
-      "Seasonality"
+      "Accept the explanation because modern businesses can be asset-light",
+      "File STR solely because no staff were seen",
+      "Close the account recommendation immediately",
+      "Escalate for business-substance validation rather than relying only on documentary correctness"
     ],
-    correctAnswer: 1
+    correctAnswer: 3
   },
   {
     id: 15,
-    question: "M/s Jupiter Auto\n\nLC due ₹5 cr. Sensitivity shows debtor stretch +15 days = cash gap ₹1.2 cr. Your action?",
+    question: "Associated PEP / Influence Risk\n\nMr. Rohit Bansal, a chartered accountant, is not a PEP. However, he handles tax structuring, investment movement, and trust accounts for a sitting state minister and several related family members. His own personal account now shows large inward transfers from advisory-linked entities.\n\nWhat is the best audit view?",
     options: [
-      "Increase CC",
-      "Allow rollover",
-      "Seek margin infusion",
-      "Ignore minor gap"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 16,
-    question: "M/s Keystone Infra\n\nWIP ₹7 cr; no BOM, no stage record. DP treatment?",
-    options: [
-      "Fully eligible",
-      "50% eligible",
-      "Exclude entirely",
-      "Include after CA certificate"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 17,
-    question: "M/s Lotus Exports\n\nExport receivable ₹4 cr; no BRC yet; 75 days passed. Eligible?",
-    options: [
-      "Yes",
-      "No",
-      "Yes if insured",
-      "Yes if LC backed"
+      "He remains a non-PEP unless his name appears on an official list",
+      "He should be treated as carrying associated PEP/influence risk requiring EDD",
+      "His professional role should be ignored unless unlawful funds are proven",
+      "Immediate STR is mandatory because of ministerial linkage"
     ],
     correctAnswer: 1
-  },
-  {
-    id: 18,
-    question: "M/s Metro Engineering\n\nInspection finds 2 machines idle; sales rising sharply. Concern?",
-    options: [
-      "Automation",
-      "Outsourcing",
-      "Inflated sales",
-      "Energy saving"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 19,
-    question: "M/s Nimbus Pharma\n\nLarge cash withdrawals for \"supplier settlement.\" No supplier ledger reduction. Inference?",
-    options: [
-      "Informal procurement",
-      "Fraud risk",
-      "Pricing arbitrage",
-      "Vendor credit terms"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 20,
-    question: "M/s Orion Traders\n\nLC limit available ₹3 cr; old LC devolved ₹2 cr. Borrower seeks new LC ₹2 cr. Your prudent view?",
-    options: [
-      "Approve to support business",
-      "Approve with margin",
-      "Reject till devolved cleared",
-      "Convert to TL"
-    ],
-    correctAnswer: 2
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Post Sanction Credit Monitoring",
+  subtitle: "Advance Audit",
   professor: "ANIL AGGARWAL",
-  totalQuestions: 20,
-  totalMarks: 80,
+  totalQuestions: 15,
+  totalMarks: 60,
   marksPerQuestion: 4,
   timeLimit: 40,
   isStructure2: false,
