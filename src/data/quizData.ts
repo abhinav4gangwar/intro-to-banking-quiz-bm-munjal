@@ -224,7 +224,7 @@ export const quizInfo = {
   totalQuestions: 15,
   totalMarks: 60,
   marksPerQuestion: 4,
-  timeLimit: 40,
+  timeLimit: 15,
   isStructure2: false,
   rules: [
     "Read each question carefully before answering",
