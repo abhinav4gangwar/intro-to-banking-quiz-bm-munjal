@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { quizInfo } from '@/data/quizData';
-import { BookOpen, CalendarDays, Clock, Timer, User } from 'lucide-react';
+import { BookOpen, CalendarDays, Timer, User } from 'lucide-react';
 
 interface WelcomeScreenProps {
   onStart: (studentInfo: { name: string; rollNumber: string }) => void;
