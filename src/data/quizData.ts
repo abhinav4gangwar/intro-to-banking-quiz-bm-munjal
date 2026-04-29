@@ -52,184 +52,242 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Customer Acceptance Policy\n\nA new current account is proposed for M/s Silverline Commodities LLP. Documents are complete, GST is active, and the introducer is an existing top-rated customer. However, the firm wants to start with expected monthly turnover of ₹18 crore, while its partners' past ITRs reflect very modest business history. The branch head says, \"This is a growth opportunity; we can monitor later.\"\n\nWhat is the most defensible audit view?",
+    question: "Nabil Bank, Durbar Marg Branch — Kathmandu (Metro)\n\nRohit Shrestha, a long-time SME customer, shows steadily declining transaction volumes in his account over 3 months, but his loan EMIs are perfectly on time. The branch team is not worried as the account is \"standard.\" As a senior manager, what should be your first interpretation?",
     options: [
-      "Escalate for enhanced onboarding review before acceptance, because scale is not supported by demonstrated business capacity",
-      "Open the account and place it under post-facto enhanced monitoring",
-      "Accept the account because documents and introducer quality are satisfactory",
-      "Reject the account immediately as a suspected shell concern"
+      "Credit quality is improving",
+      "Business is slowing down",
+      "Relationship weakening",
+      "Customer diversifying risk"
     ],
-    correctAnswer: 0
+    correctAnswer: 2
   },
   {
     id: 2,
-    question: "Beneficial Ownership\n\nM/s Horizon Urban Projects Pvt Ltd has 5 shareholders, each below the usual ownership threshold. During review, auditors note that all major funding, vendor finalization, and pricing decisions are taken only after verbal approval from Mr. Ritesh Malhotra, who is neither director nor shareholder but is named in side letters and management emails.\n\nWhat should audit conclude?",
+    question: "Global IME Bank, Lakeside Branch — Pokhara (Urban)\n\nSanjay Gurung completes almost the entire home loan process digitally but walks into the branch for final confirmation before signing. The system worked perfectly. What does this behavior most strongly indicate?",
     options: [
-      "BO cannot be identified because ownership is fragmented",
-      "Mr. Ritesh Malhotra should be treated as beneficial owner/controller based on actual control",
-      "Only directors should be treated as BO for branch-level purposes",
-      "The matter is corporate-governance related, not KYC related"
+      "Digital channel failure",
+      "Trust gap at decision stage",
+      "Habit of branch dependency",
+      "Process inefficiency"
     ],
     correctAnswer: 1
   },
   {
     id: 3,
-    question: "PEP Screening\n\nMrs. Meera Suri was onboarded as a normal customer three years ago. She is not a PEP. During re-KYC, it emerges that her son has recently become a Member of Parliament. Her account activity remains modest, but a new inward remittance of ₹42 lakh is received from an overseas source.\n\nWhat is the best audit position?",
+    question: "Standard Chartered Nepal, Pulchowk Branch — Lalitpur (Metro)\n\nNeha Maharjan interacts with call center, RM, and branch—each responds quickly and correctly. Still, she feels \"tired\" and dissatisfied. What is the real issue here?",
     options: [
-      "No change is needed because the account holder herself is not a PEP",
-      "Mark as high risk only if frequent remittances continue",
-      "File STR immediately because foreign remittance to a PEP-related account is automatically suspicious",
-      "Reclassify as PEP-related, apply EDD, and review source of funds before concluding further action"
+      "Delay in response",
+      "Ownership gap",
+      "Communication failure",
+      "Product mismatch"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
   },
   {
     id: 4,
-    question: "Transaction Monitoring\n\nM/s RapidServe Solutions is described as a back-office processing company. Over six months, turnover rises from ₹1.8 crore to ₹14 crore per month. Funds come from multiple unrelated entities and move out to a changing set of beneficiaries within the same day. Books show very low margins, but the company provides invoices when asked.\n\nWhat is the most defensible audit response?",
+    question: "NIC Asia Bank, Biratnagar Main Branch — Biratnagar (Urban)\n\nYour branch reports record-high digital account openings this quarter. However, transaction activity in those accounts is minimal after onboarding. What is the most likely underlying issue?",
     options: [
-      "Accept, because invoices support the transactions",
-      "Seek independent validation of actual value addition and customer relationship trail",
-      "File STR immediately because same-day transfers are always suspicious",
-      "Restrict operations unless customer proves margins above industry average"
+      "Product design issue",
+      "Customer awareness gap",
+      "Incentive distortion",
+      "Technology limitation"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 5,
-    question: "Mule Accounts\n\nA branch-level review finds 14 savings accounts opened through a financial inclusion drive. Over the last two months, 6 of them show repeated inward credits of ₹1.5–₹3 lakh, followed by ATM withdrawals in other states. The account holders are real individuals, but two admit that \"someone else helps operate the account.\"\n\nWhat is the strongest audit conclusion?",
+    question: "NMB Bank, Thamel Branch — Kathmandu (Metro)\n\nRahul Khadka receives a slightly better interest rate offer from your bank than a competitor, yet chooses the competitor within 24 hours. What is the most probable reason?",
     options: [
-      "This is primarily a financial literacy issue",
-      "These are high-risk accounts but not necessarily mule accounts",
-      "The pattern indicates likely mule-account misuse through third-party control",
-      "Since account holders are genuine, the issue is operational rather than AML-related"
+      "Brand image difference",
+      "Faster decision clarity",
+      "Hidden cost concern",
+      "Personal bias"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 6,
-    question: "V-CIP Credibility\n\nThe central onboarding team cleared 37 V-CIP accounts in one week. KYC records are complete. On review, auditors notice similar room settings, repeated phrasing in customer responses, and the same device signature in several sessions.\n\nWhat should be the audit stance?",
+    question: "Prabhu Bank, Chipledhunga Branch — Pokhara (Urban)\n\nBikash Gurung, an RM, spends most of his day resolving existing customer issues. As a result, he is missing new lending opportunities. What should leadership focus on fixing?",
     options: [
-      "Treat it as acceptable because identity documents matched",
-      "Escalate as possible organized assisted onboarding, even though file compliance is complete",
-      "Wait for suspicious transactions before drawing any conclusion",
-      "Mark only the repeated-device cases as exception and close the rest"
+      "RM capability",
+      "Product design",
+      "Time allocation design",
+      "Customer segmentation"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 7,
-    question: "Data Privacy\n\nAt a busy branch, scanned sanction letters containing PAN, address, and bank statement extracts are temporarily stored in a common folder accessible to all branch staff for two days. No evidence of misuse is found.\n\nWhat is the most defensible audit position?",
+    question: "Nepal SBI Bank, Dharan Branch — Dharan (Semi-Urban)\n\nSita Rai logs into the bank’s mobile app frequently, checks balances, but rarely completes transactions. What is the strongest interpretation?",
     options: [
-      "Treat it as a breach of least-privilege control and data exposure risk",
-      "Treat it as acceptable temporary sharing due to business necessity",
-      "Ignore because no customer complaint or download evidence exists",
-      "Note it only as a documentation housekeeping issue"
+      "Technical glitch",
+      "Intent without confidence",
+      "Security concern",
+      "Product mismatch"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 8,
-    question: "Staff Conduct\n\nA relationship manager, Mr. Aditya Sharma, is not directly linked to any borrower financially. However, multiple borrowers state that he strongly pushes them to use M/s PrimeTax Advisors, and one borrower says approval \"becomes smoother\" if that advisor is engaged.\n\nHow should audit view this?",
+    question: "Himalayan Bank, New Road Branch — Kathmandu (Metro)\n\nLoan processing involves multiple approval levels, causing delays but reducing risk exposure. What is the best strategic approach for leadership?",
     options: [
-      "As a soft service recommendation with no control implications",
-      "As a possible conflict-of-interest/influence risk requiring disclosure and review",
-      "As a vigilance matter only if commission proof emerges",
-      "As acceptable branch-level market practice unless customer complains formally"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 9,
-    question: "Interest Rate Risk\n\nA bank's treasury portfolio remains within approved duration limits. However, stress scenarios used by ALCO have not been updated for 11 months despite a rapidly rising interest rate environment. Large MTM losses later emerge.\n\nWhat is the best audit observation?",
-    options: [
-      "No adverse observation, since approved limits were complied with",
-      "The issue is market volatility, not a control weakness",
-      "The core failure is stale stress testing and weak anticipatory governance",
-      "The portfolio should be shifted entirely to HTM immediately"
+      "Reduce approvals",
+      "Maintain current process",
+      "Introduce risk-tiered approvals",
+      "Increase manpower"
     ],
     correctAnswer: 2
   },
   {
-    id: 10,
-    question: "Equity Price Risk\n\nA loan of ₹320 crore is secured by listed shares of three companies. The combined collateral cover is strong at sanction. Later, auditors realize all three companies belong to the same promoter group and move almost identically in the market.\n\nWhat should audit conclude?",
+    id: 9,
+    question: "Rastriya Banijya Bank, Bhaktapur Branch — Bhaktapur (Semi-Urban)\n\nKiran Dangol receives a correct solution to his issue, but only after a long delay. He expresses dissatisfaction. What has been most impacted?",
     options: [
-      "Diversification exists because there are three separate securities",
-      "Margin is enough, so concentration is not material",
-      "The main issue is valuation frequency, not concentration",
-      "The bank is exposed to correlated collateral risk despite apparent diversification"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 11,
-    question: "Commodity Price Risk\n\nA steel trader enjoys a working capital limit against inventory. Stock statements are timely and quantity is verified. However, the borrower's inventory consists of a specialized grade whose market price has fallen sharply, while DP calculations continue using last quarter's average rate.\n\nWhat is the most defensible audit view?",
-    options: [
-      "Quantity verification is sufficient unless default occurs",
-      "DP should reflect current realizable value, not stale benchmark pricing",
-      "This is mainly a credit-monitoring issue, not market risk",
-      "Continue existing DP until next formal stock audit cycle"
+      "Experience",
+      "Trust",
+      "Efficiency",
+      "Cost"
     ],
     correctAnswer: 1
   },
   {
-    id: 12,
-    question: "Foreign Exchange Risk\n\nM/s Sapphire Imports claims a natural hedge because it has both import payables and export receivables in USD. Audit finds that payables fall due in 30 days, but receivables are from one weak overseas buyer who usually pays after 120 days.\n\nWhat is the strongest audit conclusion?",
+    id: 10,
+    question: "Agricultural Development Bank, Rolpa Branch — Rural Area\n\nRam Bahadur Thapa, though comfortable using smartphones, continues to visit the branch for basic transactions. What is the most likely reason?",
     options: [
-      "The hedge is incomplete because timing and counterparty reliability are mismatched",
-      "A natural hedge exists, so no further concern arises",
-      "The branch should insist on closing all open FX exposure immediately",
-      "This is the borrower's business decision, not a bank risk concern"
+      "Lack of awareness",
+      "Connectivity issues",
+      "Trust gap",
+      "Cost concerns"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 11,
+    question: "Nabil Bank, Baneshwor Branch — Kathmandu (Metro)\n\nA newly launched app includes multiple advanced features. However, Anish Maharjan stops using it after initial exploration. What is the likely issue?",
+    options: [
+      "Over-complexity",
+      "Lack of marketing",
+      "UI problem",
+      "Poor timing"
     ],
     correctAnswer: 0
   },
   {
-    id: 13,
-    question: "CFT Risk\n\nA small charitable trust receives 1,400 donations of ₹1,000–₹4,000 in a quarter. Thereafter, money is repeatedly remitted to two individuals and one small entity in a sensitive district. Utilization certificates are generic and project descriptions are vague.\n\nWhat should audit do?",
+    id: 12,
+    question: "Global IME Bank, Mahendrapool Branch — Pokhara (Urban)\n\nSanjay Gurung receives frequent promotional messages from the bank but finds none relevant and starts ignoring all communication. What has failed?",
     options: [
-      "Accept it as normal crowdfunding behavior",
-      "Ask the branch to keep the account under watch without escalation",
-      "Validate beneficiary identity, purpose, and geographic risk before deciding next steps",
-      "Freeze outward remittances immediately"
+      "Data collection",
+      "Analytics",
+      "Targeting logic",
+      "Communication channel"
     ],
     correctAnswer: 2
   },
   {
-    id: 14,
-    question: "KYC Documentation\n\nFor M/s Eastline Traders, all KYC documents are valid, site visit confirms office existence, and GST is active. Yet the office appears to be a co-working desk with no employees, no records on-site, and no meaningful business activity visible. The branch says many modern firms operate lean.\n\nWhat is the most defensible audit stance?",
+    id: 13,
+    question: "NIC Asia Bank, Biratnagar Branch — Biratnagar (Urban)\n\nManish Agarwal’s issues are always resolved quickly, yet he gradually shifts business to another bank. What is the likely cause?",
     options: [
-      "Accept the explanation because modern businesses can be asset-light",
-      "File STR solely because no staff were seen",
-      "Close the account recommendation immediately",
-      "Escalate for business-substance validation rather than relying only on documentary correctness"
+      "Inconsistency",
+      "No emotional connect",
+      "Pricing",
+      "Service gap"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
+  },
+  {
+    id: 14,
+    question: "Standard Chartered Nepal, Lazimpat Branch — Kathmandu (Metro)\n\nAman Shrestha gets fast loan approval but faces delay in final disbursement. What will shape his overall experience?",
+    options: [
+      "Approval speed",
+      "Total journey",
+      "Final delay",
+      "Documentation"
+    ],
+    correctAnswer: 2
   },
   {
     id: 15,
-    question: "Associated PEP / Influence Risk\n\nMr. Rohit Bansal, a chartered accountant, is not a PEP. However, he handles tax structuring, investment movement, and trust accounts for a sitting state minister and several related family members. His own personal account now shows large inward transfers from advisory-linked entities.\n\nWhat is the best audit view?",
+    question: "Everest Bank, Jawalakhel Branch — Lalitpur (Metro)\n\nNeha Karki interacts digitally but calls RM before final decision. What role is the RM playing here?",
     options: [
-      "He remains a non-PEP unless his name appears on an official list",
-      "He should be treated as carrying associated PEP/influence risk requiring EDD",
-      "His professional role should be ignored unless unlawful funds are proven",
-      "Immediate STR is mandatory because of ministerial linkage"
+      "Backup",
+      "Advisor",
+      "Validator",
+      "Escalation"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 16,
+    question: "Rastriya Banijya Bank, Bharatpur Branch — Chitwan (Semi-Urban)\n\nThe bank improves turnaround time significantly, but customer satisfaction scores remain unchanged. Why?",
+    options: [
+      "Wrong metric improved",
+      "Customer expectations increased",
+      "Communication gap",
+      "Staff inefficiency"
+    ],
+    correctAnswer: 0
+  },
+  {
+    id: 17,
+    question: "Laxmi Bank, Butwal Branch — Butwal (Semi-Urban)\n\nMaya Karki maintains relationships with multiple banks but steadily increases business with one. What drives this shift?",
+    options: [
+      "Pricing",
+      "Product",
+      "Engagement quality",
+      "Location"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 18,
+    question: "Himalayan Bank, Kathmandu Head Office — Kathmandu (Metro)\n\nAfter simplifying authentication for digital transactions, fraud cases increase. What went wrong?",
+    options: [
+      "Technology issue",
+      "Risk calibration",
+      "Customer awareness",
+      "Process design"
     ],
     correctAnswer: 1
+  },
+  {
+    id: 19,
+    question: "Prabhu Bank, Nepalgunj Branch — Nepalgunj (Semi-Urban)\n\nRakesh Yadav uploads documents for a loan but receives no update for several days and drops off. What caused this?",
+    options: [
+      "Technical issue",
+      "Process complexity",
+      "Lack of feedback",
+      "Delay"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 20,
+    question: "Sunrise Bank, Itahari Branch — Itahari (Semi-Urban)\n\nDeepak Bhandari shows strong revenue generation for the branch, but his engagement with the bank is declining. What is the hidden risk?",
+    options: [
+      "Credit quality",
+      "Staff issue",
+      "Customer attrition",
+      "Competition"
+    ],
+    correctAnswer: 2
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Advance Audit",
+  subtitle: "Customer Experience Session 1",
   professor: "ANIL AGGARWAL",
-  totalQuestions: 15,
-  totalMarks: 60,
+  date: "29th April",
+  startTime: "2.00 PM",
+  resultTime: "3.45 PM",
+  totalQuestions: 20,
+  totalMarks: 80,
   marksPerQuestion: 4,
-  timeLimit: 15,
+  timeLimit: 20,
   isStructure2: false,
   rules: [
     "Read each question carefully before answering",
     "Each question carries 4 marks",
-    "Total time allowed: 40 minutes",
+    "Total time allowed: 20 minutes",
     "Only one submission per roll number allowed",
     "Click 'Submit Quiz' to finish or quiz will auto-submit when time expires"
   ]
