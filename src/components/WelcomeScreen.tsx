@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { quizInfo } from '@/data/quizData';
-import { BookOpen, Clock, User } from 'lucide-react';
+import { BookOpen, CalendarDays, Clock, Timer, User } from 'lucide-react';
 
 interface WelcomeScreenProps {
   onStart: (studentInfo: { name: string; rollNumber: string }) => void;
@@ -49,13 +49,20 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             </CardTitle>
           <CardDescription className="text-base space-y-1">
               <div><strong>Professor:</strong> {quizInfo.professor}</div>
+              <div><strong>Date:</strong> {quizInfo.date}</div>
+              <div><strong>Time:</strong> {quizInfo.startTime}</div>
+              <div><strong>Result:</strong> {quizInfo.resultTime}</div>
             </CardDescription>
           </div>
         </CardHeader>
         
         <CardContent className="space-y-6">
           {/* Quiz Info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-secondary/50 rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-secondary/50 rounded-lg">
+            <div className="flex items-center gap-2 text-sm">
+              <CalendarDays className="w-4 h-4 text-primary" />
+              <span><strong>{quizInfo.date}</strong></span>
+            </div>
             <div className="flex items-center gap-2 text-sm">
               <BookOpen className="w-4 h-4 text-primary" />
               <span><strong>{quizInfo.totalQuestions}</strong> Questions</span>
@@ -65,7 +72,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
               <span><strong>{quizInfo.totalMarks}</strong> Marks</span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <Clock className="w-4 h-4 text-primary" />
+              <Timer className="w-4 h-4 text-primary" />
               <span><strong>{quizInfo.timeLimit}</strong> Minutes</span>
             </div>
           </div>
