@@ -52,123 +52,198 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Which institution regulates and supervises commercial banks in India?",
-    options: ["SEBI", "RBI", "NABARD", "IRDAI"],
-    correctAnswer: 1
-  },
-  {
-    id: 2,
-    question: "A customer visits a bank mainly because banks are considered:",
-    options: ["Fast and aggressive", "Low-cost organizations", "Trustworthy and reliable", "Government-owned only"],
+    question: "You are working in Axis Bank. A furniture dealer says: \"Bajaj Finance is sanctioning my machinery loan in 2 days. Your bank is taking 10 days.\" What is the BEST response as a field officer?",
+    options: [
+      "NBFCs do not follow RBI rules.",
+      "We cannot process faster.",
+      "We ensure proper assessment and safer long-term banking support.",
+      "Take loan from NBFC only."
+    ],
     correctAnswer: 2
   },
   {
+    id: 2,
+    question: "A farmer in Karnal needs urgent crop finance before sowing season. Which institution is MOST likely to process quickly due to rural presence?",
+    options: ["RRB", "Foreign Bank", "Investment Bank", "Urban Co-operative Bank"],
+    correctAnswer: 0
+  },
+  {
     id: 3,
-    question: "Which of the following is a Public Sector Bank?",
-    options: ["Axis Bank", "HDFC Bank", "ICICI Bank", "Punjab National Bank"],
+    question: "A customer asks why banks insist on KYC even for small MSME loans. What is the BEST explanation?",
+    options: [
+      "To delay loan sanction",
+      "To increase bank paperwork",
+      "To reduce branch workload",
+      "To comply with regulations and prevent fraud"
+    ],
     correctAnswer: 3
   },
   {
     id: 4,
-    question: "What is the main activity of a bank?",
-    options: ["Manufacturing products", "Buying land", "Accepting deposits and giving loans", "Selling insurance only"],
-    correctAnswer: 2
+    question: "A branch is struggling to meet Priority Sector targets. Which customer should the field officer focus on FIRST?",
+    options: [
+      "Luxury mall developer",
+      "Small garment manufacturer",
+      "Imported car dealer",
+      "Large IT park company"
+    ],
+    correctAnswer: 1
   },
   {
     id: 5,
-    question: "Which type of account is generally used by businesses for frequent transactions?",
-    options: ["Savings Account", "Current Account", "Fixed Deposit", "Loan Account"],
-    correctAnswer: 1
+    question: "A customer says: \"NBFC people came to my shop directly. Your bank only calls me to branch.\" What is the BEST practical solution?",
+    options: [
+      "Stop MSME lending",
+      "Increase interest rate",
+      "Improve field visits and doorstep banking",
+      "Avoid small borrowers"
+    ],
+    correctAnswer: 2
   },
   {
     id: 6,
-    question: "Which of the following is an example of a Foreign Bank in India?",
-    options: ["State Bank of India", "Bank of Baroda", "HSBC", "Union Bank of India"],
-    correctAnswer: 2
-  },
-  {
-    id: 7,
-    question: "Why are deposits treated as liabilities for banks?",
-    options: ["Banks invest deposits in shares", "Banks have to repay depositors", "Deposits are owned by RBI", "Deposits cannot be withdrawn"],
+    question: "While visiting a village, you find three farmers already financed by different banks for the same crop activity. This situation reflects:",
+    options: ["CASA mobilization", "Over financing risk", "Treasury mismatch", "Foreign exchange exposure"],
     correctAnswer: 1
   },
   {
+    id: 7,
+    question: "A branch manager wants faster MSME sanctions without increasing NPAs. Which is the MOST practical approach?",
+    options: [
+      "Stop documentation",
+      "Sanction without verification",
+      "Reject all MSME proposals",
+      "Use GST and bank statement analytics"
+    ],
+    correctAnswer: 3
+  },
+  {
     id: 8,
-    question: "Which department in a bank mainly handles cyber security and software management?",
-    options: ["HR Department", "Treasury Department", "IT Department", "Accounts Department"],
-    correctAnswer: 2
+    question: "A customer says: \"Local Area Bank approved my dairy loan in 2 days.\" Why are LABs sometimes faster?",
+    options: [
+      "Smaller local operations and better local understanding",
+      "They are exempt from regulations",
+      "They finance only large corporates",
+      "They do not verify customers"
+    ],
+    correctAnswer: 0
   },
   {
     id: 9,
-    question: "A banker helping a customer transfer money through NEFT is providing:",
-    options: ["Treasury service", "Remittance service", "Audit service", "Insurance service"],
+    question: "An MSME customer asks SIDBI support for technology upgradation. Which SIDBI role matches this requirement?",
+    options: ["Currency issuance", "Cluster development", "Crop insurance", "Foreign remittance"],
     correctAnswer: 1
   },
   {
     id: 10,
-    question: "Which organization insures bank deposits up to ₹5 lakh per depositor?",
-    options: ["SEBI", "NABARD", "SIDBI", "DICGC"],
-    correctAnswer: 3
-  },
-  {
-    id: 11,
-    question: "Which of the following is an example of a Payment Bank?",
-    options: ["Bajaj Finance", "Airtel Payments Bank", "Tata Capital", "AU Small Finance Bank"],
+    question: "A branch officer notices customers shifting to digital lenders. What is the BIGGEST reason?",
+    options: [
+      "Better branch interiors",
+      "Faster onboarding and approvals",
+      "Higher paperwork",
+      "Lower customer expectations"
+    ],
     correctAnswer: 1
   },
   {
-    id: 12,
-    question: "What is the role of the Compliance Department in a bank?",
-    options: ["Managing advertisements", "Recruiting staff", "Ensuring adherence to RBI guidelines", "Handling customer loans only"],
+    id: 11,
+    question: "A borrower's cheque issued to the bank gets dishonoured. Which law becomes relevant?",
+    options: ["FEMA", "Banking Regulation Act", "Negotiable Instruments Act", "Companies Act"],
     correctAnswer: 2
   },
   {
+    id: 12,
+    question: "A field officer wants to increase agri business in villages. Which institution mainly supports refinance for rural lending?",
+    options: ["NABARD", "SEBI", "IRDAI", "EXIM Bank"],
+    correctAnswer: 0
+  },
+  {
     id: 13,
-    question: "Which ratio represents the percentage of deposits banks must keep with RBI?",
-    options: ["NPA", "CASA", "SLR", "CRR"],
-    correctAnswer: 3
+    question: "A branch suddenly faces phishing complaints from multiple customers. Which department should coordinate FIRST?",
+    options: [
+      "Marketing Department",
+      "Treasury Department",
+      "Fraud Control and IT Department",
+      "Accounts Department"
+    ],
+    correctAnswer: 2
   },
   {
     id: 14,
-    question: "Which banking challenge is commonly linked with phishing and SIM swap frauds?",
-    options: ["Treasury loss", "Cyber security threat", "Rural banking issue", "Credit appraisal issue"],
+    question: "A customer says: \"NBFC approved my truck loan though bank rejected it.\" This mainly shows that NBFCs:",
+    options: [
+      "Avoid rural markets",
+      "Focus on specialized asset financing",
+      "Accept unlimited deposits",
+      "Work as payment banks"
+    ],
     correctAnswer: 1
   },
   {
     id: 15,
-    question: "A Regional Rural Bank is mainly created to:",
-    options: ["Finance only large corporates", "Operate only in metro cities", "Serve rural and regional banking needs", "Manage foreign exchange business"],
+    question: "A bank officer is under pressure to improve CASA deposits. Which strategy is MOST practical?",
+    options: [
+      "Ignore small customers",
+      "Focus only on corporate loans",
+      "Increase rural and salary account acquisition",
+      "Stop digital banking promotion"
+    ],
     correctAnswer: 2
   },
   {
     id: 16,
-    question: "Which banking channel is considered an alternate banking channel?",
-    options: ["ATM", "Branch counter", "Loan desk", "Audit cell"],
-    correctAnswer: 0
+    question: "During RBI inspection, branch staff cannot produce proper loan documents. What is the BIGGEST risk?",
+    options: [
+      "Faster business growth",
+      "Loan recovery and compliance issues",
+      "Increase in CASA",
+      "Better customer satisfaction"
+    ],
+    correctAnswer: 1
   },
   {
     id: 17,
-    question: "What is the key function of the Treasury Department in a bank?",
-    options: ["Managing branch interiors", "Optimizing usage of funds", "Conducting staff training", "Selling insurance products"],
-    correctAnswer: 1
+    question: "A rural borrower says: \"I need crop insurance along with KCC.\" Which banking approach is MOST suitable?",
+    options: [
+      "Pure treasury solution",
+      "Investment banking",
+      "Retail gold trading",
+      "Integrated rural banking support"
+    ],
+    correctAnswer: 3
   },
   {
     id: 18,
-    question: "Which law mainly governs banking regulation in India?",
-    options: ["Companies Act", "FEMA 1999", "Banking Regulation Act 1949", "Income Tax Act"],
-    correctAnswer: 2
-  },
-  {
-    id: 19,
-    question: "Positive Pay system is mainly related to:",
-    options: ["Loan approval", "Cheque verification for high-value cheques", "Credit card activation", "Opening salary accounts"],
+    question: "A branch wants to improve PSL achievement quickly. Which portfolio helps directly?",
+    options: [
+      "Luxury villa financing",
+      "Renewable energy and MSME loans",
+      "Imported machinery for MNCs",
+      "High-end foreign travel loans"
+    ],
     correctAnswer: 1
   },
   {
+    id: 19,
+    question: "A customer compares bank and NBFC interest rates and still chooses bank finance. What is the MOST likely reason?",
+    options: [
+      "Trust and long-term relationship",
+      "Banks avoid regulations",
+      "Banks never verify documents",
+      "Banks approve every proposal instantly"
+    ],
+    correctAnswer: 0
+  },
+  {
     id: 20,
-    question: "Which recent trend is helping banks in faster digital customer onboarding?",
-    options: ["Physical cash movement", "Manual ledger posting", "UPI with eKYC and Aadhaar", "Demand drafts only"],
-    correctAnswer: 2
+    question: "You are a field officer in a competitive market. What is the BEST long-term strategy to survive against fintechs and NBFCs?",
+    options: [
+      "Avoid technology adoption",
+      "Focus only on large corporates",
+      "Delay customer responses",
+      "Balance speed, compliance, and customer service"
+    ],
+    correctAnswer: 3
   }
 ];
 
@@ -176,8 +251,7 @@ export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
   subtitle: "Introduction to Banking in India",
   professor: "ANIL AGGARWAL",
-  date: "8th May",
-  startTime: "12.30 PM",
+  date: "9th May",
   totalQuestions: 20,
   totalMarks: 80,
   marksPerQuestion: 4,
