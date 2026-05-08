@@ -52,233 +52,132 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Nabil Bank, Durbar Marg Branch — Kathmandu (Metro)\n\nRohit Shrestha, a long-time SME customer, shows steadily declining transaction volumes in his account over 3 months, but his loan EMIs are perfectly on time. The branch team is not worried as the account is \"standard.\" As a senior manager, what should be your first interpretation?",
-    options: [
-      "Credit quality is improving",
-      "Business is slowing down",
-      "Relationship weakening",
-      "Customer diversifying risk"
-    ],
-    correctAnswer: 2
+    question: "Which institution regulates and supervises commercial banks in India?",
+    options: ["SEBI", "RBI", "NABARD", "IRDAI"],
+    correctAnswer: 1
   },
   {
     id: 2,
-    question: "Global IME Bank, Lakeside Branch — Pokhara (Urban)\n\nSanjay Gurung completes almost the entire home loan process digitally but walks into the branch for final confirmation before signing. The system worked perfectly. What does this behavior most strongly indicate?",
-    options: [
-      "Digital channel failure",
-      "Trust gap at decision stage",
-      "Habit of branch dependency",
-      "Process inefficiency"
-    ],
-    correctAnswer: 1
+    question: "A customer visits a bank mainly because banks are considered:",
+    options: ["Fast and aggressive", "Low-cost organizations", "Trustworthy and reliable", "Government-owned only"],
+    correctAnswer: 2
   },
   {
     id: 3,
-    question: "Standard Chartered Nepal, Pulchowk Branch — Lalitpur (Metro)\n\nNeha Maharjan interacts with call center, RM, and branch—each responds quickly and correctly. Still, she feels \"tired\" and dissatisfied. What is the real issue here?",
-    options: [
-      "Delay in response",
-      "Ownership gap",
-      "Communication failure",
-      "Product mismatch"
-    ],
-    correctAnswer: 1
+    question: "Which of the following is a Public Sector Bank?",
+    options: ["Axis Bank", "HDFC Bank", "ICICI Bank", "Punjab National Bank"],
+    correctAnswer: 3
   },
   {
     id: 4,
-    question: "NIC Asia Bank, Biratnagar Main Branch — Biratnagar (Urban)\n\nYour branch reports record-high digital account openings this quarter. However, transaction activity in those accounts is minimal after onboarding. What is the most likely underlying issue?",
-    options: [
-      "Product design issue",
-      "Customer awareness gap",
-      "Incentive distortion",
-      "Technology limitation"
-    ],
+    question: "What is the main activity of a bank?",
+    options: ["Manufacturing products", "Buying land", "Accepting deposits and giving loans", "Selling insurance only"],
     correctAnswer: 2
   },
   {
     id: 5,
-    question: "NMB Bank, Thamel Branch — Kathmandu (Metro)\n\nRahul Khadka receives a slightly better interest rate offer from your bank than a competitor, yet chooses the competitor within 24 hours. What is the most probable reason?",
-    options: [
-      "Brand image difference",
-      "Faster decision clarity",
-      "Hidden cost concern",
-      "Personal bias"
-    ],
+    question: "Which type of account is generally used by businesses for frequent transactions?",
+    options: ["Savings Account", "Current Account", "Fixed Deposit", "Loan Account"],
     correctAnswer: 1
   },
   {
     id: 6,
-    question: "Prabhu Bank, Chipledhunga Branch — Pokhara (Urban)\n\nBikash Gurung, an RM, spends most of his day resolving existing customer issues. As a result, he is missing new lending opportunities. What should leadership focus on fixing?",
-    options: [
-      "RM capability",
-      "Product design",
-      "Time allocation design",
-      "Customer segmentation"
-    ],
+    question: "Which of the following is an example of a Foreign Bank in India?",
+    options: ["State Bank of India", "Bank of Baroda", "HSBC", "Union Bank of India"],
     correctAnswer: 2
   },
   {
     id: 7,
-    question: "Nepal SBI Bank, Dharan Branch — Dharan (Semi-Urban)\n\nSita Rai logs into the bank’s mobile app frequently, checks balances, but rarely completes transactions. What is the strongest interpretation?",
-    options: [
-      "Technical glitch",
-      "Intent without confidence",
-      "Security concern",
-      "Product mismatch"
-    ],
+    question: "Why are deposits treated as liabilities for banks?",
+    options: ["Banks invest deposits in shares", "Banks have to repay depositors", "Deposits are owned by RBI", "Deposits cannot be withdrawn"],
     correctAnswer: 1
   },
   {
     id: 8,
-    question: "Himalayan Bank, New Road Branch — Kathmandu (Metro)\n\nLoan processing involves multiple approval levels, causing delays but reducing risk exposure. What is the best strategic approach for leadership?",
-    options: [
-      "Reduce approvals",
-      "Maintain current process",
-      "Introduce risk-tiered approvals",
-      "Increase manpower"
-    ],
+    question: "Which department in a bank mainly handles cyber security and software management?",
+    options: ["HR Department", "Treasury Department", "IT Department", "Accounts Department"],
     correctAnswer: 2
   },
   {
     id: 9,
-    question: "Rastriya Banijya Bank, Bhaktapur Branch — Bhaktapur (Semi-Urban)\n\nKiran Dangol receives a correct solution to his issue, but only after a long delay. He expresses dissatisfaction. What has been most impacted?",
-    options: [
-      "Experience",
-      "Trust",
-      "Efficiency",
-      "Cost"
-    ],
+    question: "A banker helping a customer transfer money through NEFT is providing:",
+    options: ["Treasury service", "Remittance service", "Audit service", "Insurance service"],
     correctAnswer: 1
   },
   {
     id: 10,
-    question: "Agricultural Development Bank, Rolpa Branch — Rural Area\n\nRam Bahadur Thapa, though comfortable using smartphones, continues to visit the branch for basic transactions. What is the most likely reason?",
-    options: [
-      "Lack of awareness",
-      "Connectivity issues",
-      "Trust gap",
-      "Cost concerns"
-    ],
-    correctAnswer: 2
+    question: "Which organization insures bank deposits up to ₹5 lakh per depositor?",
+    options: ["SEBI", "NABARD", "SIDBI", "DICGC"],
+    correctAnswer: 3
   },
   {
     id: 11,
-    question: "Nabil Bank, Baneshwor Branch — Kathmandu (Metro)\n\nA newly launched app includes multiple advanced features. However, Anish Maharjan stops using it after initial exploration. What is the likely issue?",
-    options: [
-      "Over-complexity",
-      "Lack of marketing",
-      "UI problem",
-      "Poor timing"
-    ],
-    correctAnswer: 0
+    question: "Which of the following is an example of a Payment Bank?",
+    options: ["Bajaj Finance", "Airtel Payments Bank", "Tata Capital", "AU Small Finance Bank"],
+    correctAnswer: 1
   },
   {
     id: 12,
-    question: "Global IME Bank, Mahendrapool Branch — Pokhara (Urban)\n\nSanjay Gurung receives frequent promotional messages from the bank but finds none relevant and starts ignoring all communication. What has failed?",
-    options: [
-      "Data collection",
-      "Analytics",
-      "Targeting logic",
-      "Communication channel"
-    ],
+    question: "What is the role of the Compliance Department in a bank?",
+    options: ["Managing advertisements", "Recruiting staff", "Ensuring adherence to RBI guidelines", "Handling customer loans only"],
     correctAnswer: 2
   },
   {
     id: 13,
-    question: "NIC Asia Bank, Biratnagar Branch — Biratnagar (Urban)\n\nManish Agarwal’s issues are always resolved quickly, yet he gradually shifts business to another bank. What is the likely cause?",
-    options: [
-      "Inconsistency",
-      "No emotional connect",
-      "Pricing",
-      "Service gap"
-    ],
-    correctAnswer: 1
+    question: "Which ratio represents the percentage of deposits banks must keep with RBI?",
+    options: ["NPA", "CASA", "SLR", "CRR"],
+    correctAnswer: 3
   },
   {
     id: 14,
-    question: "Standard Chartered Nepal, Lazimpat Branch — Kathmandu (Metro)\n\nAman Shrestha gets fast loan approval but faces delay in final disbursement. What will shape his overall experience?",
-    options: [
-      "Approval speed",
-      "Total journey",
-      "Final delay",
-      "Documentation"
-    ],
-    correctAnswer: 2
+    question: "Which banking challenge is commonly linked with phishing and SIM swap frauds?",
+    options: ["Treasury loss", "Cyber security threat", "Rural banking issue", "Credit appraisal issue"],
+    correctAnswer: 1
   },
   {
     id: 15,
-    question: "Everest Bank, Jawalakhel Branch — Lalitpur (Metro)\n\nNeha Karki interacts digitally but calls RM before final decision. What role is the RM playing here?",
-    options: [
-      "Backup",
-      "Advisor",
-      "Validator",
-      "Escalation"
-    ],
+    question: "A Regional Rural Bank is mainly created to:",
+    options: ["Finance only large corporates", "Operate only in metro cities", "Serve rural and regional banking needs", "Manage foreign exchange business"],
     correctAnswer: 2
   },
   {
     id: 16,
-    question: "Rastriya Banijya Bank, Bharatpur Branch — Chitwan (Semi-Urban)\n\nThe bank improves turnaround time significantly, but customer satisfaction scores remain unchanged. Why?",
-    options: [
-      "Wrong metric improved",
-      "Customer expectations increased",
-      "Communication gap",
-      "Staff inefficiency"
-    ],
+    question: "Which banking channel is considered an alternate banking channel?",
+    options: ["ATM", "Branch counter", "Loan desk", "Audit cell"],
     correctAnswer: 0
   },
   {
     id: 17,
-    question: "Laxmi Bank, Butwal Branch — Butwal (Semi-Urban)\n\nMaya Karki maintains relationships with multiple banks but steadily increases business with one. What drives this shift?",
-    options: [
-      "Pricing",
-      "Product",
-      "Engagement quality",
-      "Location"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 18,
-    question: "Himalayan Bank, Kathmandu Head Office — Kathmandu (Metro)\n\nAfter simplifying authentication for digital transactions, fraud cases increase. What went wrong?",
-    options: [
-      "Technology issue",
-      "Risk calibration",
-      "Customer awareness",
-      "Process design"
-    ],
+    question: "What is the key function of the Treasury Department in a bank?",
+    options: ["Managing branch interiors", "Optimizing usage of funds", "Conducting staff training", "Selling insurance products"],
     correctAnswer: 1
   },
   {
-    id: 19,
-    question: "Prabhu Bank, Nepalgunj Branch — Nepalgunj (Semi-Urban)\n\nRakesh Yadav uploads documents for a loan but receives no update for several days and drops off. What caused this?",
-    options: [
-      "Technical issue",
-      "Process complexity",
-      "Lack of feedback",
-      "Delay"
-    ],
+    id: 18,
+    question: "Which law mainly governs banking regulation in India?",
+    options: ["Companies Act", "FEMA 1999", "Banking Regulation Act 1949", "Income Tax Act"],
     correctAnswer: 2
   },
   {
+    id: 19,
+    question: "Positive Pay system is mainly related to:",
+    options: ["Loan approval", "Cheque verification for high-value cheques", "Credit card activation", "Opening salary accounts"],
+    correctAnswer: 1
+  },
+  {
     id: 20,
-    question: "Sunrise Bank, Itahari Branch — Itahari (Semi-Urban)\n\nDeepak Bhandari shows strong revenue generation for the branch, but his engagement with the bank is declining. What is the hidden risk?",
-    options: [
-      "Credit quality",
-      "Staff issue",
-      "Customer attrition",
-      "Competition"
-    ],
+    question: "Which recent trend is helping banks in faster digital customer onboarding?",
+    options: ["Physical cash movement", "Manual ledger posting", "UPI with eKYC and Aadhaar", "Demand drafts only"],
     correctAnswer: 2
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Customer Experience Session 1",
+  subtitle: "Introduction to Banking in India",
   professor: "ANIL AGGARWAL",
-  date: "29th April",
-  startTime: "2.00 PM",
-  resultTime: "3.45 PM",
+  date: "8th May",
+  startTime: "12.30 PM",
   totalQuestions: 20,
   totalMarks: 80,
   marksPerQuestion: 4,
