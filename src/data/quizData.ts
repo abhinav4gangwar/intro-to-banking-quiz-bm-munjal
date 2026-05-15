@@ -52,196 +52,146 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "You are working in Axis Bank. A furniture dealer says: \"Bajaj Finance is sanctioning my machinery loan in 2 days. Your bank is taking 10 days.\" What is the BEST response as a field officer?",
+    question: "You are posted at ICICI Bank, Surat. A textile trader seeks CC limit enhancement from ₹18 lakh to ₹30 lakh. Observations: GST turnover increased 22%, Bank credits improved, but debtor cycle increased from 48 to 81 days. What is the MOST important concern?",
     options: [
-      "NBFCs do not follow RBI rules.",
-      "We cannot process faster.",
-      "We ensure proper assessment and safer long-term banking support.",
-      "Take loan from NBFC only."
+      "Profit margin dilution due to GST mismatch",
+      "Liquidity stress despite sales growth",
+      "Insufficient collateral coverage ratio",
+      "Reduction in CASA profitability"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 2,
-    question: "A farmer in Karnal needs urgent crop finance before sowing season. Which institution is MOST likely to process quickly due to rural presence?",
-    options: ["RRB", "Foreign Bank", "Investment Bank", "Urban Co-operative Bank"],
-    correctAnswer: 0
+    question: "A borrower in Assam earns ₹1,500 weekly surplus after household expenses. MFI policy allows maximum 55% utilization toward EMI. What is the MOST prudent weekly repayment capacity?",
+    options: ["₹600", "₹700", "₹825", "₹1,050"],
+    correctAnswer: 2
   },
   {
     id: 3,
-    question: "A customer asks why banks insist on KYC even for small MSME loans. What is the BEST explanation?",
+    question: "You visit an SHG financed earlier by Axis Bank. Positive: 100% repayment, good attendance, active dairy business. Concern: Group leader's husband handles all cash collections personally. What is the MOST appropriate banking approach?",
     options: [
-      "To delay loan sanction",
-      "To increase bank paperwork",
-      "To reduce branch workload",
-      "To comply with regulations and prevent fraud"
+      "Reject enhancement due to governance concentration risk",
+      "Ignore issue because repayment is regular",
+      "Increase loan because repayment track is strong",
+      "Conduct member-level interaction before enhancement"
     ],
     correctAnswer: 3
   },
   {
     id: 4,
-    question: "A branch is struggling to meet Priority Sector targets. Which customer should the field officer focus on FIRST?",
+    question: "A salaried customer says: \"HDFC Bank approved my personal loan digitally within 15 minutes.\" Your PSU bank branch lost the case mainly because of:",
     options: [
-      "Luxury mall developer",
-      "Small garment manufacturer",
-      "Imported car dealer",
-      "Large IT park company"
+      "Higher CRR obligations",
+      "Slower credit processing experience",
+      "Lower treasury income",
+      "Weak SLR portfolio"
     ],
     correctAnswer: 1
   },
   {
     id: 5,
-    question: "A customer says: \"NBFC people came to my shop directly. Your bank only calls me to branch.\" What is the BEST practical solution?",
-    options: [
-      "Stop MSME lending",
-      "Increase interest rate",
-      "Improve field visits and doorstep banking",
-      "Avoid small borrowers"
-    ],
-    correctAnswer: 2
+    question: "A vegetable wholesaler generates daily average net surplus = ₹2,400. Weekly market closed = 1 day. Maximum safe repayment allocation policy = 50%. What is the MOST suitable weekly repayment capacity?",
+    options: ["₹6,000", "₹7,200", "₹8,400", "₹9,600"],
+    correctAnswer: 1
   },
   {
     id: 6,
-    question: "While visiting a village, you find three farmers already financed by different banks for the same crop activity. This situation reflects:",
-    options: ["CASA mobilization", "Over financing risk", "Treasury mismatch", "Foreign exchange exposure"],
+    question: "A borrower has SHG loan, Gold loan, Consumer durable EMI, and existing MFI loan. Still requests fresh dairy loan. What is the MOST critical banking assessment?",
+    options: [
+      "Branch CASA opportunity",
+      "Combined household repayment obligation",
+      "Insurance penetration ratio",
+      "Treasury profitability impact"
+    ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "A branch manager wants faster MSME sanctions without increasing NPAs. Which is the MOST practical approach?",
+    question: "During field visit, machinery financed under MSME loan is absent from business premises. Borrower says: \"Machine is temporarily shifted.\" What should be your FIRST action?",
     options: [
-      "Stop documentation",
-      "Sanction without verification",
-      "Reject all MSME proposals",
-      "Use GST and bank statement analytics"
+      "Classify account immediately as fraud",
+      "Ignore because EMI is regular",
+      "Verify asset existence independently",
+      "Enhance collateral margin"
     ],
-    correctAnswer: 3
+    correctAnswer: 2
   },
   {
     id: 8,
-    question: "A customer says: \"Local Area Bank approved my dairy loan in 2 days.\" Why are LABs sometimes faster?",
+    question: "A borrower prefers Shriram Finance over bank vehicle finance. MOST likely reason?",
     options: [
-      "Smaller local operations and better local understanding",
-      "They are exempt from regulations",
-      "They finance only large corporates",
-      "They do not verify customers"
+      "Lower statutory liquidity requirement",
+      "Faster asset-focused underwriting",
+      "RBI refinance support",
+      "Lower branch operating cost"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 9,
-    question: "An MSME customer asks SIDBI support for technology upgradation. Which SIDBI role matches this requirement?",
-    options: ["Currency issuance", "Cluster development", "Crop insurance", "Foreign remittance"],
+    question: "An MFI branch reports excellent disbursement growth but rising bounce cases after 90 days. MOST likely root cause?",
+    options: [
+      "Strong liquidity coverage ratio",
+      "Excessive borrower acquisition without repayment assessment",
+      "Improved collection efficiency",
+      "Reduction in rural credit demand"
+    ],
     correctAnswer: 1
   },
   {
     id: 10,
-    question: "A branch officer notices customers shifting to digital lenders. What is the BIGGEST reason?",
-    options: [
-      "Better branch interiors",
-      "Faster onboarding and approvals",
-      "Higher paperwork",
-      "Lower customer expectations"
-    ],
+    question: "A tailoring unit borrower needs ₹24,000 loan. Expected monthly surplus: ₹2,000. Bank policy: Maximum 60% surplus for EMI. What is the MOST suitable EMI range?",
+    options: ["₹700–₹900", "₹1,100–₹1,300", "₹1,800–₹2,000", "₹2,200–₹2,400"],
     correctAnswer: 1
   },
   {
     id: 11,
-    question: "A borrower's cheque issued to the bank gets dishonoured. Which law becomes relevant?",
-    options: ["FEMA", "Banking Regulation Act", "Negotiable Instruments Act", "Companies Act"],
-    correctAnswer: 2
+    question: "Branch manager says: \"We must close ₹2 crore MSME book before quarter end.\" Which behavior creates the BIGGEST future risk?",
+    options: [
+      "Faster field verification",
+      "Relaxed income assessment under pressure",
+      "Better borrower segmentation",
+      "Improved customer outreach"
+    ],
+    correctAnswer: 1
   },
   {
     id: 12,
-    question: "A field officer wants to increase agri business in villages. Which institution mainly supports refinance for rural lending?",
-    options: ["NABARD", "SEBI", "IRDAI", "EXIM Bank"],
-    correctAnswer: 0
+    question: "A customer with heavy UPI activity wants ₹5 lakh overdraft from Airtel Payments Bank. Correct field understanding?",
+    options: [
+      "Payment Banks can lend through PSL route",
+      "Payment Banks can provide overdraft against QR turnover",
+      "Payment Banks cannot directly undertake lending",
+      "Payment Banks can finance through treasury operations"
+    ],
+    correctAnswer: 2
   },
   {
     id: 13,
-    question: "A branch suddenly faces phishing complaints from multiple customers. Which department should coordinate FIRST?",
+    question: "An MSME borrower shows strong turnover, high bank credits, but irregular GST filing. What is the MOST likely interpretation?",
     options: [
-      "Marketing Department",
-      "Treasury Department",
-      "Fraud Control and IT Department",
-      "Accounts Department"
+      "Healthy operational discipline",
+      "Potential compliance and cash flow inconsistency risk",
+      "Strong collateral security position",
+      "Better treasury utilization"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 14,
-    question: "A customer says: \"NBFC approved my truck loan though bank rejected it.\" This mainly shows that NBFCs:",
-    options: [
-      "Avoid rural markets",
-      "Focus on specialized asset financing",
-      "Accept unlimited deposits",
-      "Work as payment banks"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 15,
-    question: "A bank officer is under pressure to improve CASA deposits. Which strategy is MOST practical?",
-    options: [
-      "Ignore small customers",
-      "Focus only on corporate loans",
-      "Increase rural and salary account acquisition",
-      "Stop digital banking promotion"
-    ],
+    question: "An SHG has average annual savings = ₹1.2 lakh, excellent repayment history, completed first cycle successfully. As per practical SHG multiplier approach, second cycle eligibility may approximately reach:",
+    options: ["₹1.5–₹2 lakh", "₹3–₹4 lakh", "₹7–₹9 lakh", "₹12–₹15 lakh"],
     correctAnswer: 2
   },
   {
-    id: 16,
-    question: "During RBI inspection, branch staff cannot produce proper loan documents. What is the BIGGEST risk?",
+    id: 15,
+    question: "You are a new banker in a district where NBFCs sanction faster, Fintechs onboard digitally, MFIs provide doorstep service, and PSU banks dominate trust. What is the MOST sustainable long-term banking strategy?",
     options: [
-      "Faster business growth",
-      "Loan recovery and compliance issues",
-      "Increase in CASA",
-      "Better customer satisfaction"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 17,
-    question: "A rural borrower says: \"I need crop insurance along with KCC.\" Which banking approach is MOST suitable?",
-    options: [
-      "Pure treasury solution",
-      "Investment banking",
-      "Retail gold trading",
-      "Integrated rural banking support"
-    ],
-    correctAnswer: 3
-  },
-  {
-    id: 18,
-    question: "A branch wants to improve PSL achievement quickly. Which portfolio helps directly?",
-    options: [
-      "Luxury villa financing",
-      "Renewable energy and MSME loans",
-      "Imported machinery for MNCs",
-      "High-end foreign travel loans"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 19,
-    question: "A customer compares bank and NBFC interest rates and still chooses bank finance. What is the MOST likely reason?",
-    options: [
-      "Trust and long-term relationship",
-      "Banks avoid regulations",
-      "Banks never verify documents",
-      "Banks approve every proposal instantly"
-    ],
-    correctAnswer: 0
-  },
-  {
-    id: 20,
-    question: "You are a field officer in a competitive market. What is the BEST long-term strategy to survive against fintechs and NBFCs?",
-    options: [
-      "Avoid technology adoption",
-      "Focus only on large corporates",
-      "Delay customer responses",
-      "Balance speed, compliance, and customer service"
+      "Compete only through lower interest rates",
+      "Focus only on compliance and documentation",
+      "Aggressive disbursement without detailed assessment",
+      "Combine digital speed with disciplined underwriting"
     ],
     correctAnswer: 3
   }
@@ -251,9 +201,9 @@ export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
   subtitle: "Introduction to Banking in India",
   professor: "ANIL AGGARWAL",
-  date: "9th May",
-  totalQuestions: 20,
-  totalMarks: 80,
+  date: "15th May",
+  totalQuestions: 15,
+  totalMarks: 60,
   marksPerQuestion: 4,
   timeLimit: 20,
   isStructure2: false,
