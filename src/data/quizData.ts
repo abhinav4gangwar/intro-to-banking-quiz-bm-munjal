@@ -52,146 +52,111 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "You are posted at ICICI Bank, Surat. A textile trader seeks CC limit enhancement from ₹18 lakh to ₹30 lakh. Observations: GST turnover increased 22%, Bank credits improved, but debtor cycle increased from 48 to 81 days. What is the MOST important concern?",
+    question: "EPC Escrow Comfort Trap — Party: KNR-linked subcontractor Shivam Infra Projects Pvt Ltd. The borrower insists all receivables will come through escrow. However, subcontractor payments to labour and diesel vendors are mostly cash-intensive and outside escrow visibility. What should disturb a senior credit officer most?",
     options: [
-      "Profit margin dilution due to GST mismatch",
-      "Liquidity stress despite sales growth",
-      "Insufficient collateral coverage ratio",
-      "Reduction in CASA profitability"
+      "Escrow may improve visibility but not necessarily liquidity discipline",
+      "Cash vendor payments are common in EPC sector",
+      "Government-linked contracts reduce diversion risk",
+      "Escrow structure itself sufficiently mitigates monitoring concerns"
     ],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
     id: 2,
-    question: "A borrower in Assam earns ₹1,500 weekly surplus after household expenses. MFI policy allows maximum 55% utilization toward EMI. What is the MOST prudent weekly repayment capacity?",
-    options: ["₹600", "₹700", "₹825", "₹1,050"],
+    question: "Pharma Distribution Illusion — Party: Zenith Lifecare Distributors Pvt Ltd. GST turnover increased 32%. Bank credits increased only 8%. Borrower says \"hospital chains now take longer to settle.\" Which interpretation is most mature?",
+    options: [
+      "GST data is usually more reliable than bank turnover",
+      "Debtor stretch alone explains mismatch",
+      "Sales growth may not be translating into real cash generation",
+      "Healthcare sector cycles have generally elongated recently"
+    ],
     correctAnswer: 2
   },
   {
     id: 3,
-    question: "You visit an SHG financed earlier by Axis Bank. Positive: 100% repayment, good attendance, active dairy business. Concern: Group leader's husband handles all cash collections personally. What is the MOST appropriate banking approach?",
+    question: "PSI Comfort Bias — Party: Shree Balaji Steels Pvt Ltd. Factory fully operational during PSI. Workers active. Machines running. However: electricity consumption flat for 6 months, e-way bills inconsistent, finished goods dispatches lower than projected sales. What is the deeper risk?",
     options: [
-      "Reject enhancement due to governance concentration risk",
-      "Ignore issue because repayment is regular",
-      "Increase loan because repayment track is strong",
-      "Conduct member-level interaction before enhancement"
+      "Temporary dispatch slowdown",
+      "Inflated turnover possibility despite operational appearance",
+      "Electricity billing anomaly",
+      "Seasonal inventory accumulation"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
   },
   {
     id: 4,
-    question: "A salaried customer says: \"HDFC Bank approved my personal loan digitally within 15 minutes.\" Your PSU bank branch lost the case mainly because of:",
+    question: "Long Relationship Bias — Party: Vardhman Auto Components Pvt Ltd. Banking relationship 14 years. No historical default. Now: CC utilisation 99% continuously, promoter drawing increased, statutory dues delayed twice. What is the most dangerous mistake?",
     options: [
-      "Higher CRR obligations",
-      "Slower credit processing experience",
-      "Lower treasury income",
-      "Weak SLR portfolio"
+      "Treating the issue as temporary because past conduct was clean",
+      "Escalating account for SMA monitoring",
+      "Seeking updated cash-flow projections",
+      "Reducing ad-hoc exposure immediately"
     ],
-    correctAnswer: 1
+    correctAnswer: 0
   },
   {
     id: 5,
-    question: "A vegetable wholesaler generates daily average net surplus = ₹2,400. Weekly market closed = 1 day. Maximum safe repayment allocation policy = 50%. What is the MOST suitable weekly repayment capacity?",
-    options: ["₹6,000", "₹7,200", "₹8,400", "₹9,600"],
-    correctAnswer: 1
+    question: "Machinery Valuation Comfort — Party: Omkar Engineering Pvt Ltd. Plant valuation ₹11 Cr by empanelled valuer. However: imported line not yet commissioned, no operator training completed, promoter margin still partly unpaid. What should concern the officer most?",
+    options: [
+      "Valuation may still be technically valid",
+      "Delayed commissioning is common",
+      "Asset value may not equal operational cash-generation capability",
+      "Margin infusion timing can be regularised later"
+    ],
+    correctAnswer: 2
   },
   {
     id: 6,
-    question: "A borrower has SHG loan, Gold loan, Consumer durable EMI, and existing MFI loan. Still requests fresh dairy loan. What is the MOST critical banking assessment?",
+    question: "Consortium Silence Risk — Party: Galaxy Electronics Pvt Ltd. Lead bank has not raised concerns. Your branch notices: receivable ageing worsening, stock audit delayed, frequent TOD requests. Most prudent thought process?",
     options: [
-      "Branch CASA opportunity",
-      "Combined household repayment obligation",
-      "Insurance penetration ratio",
-      "Treasury profitability impact"
+      "Follow lead bank comfort unless account slips",
+      "Independent risk assessment remains necessary despite consortium comfort",
+      "Delay action until next consortium meeting",
+      "Minor operational gaps are expected in multiple banking"
     ],
     correctAnswer: 1
   },
   {
     id: 7,
-    question: "During field visit, machinery financed under MSME loan is absent from business premises. Borrower says: \"Machine is temporarily shifted.\" What should be your FIRST action?",
+    question: "Export Growth Excitement — Party: Raj Overseas Exports Pvt Ltd. New US orders doubled revenue projections. However: margins dropped sharply, freight volatility rising, receivables now 120+ days. Which is the sharpest underwriting insight?",
     options: [
-      "Classify account immediately as fraud",
-      "Ignore because EMI is regular",
-      "Verify asset existence independently",
-      "Enhance collateral margin"
+      "Export diversification offsets some risk",
+      "Higher turnover improves repayment comfort",
+      "Growth may actually weaken liquidity position",
+      "ECGC cover sufficiently reduces concern"
     ],
     correctAnswer: 2
   },
   {
     id: 8,
-    question: "A borrower prefers Shriram Finance over bank vehicle finance. MOST likely reason?",
+    question: "Audit Objection Waiting to Happen — Party: Ganesh Agro Industries Ltd. Ad-hoc limits renewed repeatedly for 11 months. Account remains standard. What is the real risk?",
     options: [
-      "Lower statutory liquidity requirement",
-      "Faster asset-focused underwriting",
-      "RBI refinance support",
-      "Lower branch operating cost"
+      "Temporary support may still be commercially justified",
+      "Standard asset status reduces audit concern",
+      "Interest servicing validates bank comfort",
+      "Structural working-capital mismatch is being informally funded"
     ],
-    correctAnswer: 1
+    correctAnswer: 3
   },
   {
     id: 9,
-    question: "An MFI branch reports excellent disbursement growth but rising bounce cases after 90 days. MOST likely root cause?",
+    question: "Hidden Diversion Pattern — Party: Medisphere Healthcare Pvt Ltd. Sales increasing. Stock stable. GST regular. But: promoter purchased commercial property personally, unsecured loans to related entity increased, CC utilisation remains near maximum. Most important inference?",
     options: [
-      "Strong liquidity coverage ratio",
-      "Excessive borrower acquisition without repayment assessment",
-      "Improved collection efficiency",
-      "Reduction in rural credit demand"
+      "Promoter wealth creation normal in growth phase",
+      "Business expansion often requires group support",
+      "Possible leakage of operating liquidity outside business",
+      "Property acquisition unrelated to banking risk"
     ],
-    correctAnswer: 1
+    correctAnswer: 2
   },
   {
     id: 10,
-    question: "A tailoring unit borrower needs ₹24,000 loan. Expected monthly surplus: ₹2,000. Bank policy: Maximum 60% surplus for EMI. What is the MOST suitable EMI range?",
-    options: ["₹700–₹900", "₹1,100–₹1,300", "₹1,800–₹2,000", "₹2,200–₹2,400"],
-    correctAnswer: 1
-  },
-  {
-    id: 11,
-    question: "Branch manager says: \"We must close ₹2 crore MSME book before quarter end.\" Which behavior creates the BIGGEST future risk?",
+    question: "Customer Selection Trap — Party: Suryodaya EV Components Pvt Ltd. Strong projections, impressive presentation, reputed consultant report. But promoters have: no manufacturing history, limited technical depth, aggressive leverage assumptions. Most mature underwriting reaction?",
     options: [
-      "Faster field verification",
-      "Relaxed income assessment under pressure",
-      "Better borrower segmentation",
-      "Improved customer outreach"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 12,
-    question: "A customer with heavy UPI activity wants ₹5 lakh overdraft from Airtel Payments Bank. Correct field understanding?",
-    options: [
-      "Payment Banks can lend through PSL route",
-      "Payment Banks can provide overdraft against QR turnover",
-      "Payment Banks cannot directly undertake lending",
-      "Payment Banks can finance through treasury operations"
-    ],
-    correctAnswer: 2
-  },
-  {
-    id: 13,
-    question: "An MSME borrower shows strong turnover, high bank credits, but irregular GST filing. What is the MOST likely interpretation?",
-    options: [
-      "Healthy operational discipline",
-      "Potential compliance and cash flow inconsistency risk",
-      "Strong collateral security position",
-      "Better treasury utilization"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 14,
-    question: "An SHG has average annual savings = ₹1.2 lakh, excellent repayment history, completed first cycle successfully. As per practical SHG multiplier approach, second cycle eligibility may approximately reach:",
-    options: ["₹1.5–₹2 lakh", "₹3–₹4 lakh", "₹7–₹9 lakh", "₹12–₹15 lakh"],
-    correctAnswer: 2
-  },
-  {
-    id: 15,
-    question: "You are a new banker in a district where NBFCs sanction faster, Fintechs onboard digitally, MFIs provide doorstep service, and PSU banks dominate trust. What is the MOST sustainable long-term banking strategy?",
-    options: [
-      "Compete only through lower interest rates",
-      "Focus only on compliance and documentation",
-      "Aggressive disbursement without detailed assessment",
-      "Combine digital speed with disciplined underwriting"
+      "Strong sector tailwinds justify calculated risk",
+      "Consultant validation improves confidence materially",
+      "Collateral enhancement can offset execution risk",
+      "Business model attractiveness should not replace promoter capability assessment"
     ],
     correctAnswer: 3
   }
@@ -201,9 +166,9 @@ export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
   subtitle: "Introduction to Banking in India",
   professor: "ANIL AGGARWAL",
-  date: "15th May",
-  totalQuestions: 15,
-  totalMarks: 60,
+  date: "18th May",
+  totalQuestions: 10,
+  totalMarks: 40,
   marksPerQuestion: 4,
   timeLimit: 20,
   isStructure2: false,
