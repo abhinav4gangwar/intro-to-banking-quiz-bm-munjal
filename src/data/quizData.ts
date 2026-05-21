@@ -52,113 +52,113 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "EPC Escrow Comfort Trap — Party: KNR-linked subcontractor Shivam Infra Projects Pvt Ltd. The borrower insists all receivables will come through escrow. However, subcontractor payments to labour and diesel vendors are mostly cash-intensive and outside escrow visibility. What should disturb a senior credit officer most?",
+    question: "THE \"VERY COOPERATIVE\" CUSTOMER — Customer: Vivek Malhotra. During V-CIP he answers every question correctly, keeps smiling confidently, repeatedly says \"I have already done this with other banks,\" and the officer notices another person reflected faintly in the screen glass. Business team is pushing urgent activation for a current account. What should the officer do?",
     options: [
-      "Escrow may improve visibility but not necessarily liquidity discipline",
-      "Cash vendor payments are common in EPC sector",
-      "Government-linked contracts reduce diversion risk",
-      "Escrow structure itself sufficiently mitigates monitoring concerns"
+      "Approve because all responses are correct",
+      "Escalate for enhanced due diligence and document observations",
+      "Reject immediately as fraudulent",
+      "Ignore reflection because system passed face match"
     ],
-    correctAnswer: 0
+    correctAnswer: 1
   },
   {
     id: 2,
-    question: "Pharma Distribution Illusion — Party: Zenith Lifecare Distributors Pvt Ltd. GST turnover increased 32%. Bank credits increased only 8%. Borrower says \"hospital chains now take longer to settle.\" Which interpretation is most mature?",
+    question: "THE \"TRAVELLING CUSTOMER\" — Customer: Nitin Rao claims \"I am temporarily in Dubai for business.\" During onboarding: Indian mobile active, PAN verified, Aadhaar valid, but IP indicates foreign routing. Customer requests immediate account activation. What is the BEST response?",
     options: [
-      "GST data is usually more reliable than bank turnover",
-      "Debtor stretch alone explains mismatch",
-      "Sales growth may not be translating into real cash generation",
-      "Healthcare sector cycles have generally elongated recently"
+      "Reject because onboarding must never happen outside India",
+      "Approve because documents are genuine",
+      "Escalate for risk review and verify regulatory permissibility carefully",
+      "Ignore IP mismatch if customer profile looks genuine"
     ],
     correctAnswer: 2
   },
   {
     id: 3,
-    question: "PSI Comfort Bias — Party: Shree Balaji Steels Pvt Ltd. Factory fully operational during PSI. Workers active. Machines running. However: electricity consumption flat for 6 months, e-way bills inconsistent, finished goods dispatches lower than projected sales. What is the deeper risk?",
+    question: "THE \"OLD CUSTOMER\" — Customer: Rajeshwari Iyer, 10-year relationship, historically low-risk pension account. Suddenly: high inward transfers, crypto exchange references observed, multiple beneficiary additions. Branch says: \"Madam is our old trusted customer.\" What is the MOST appropriate approach?",
     options: [
-      "Temporary dispatch slowdown",
-      "Inflated turnover possibility despite operational appearance",
-      "Electricity billing anomaly",
-      "Seasonal inventory accumulation"
+      "Maintain low-risk classification because relationship is old",
+      "Initiate enhanced review and reassess customer risk category",
+      "Wait for formal Re-KYC due date",
+      "Ignore temporary transaction spike"
     ],
     correctAnswer: 1
   },
   {
     id: 4,
-    question: "Long Relationship Bias — Party: Vardhman Auto Components Pvt Ltd. Banking relationship 14 years. No historical default. Now: CC utilisation 99% continuously, promoter drawing increased, statutory dues delayed twice. What is the most dangerous mistake?",
+    question: "THE \"RUSHED APPROVAL\" — Officer Sonal Gupta conducts V-CIP during heavy onboarding rush. Video quality is weak, audio lagging, customer impatient. Officer approves to avoid escalation and TAT delay. What is the biggest risk created?",
     options: [
-      "Treating the issue as temporary because past conduct was clean",
-      "Escalating account for SMA monitoring",
-      "Seeking updated cash-flow projections",
-      "Reducing ad-hoc exposure immediately"
+      "Weak audit defensibility and identity verification quality",
+      "Minor operational inconvenience only",
+      "Customer dissatisfaction risk reduced",
+      "Only technology team responsible if issue arises later"
     ],
     correctAnswer: 0
   },
   {
     id: 5,
-    question: "Machinery Valuation Comfort — Party: Omkar Engineering Pvt Ltd. Plant valuation ₹11 Cr by empanelled valuer. However: imported line not yet commissioned, no operator training completed, promoter margin still partly unpaid. What should concern the officer most?",
+    question: "THE \"SYSTEM GENERATED LOW RISK\" — Customer: Farhan Siddiqui. System-generated risk score: LOW RISK. Officer observes: customer hesitant during business explanation, turnover declaration inconsistent, spontaneous questions answered vaguely. What should the senior manager advise?",
     options: [
-      "Valuation may still be technically valid",
-      "Delayed commissioning is common",
-      "Asset value may not equal operational cash-generation capability",
-      "Margin infusion timing can be regularised later"
+      "Approve because system score is more reliable than observation",
+      "Reject immediately without review",
+      "Conduct enhanced due diligence and document rationale",
+      "Ignore inconsistencies if PAN and Aadhaar valid"
     ],
     correctAnswer: 2
   },
   {
     id: 6,
-    question: "Consortium Silence Risk — Party: Galaxy Electronics Pvt Ltd. Lead bank has not raised concerns. Your branch notices: receivable ageing worsening, stock audit delayed, frequent TOD requests. Most prudent thought process?",
+    question: "THE \"ADDRESS CHANGE REQUEST\" — Customer: Pooja Verma requests a digital address update. Documents valid through DigiLocker. However: address changed twice in 5 months, transaction geography highly inconsistent. What is the MOST intelligent response?",
     options: [
-      "Follow lead bank comfort unless account slips",
-      "Independent risk assessment remains necessary despite consortium comfort",
-      "Delay action until next consortium meeting",
-      "Minor operational gaps are expected in multiple banking"
+      "Update immediately because documents are authentic",
+      "Reject all digital address modifications",
+      "Escalate for behavioral and transaction review",
+      "Ignore transaction geography because KYC is valid"
+    ],
+    correctAnswer: 2
+  },
+  {
+    id: 7,
+    question: "THE \"TARGET PRESSURE\" — Regional office aggressively pushing CASA growth, same-day onboarding, and reduced onboarding TAT. Operations teams gradually stop escalating unusual onboarding behavior, geo-location inconsistencies, and repeated device attempts. What is the BIGGEST hidden danger?",
+    options: [
+      "Customer onboarding may become slower",
+      "Intelligent skepticism may collapse under business pressure",
+      "Technology systems may automatically compensate fully",
+      "Only compliance department becomes responsible"
     ],
     correctAnswer: 1
   },
   {
-    id: 7,
-    question: "Export Growth Excitement — Party: Raj Overseas Exports Pvt Ltd. New US orders doubled revenue projections. However: margins dropped sharply, freight volatility rising, receivables now 120+ days. Which is the sharpest underwriting insight?",
+    id: 8,
+    question: "THE \"GENUINE STUDENT\" — Customer: Aman Kapoor, college student. All onboarding proper. After 3 months: unusually high account turnover, gaming-related credits, rapid outward UPI transfers. Student later says: \"Someone offered monthly commission for account use.\" What is the KEY learning?",
     options: [
-      "Export diversification offsets some risk",
-      "Higher turnover improves repayment comfort",
-      "Growth may actually weaken liquidity position",
-      "ECGC cover sufficiently reduces concern"
+      "Only fake identities create fraud risk",
+      "Digital onboarding should stop for students",
+      "Genuine identities can still be commercially exploited",
+      "System validation failed technically"
     ],
     correctAnswer: 2
-  },
-  {
-    id: 8,
-    question: "Audit Objection Waiting to Happen — Party: Ganesh Agro Industries Ltd. Ad-hoc limits renewed repeatedly for 11 months. Account remains standard. What is the real risk?",
-    options: [
-      "Temporary support may still be commercially justified",
-      "Standard asset status reduces audit concern",
-      "Interest servicing validates bank comfort",
-      "Structural working-capital mismatch is being informally funded"
-    ],
-    correctAnswer: 3
   },
   {
     id: 9,
-    question: "Hidden Diversion Pattern — Party: Medisphere Healthcare Pvt Ltd. Sales increasing. Stock stable. GST regular. But: promoter purchased commercial property personally, unsecured loans to related entity increased, CC utilisation remains near maximum. Most important inference?",
+    question: "THE \"MAKER-CHECKER SHORTCUT\" — Due to workload, the same officer performs onboarding, review, and approval. Branch says: \"Otherwise TAT impossible.\" What is the MOST critical risk?",
     options: [
-      "Promoter wealth creation normal in growth phase",
-      "Business expansion often requires group support",
-      "Possible leakage of operating liquidity outside business",
-      "Property acquisition unrelated to banking risk"
+      "Operational efficiency improves",
+      "Control independence collapses",
+      "Customer satisfaction may increase",
+      "Only minor audit issue possible"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 10,
-    question: "Customer Selection Trap — Party: Suryodaya EV Components Pvt Ltd. Strong projections, impressive presentation, reputed consultant report. But promoters have: no manufacturing history, limited technical depth, aggressive leverage assumptions. Most mature underwriting reaction?",
+    question: "THE \"VERY SOPHISTICATED CUSTOMER\" — Customer: Kunal Arvind. Polished communication, premium business profile, perfect documents, successful liveness test. Officer notices customer becomes uncomfortable only when asked: \"Who will primarily operate this account?\" What is the BEST interpretation?",
     options: [
-      "Strong sector tailwinds justify calculated risk",
-      "Consultant validation improves confidence materially",
-      "Collateral enhancement can offset execution risk",
-      "Business model attractiveness should not replace promoter capability assessment"
+      "Question unnecessary after successful onboarding",
+      "Behavioral discomfort may indicate hidden operational control issue",
+      "Successful liveness eliminates concern",
+      "Customer sophistication itself proves low risk"
     ],
-    correctAnswer: 3
+    correctAnswer: 1
   }
 ];
 
@@ -166,7 +166,7 @@ export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
   subtitle: "Introduction to Banking in India",
   professor: "ANIL AGGARWAL",
-  date: "18th May",
+  date: "21st May",
   totalQuestions: 10,
   totalMarks: 40,
   marksPerQuestion: 4,
@@ -180,3 +180,4 @@ export const quizInfo = {
     "Click 'Submit Quiz' to finish or quiz will auto-submit when time expires"
   ]
 };
+
