@@ -52,111 +52,101 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "THE \"VERY COOPERATIVE\" CUSTOMER — Customer: Vivek Malhotra. During V-CIP he answers every question correctly, keeps smiling confidently, repeatedly says \"I have already done this with other banks,\" and the officer notices another person reflected faintly in the screen glass. Business team is pushing urgent activation for a current account. What should the officer do?",
-    options: [
-      "Approve because all responses are correct",
-      "Escalate for enhanced due diligence and document observations",
-      "Reject immediately as fraudulent",
-      "Ignore reflection because system passed face match"
-    ],
-    correctAnswer: 1
-  },
-  {
-    id: 2,
-    question: "THE \"TRAVELLING CUSTOMER\" — Customer: Nitin Rao claims \"I am temporarily in Dubai for business.\" During onboarding: Indian mobile active, PAN verified, Aadhaar valid, but IP indicates foreign routing. Customer requests immediate account activation. What is the BEST response?",
-    options: [
-      "Reject because onboarding must never happen outside India",
-      "Approve because documents are genuine",
-      "Escalate for risk review and verify regulatory permissibility carefully",
-      "Ignore IP mismatch if customer profile looks genuine"
-    ],
+    question: "A Branch Manager in a high-performing DCCB is found to have bypassed the crop loan processing checklist to meet aggressive annual disbursement targets. When questioned, he stated that top management pushed for high volume, and he needed this business to secure his upcoming promotion. Which component of the classic Fraud Triangle is most acutely manifested here?",
+    options: ["Opportunity", "Rationalization", "Pressure", "Capability"],
     correctAnswer: 2
   },
   {
-    id: 3,
-    question: "THE \"OLD CUSTOMER\" — Customer: Rajeshwari Iyer, 10-year relationship, historically low-risk pension account. Suddenly: high inward transfers, crypto exchange references observed, multiple beneficiary additions. Branch says: \"Madam is our old trusted customer.\" What is the MOST appropriate approach?",
+    id: 2,
+    question: "Under the latest RBI/NABARD guidelines, what is the supervisory expectation regarding the board's role in dealing with \"Early Warning Signals\" (EWS)?",
     options: [
-      "Maintain low-risk classification because relationship is old",
-      "Initiate enhanced review and reassess customer risk category",
-      "Wait for formal Re-KYC due date",
-      "Ignore temporary transaction spike"
+      "EWS reviews can be delegated entirely to the Concurrent Auditor.",
+      "The Board must periodically oversee the EWS framework and ensure prompt corrective actions are taken.",
+      "EWS alerts should only be reviewed after a localized external audit.",
+      "The board should remain detached from EWS to maintain independent judgment."
     ],
     correctAnswer: 1
   },
   {
+    id: 3,
+    question: "A field officer attached to an NGO acting as a Business Correspondent (BC) creates ghost SHG (Self Help Group) members and siphons off revolving funds, aided by a local branch clerk who bypasses biometric authentication for \"speedy disbursement.\" This is classified as:",
+    options: ["External fraud", "Cyber fraud", "Internal-External Collusion (Mixed Fraud)", "Third-party manipulation"],
+    correctAnswer: 2
+  },
+  {
     id: 4,
-    question: "THE \"RUSHED APPROVAL\" — Officer Sonal Gupta conducts V-CIP during heavy onboarding rush. Video quality is weak, audio lagging, customer impatient. Officer approves to avoid escalation and TAT delay. What is the biggest risk created?",
+    question: "During a field drive, an internal audit team discovers that several KCC (Kisan Credit Card) loans were disbursed digitally without physically verifying the land ownership or crop sown. The KYC was completed using fake digital identities. What systemic failure is primarily responsible?",
     options: [
-      "Weak audit defensibility and identity verification quality",
-      "Minor operational inconvenience only",
-      "Customer dissatisfaction risk reduced",
-      "Only technology team responsible if issue arises later"
+      "Cash shortage",
+      "Failure of concurrent audit and technological verification controls",
+      "Forgery by the customer alone",
+      "Deficient portfolio diversification"
+    ],
+    correctAnswer: 1
+  },
+  {
+    id: 5,
+    question: "A rural cooperative bank's head office fails to reconcile the Nostro/mirror accounts with the sponsor bank for over 90 days. Taking advantage of this, a clerk manipulates the internal clearing account to transfer funds to a dormant account controlled by a relative. What is the fundamental control breakdown here?",
+    options: [
+      "Lack of independent reconciliation and Segregation of Duties (SoD)",
+      "Phishing attacks",
+      "Natural disaster",
+      "Customer error"
     ],
     correctAnswer: 0
   },
   {
-    id: 5,
-    question: "THE \"SYSTEM GENERATED LOW RISK\" — Customer: Farhan Siddiqui. System-generated risk score: LOW RISK. Officer observes: customer hesitant during business explanation, turnover declaration inconsistent, spontaneous questions answered vaguely. What should the senior manager advise?",
-    options: [
-      "Approve because system score is more reliable than observation",
-      "Reject immediately without review",
-      "Conduct enhanced due diligence and document rationale",
-      "Ignore inconsistencies if PAN and Aadhaar valid"
-    ],
-    correctAnswer: 2
-  },
-  {
     id: 6,
-    question: "THE \"ADDRESS CHANGE REQUEST\" — Customer: Pooja Verma requests a digital address update. Documents valid through DigiLocker. However: address changed twice in 5 months, transaction geography highly inconsistent. What is the MOST intelligent response?",
+    question: "A Primary Agricultural Credit Society (PACS) secretary diverts fertilizer subsidy funds. The delay in detecting this fraud by the apex DCCB was three months. What is the biggest consequence of delayed detection in such rural scenarios?",
     options: [
-      "Update immediately because documents are authentic",
-      "Reject all digital address modifications",
-      "Escalate for behavioral and transaction review",
-      "Ignore transaction geography because KYC is valid"
+      "Higher liquidity for the DCCB",
+      "Increased opportunity for perpetrators to destroy evidence and dissipate funds",
+      "Decreased staff workload",
+      "Better customer satisfaction"
     ],
-    correctAnswer: 2
+    correctAnswer: 1
   },
   {
     id: 7,
-    question: "THE \"TARGET PRESSURE\" — Regional office aggressively pushing CASA growth, same-day onboarding, and reduced onboarding TAT. Operations teams gradually stop escalating unusual onboarding behavior, geo-location inconsistencies, and repeated device attempts. What is the BIGGEST hidden danger?",
+    question: "Several elderly customers of an RRB complain that their accounts were debited for unauthorized online transactions. Investigation reveals that the branch IT team had not disabled contactless features or enforced multifactor authentication on RuPay debit cards issued to rural customers. This is an example of:",
     options: [
-      "Customer onboarding may become slower",
-      "Intelligent skepticism may collapse under business pressure",
-      "Technology systems may automatically compensate fully",
-      "Only compliance department becomes responsible"
+      "Fraudulent encashment through forged instruments",
+      "Systemic vulnerability due to deficient digital security deployment",
+      "Borrowing account irregularities",
+      "Internal misappropriation"
     ],
     correctAnswer: 1
   },
   {
     id: 8,
-    question: "THE \"GENUINE STUDENT\" — Customer: Aman Kapoor, college student. All onboarding proper. After 3 months: unusually high account turnover, gaming-related credits, rapid outward UPI transfers. Student later says: \"Someone offered monthly commission for account use.\" What is the KEY learning?",
+    question: "An RRB experiences a massive data breach, leaking customer data which is then used to scam borrowers. The CEO claims ignorance, stating that IT operations are outsourced. Under NABARD/RBI supervisory frameworks, who bears ultimate accountability for this control failure?",
     options: [
-      "Only fake identities create fraud risk",
-      "Digital onboarding should stop for students",
-      "Genuine identities can still be commercially exploited",
-      "System validation failed technically"
+      "The IT vendor",
+      "The Chief Information Security Officer (CISO) exclusively",
+      "The Board and Senior Management",
+      "The customers"
     ],
     correctAnswer: 2
   },
   {
     id: 9,
-    question: "THE \"MAKER-CHECKER SHORTCUT\" — Due to workload, the same officer performs onboarding, review, and approval. Branch says: \"Otherwise TAT impossible.\" What is the MOST critical risk?",
+    question: "An Urban Cooperative Bank (UCB) detects a fraud of Rs. 10 Lakh on June 5th. Due to internal inquiries to establish exact culpability, the management delays reporting to NABARD until July 15th. What is the supervisory implication of this action?",
     options: [
-      "Operational efficiency improves",
-      "Control independence collapses",
-      "Customer satisfaction may increase",
-      "Only minor audit issue possible"
+      "The bank is in compliance as long as the police are informed.",
+      "The bank is liable for penal action and adverse supervisory findings due to a breach of reporting timelines.",
+      "The delay is acceptable since the internal inquiry must conclude first.",
+      "The bank only needs to report this at the end of the financial year."
     ],
     correctAnswer: 1
   },
   {
     id: 10,
-    question: "THE \"VERY SOPHISTICATED CUSTOMER\" — Customer: Kunal Arvind. Polished communication, premium business profile, perfect documents, successful liveness test. Officer notices customer becomes uncomfortable only when asked: \"Who will primarily operate this account?\" What is the BEST interpretation?",
+    question: "A State Cooperative Bank notices a sudden rise in suspicious non-agricultural gold loan accounts. To prevent this from escalating into a larger fraud, what is the best immediate strategic move?",
     options: [
-      "Question unnecessary after successful onboarding",
-      "Behavioral discomfort may indicate hidden operational control issue",
-      "Successful liveness eliminates concern",
-      "Customer sophistication itself proves low risk"
+      "Increase interest rates on all loans",
+      "Institute random, independent surprise audits of gold portfolios and strengthen collateral valuation checks",
+      "Discontinue the gold loan product entirely",
+      "Ignore the signals as the loans are backed by physical assets"
     ],
     correctAnswer: 1
   }
@@ -166,7 +156,7 @@ export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
   subtitle: "Introduction to Banking in India",
   professor: "ANIL AGGARWAL",
-  date: "21st May",
+  date: "10th June",
   totalQuestions: 10,
   totalMarks: 40,
   marksPerQuestion: 4,
@@ -180,4 +170,5 @@ export const quizInfo = {
     "Click 'Submit Quiz' to finish or quiz will auto-submit when time expires"
   ]
 };
+
 
