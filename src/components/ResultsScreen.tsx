@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { quizQuestions, quizInfo } from '@/data/quizData';
 import type { QuizResults } from './QuizInterface';
-import { Trophy, Clock, User, Mail, RotateCcw, CheckCircle, XCircle } from 'lucide-react';
+import { Trophy, Clock, User, Mail, RotateCcw, CheckCircle, XCircle, Lightbulb, Hash } from 'lucide-react';
 
 interface ResultsScreenProps {
   results: QuizResults;
@@ -38,6 +38,10 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
               <div className="flex items-center justify-center gap-2">
                 <User className="w-4 h-4" />
                 <span className="font-semibold">{studentInfo.name}</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <Hash className="w-4 h-4" />
+                <span className="text-sm">Section: {studentInfo.section}</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <Mail className="w-4 h-4" />
@@ -124,6 +128,23 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
                           </Badge>
                         )}
                       </div>
+
+                      {question.reason && (
+                        <div className="mt-3 p-3 rounded-md bg-primary/5 border border-primary/20">
+                          <div className="flex items-start gap-2">
+                            <Lightbulb className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                            <div className="text-sm">
+                              <div className="font-semibold text-primary mb-1">
+                                Correct Answer: {optionLabels[correctAnswer]}) {question.options[correctAnswer]}
+                              </div>
+                              <div className="text-muted-foreground leading-relaxed">
+                                <span className="font-medium text-foreground">Reason: </span>
+                                {question.reason}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

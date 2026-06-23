@@ -7,6 +7,7 @@ type AppState = 'welcome' | 'quiz' | 'results';
 
 interface StudentInfo {
   name: string;
+  section: string;
   rollNumber: string;
 }
 
