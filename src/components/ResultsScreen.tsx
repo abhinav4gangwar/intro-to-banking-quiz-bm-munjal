@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { quizQuestions, quizInfo } from '@/data/quizData';
 import type { QuizResults } from './QuizInterface';
-import { Trophy, Clock, User, Mail, RotateCcw, CheckCircle, XCircle } from 'lucide-react';
+import { Trophy, Clock, User, Mail, RotateCcw, CheckCircle, XCircle, Lightbulb, Hash } from 'lucide-react';
 
 interface ResultsScreenProps {
   results: QuizResults;
@@ -40,12 +40,13 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
                 <span className="font-semibold">{studentInfo.name}</span>
               </div>
               <div className="flex items-center justify-center gap-2">
+                <Hash className="w-4 h-4" />
+                <span className="text-sm">Section: {studentInfo.section}</span>
+              </div>
+              <div className="flex items-center justify-center gap-2">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">Roll Number: {studentInfo.rollNumber}</span>
               </div>
-            </div>
-          </CardHeader>
-        </Card>
 
         {/* Score */}
         <Card className="shadow-[var(--shadow-card)]">
