@@ -24,6 +24,7 @@ export type Database = {
           score: number
           student_name: string
           student_roll_number: string
+          student_section: string | null
           time_spent: number
           total_marks: number
         }
@@ -36,6 +37,7 @@ export type Database = {
           score: number
           student_name: string
           student_roll_number: string
+          student_section?: string | null
           time_spent: number
           total_marks: number
         }
@@ -48,6 +50,7 @@ export type Database = {
           score?: number
           student_name?: string
           student_roll_number?: string
+          student_section?: string | null
           time_spent?: number
           total_marks?: number
         }
