@@ -7,20 +7,20 @@ import { quizInfo } from '@/data/quizData';
 import { BookOpen, CalendarDays, Timer, User } from 'lucide-react';
 
 interface WelcomeScreenProps {
-  onStart: (studentInfo: { name: string; rollNumber: string }) => void;
+  onStart: (studentInfo: { name: string; section: string; rollNumber: string }) => void;
 }
 
 const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
   const [name, setName] = useState('');
+  const [section, setSection] = useState('');
   const [rollNumber, setRollNumber] = useState('');
-  const [errors, setErrors] = useState<{ name?: string; rollNumber?: string }>({});
+  const [errors, setErrors] = useState<{ name?: string; section?: string; rollNumber?: string }>({});
 
   const validateAndStart = () => {
-    const newErrors: { name?: string; rollNumber?: string } = {};
+    const newErrors: { name?: string; section?: string; rollNumber?: string } = {};
 
-    if (!name.trim()) {
-      newErrors.name = 'Name is required';
-    }
+    if (!name.trim()) newErrors.name = 'Name is required';
+    if (!section.trim()) newErrors.section = 'Section is required';
 
     if (!rollNumber.trim()) {
       newErrors.rollNumber = 'Roll number is required';
@@ -33,7 +33,11 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
       return;
     }
 
-    onStart({ name: name.trim(), rollNumber: rollNumber.toUpperCase().trim() });
+    onStart({
+      name: name.trim(),
+      section: section.trim().toUpperCase(),
+      rollNumber: rollNumber.toUpperCase().trim(),
+    });
   };
 
   return (
@@ -44,18 +48,17 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             <BookOpen className="w-8 h-8" />
           </div>
           <div>
-          <CardTitle className="text-2xl font-bold text-primary mb-2">
+            <CardTitle className="text-2xl font-bold text-primary mb-2">
               {quizInfo.title}
             </CardTitle>
-          <CardDescription className="text-base space-y-1">
+            <CardDescription className="text-base space-y-1">
               <div><strong>Professor:</strong> {quizInfo.professor}</div>
               <div><strong>Date:</strong> {quizInfo.date}</div>
             </CardDescription>
           </div>
         </CardHeader>
-        
+
         <CardContent className="space-y-6">
-          {/* Quiz Info */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-4 bg-secondary/50 rounded-lg">
             <div className="flex items-center gap-2 text-sm">
               <CalendarDays className="w-4 h-4 text-primary" />
@@ -75,7 +78,6 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             </div>
           </div>
 
-          {/* Rules */}
           <div className="space-y-2">
             <h3 className="font-semibold text-lg">Instructions:</h3>
             <ul className="space-y-1 text-sm text-muted-foreground">
@@ -88,10 +90,9 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             </ul>
           </div>
 
-          {/* Student Information Form */}
           <div className="space-y-4 p-4 bg-muted/50 rounded-lg">
             <h3 className="font-semibold text-lg">Student Information</h3>
-            
+
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
               <Input
@@ -105,9 +106,23 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 placeholder="Enter your full name"
                 className={errors.name ? 'border-destructive' : ''}
               />
-              {errors.name && (
-                <p className="text-sm text-destructive">{errors.name}</p>
-              )}
+              {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="section">Section</Label>
+              <Input
+                id="section"
+                type="text"
+                value={section}
+                onChange={(e) => {
+                  setSection(e.target.value);
+                  if (errors.section) setErrors({ ...errors, section: undefined });
+                }}
+                placeholder="Enter your section (e.g. A)"
+                className={errors.section ? 'border-destructive' : ''}
+              />
+              {errors.section && <p className="text-sm text-destructive">{errors.section}</p>}
             </div>
 
             <div className="space-y-2">
@@ -123,13 +138,11 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 placeholder="Enter your roll number"
                 className={errors.rollNumber ? 'border-destructive' : ''}
               />
-              {errors.rollNumber && (
-                <p className="text-sm text-destructive">{errors.rollNumber}</p>
-              )}
+              {errors.rollNumber && <p className="text-sm text-destructive">{errors.rollNumber}</p>}
             </div>
           </div>
 
-          <Button 
+          <Button
             onClick={validateAndStart}
             className="w-full h-12 text-lg font-semibold bg-gradient-to-r from-primary to-primary-hover hover:opacity-90 transition-opacity"
           >

@@ -8,12 +8,12 @@ import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 
 interface QuizInterfaceProps {
-  studentInfo: { name: string; rollNumber: string };
+  studentInfo: { name: string; section: string; rollNumber: string };
   onComplete: (results: QuizResults) => void;
 }
 
 export interface QuizResults {
-  studentInfo: { name: string; rollNumber: string };
+  studentInfo: { name: string; section: string; rollNumber: string };
   answers: (number | null)[];
   score: number;
   timeSpent: number;
@@ -70,13 +70,14 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
         .from('quiz_results')
         .insert({
           student_name: studentInfo.name,
+          student_section: studentInfo.section,
           student_roll_number: studentInfo.rollNumber,
           score: results.score,
           total_marks: quizInfo.totalMarks,
           percentage: percentage,
           time_spent: results.timeSpent,
           answers: results.answers
-        });
+        } as any);
 
       if (error) {
         console.error('Error saving quiz results:', error);
