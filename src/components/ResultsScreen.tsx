@@ -128,6 +128,23 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
                           </Badge>
                         )}
                       </div>
+
+                      {question.reason && (
+                        <div className="mt-3 p-3 rounded-md bg-primary/5 border border-primary/20">
+                          <div className="flex items-start gap-2">
+                            <Lightbulb className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                            <div className="text-sm">
+                              <div className="font-semibold text-primary mb-1">
+                                Correct Answer: {optionLabels[correctAnswer]}) {question.options[correctAnswer]}
+                              </div>
+                              <div className="text-muted-foreground leading-relaxed">
+                                <span className="font-medium text-foreground">Reason: </span>
+                                {question.reason}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
