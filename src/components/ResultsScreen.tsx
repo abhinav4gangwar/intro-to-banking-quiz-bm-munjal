@@ -47,6 +47,9 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">Roll Number: {studentInfo.rollNumber}</span>
               </div>
+            </div>
+          </CardHeader>
+        </Card>
 
         {/* Score */}
         <Card className="shadow-[var(--shadow-card)]">
