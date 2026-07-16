@@ -33,426 +33,491 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Before the landmark economic reforms of 1991, an Indian corporate house looking to launch an IPO was legally blocked from deciding its own share price. A government official fixed the price using rigid accounting formulas. When the Indian government abolished the Controller of Capital Issues (CCI) in 1992, how did this structural shift fundamentally change the evolution of investment banking?",
+    question: "A promoter submits a DPR for a 50-MW solar plant. They include a ₹4.50 Crore central subsidy as part of the upfront equity margin. The subsidy guidelines state it is \"disbursed post-stabilization.\" How must you treat this?",
     options: [
-      "It forced investment banks to obtain mandatory daily pricing approvals directly from the Reserve Bank of India.",
-      "It granted investment banks the freedom to discover and set share prices based on actual institutional market demand.",
-      "It required investment banks to sell at least 50% of all public equity issues directly to public sector undertakings.",
-      "It shifted the absolute authority of corporate share price-fixing to the newly formed national stock exchanges."
+      "Exclude the subsidy from the upfront margin calculation.",
+      "Accept it if backed by a corporate guarantee.",
+      "Treat it as a quasi-equity loan option.",
+      "Deduct it directly from the primary loan amount."
     ],
-    correctAnswer: 1,
-    reason: "The abolition of the CCI in 1992 dismantled the government's rigid price-control regime. This evolutionary milestone allowed investment banks to introduce free-market pricing mechanisms, enabling them to evaluate market demand and price shares dynamically through book-building."
+    correctAnswer: 0,
+    reason: "Back-ended subsidies cannot bridge upfront construction capital. Treating them as upfront margin creates an immediate funding deficit. Lenders must demand real cash equity upfront."
   },
   {
     id: 2,
-    question: "A prominent Indian investment banking firm compared its transaction data from 1995 against its deal pipeline in 2025. In 1995, 90% of its fees came from managing basic local public share issues. In 2025, the vast majority of its revenue is driven by cross-border Mergers & Acquisitions (M&A) and private equity exits. What does this evolutionary shift in the fee pool conceptually signal about the transformation of the Indian corporate ecosystem?",
+    question: "During a TEV study for a greenfield chemical plant expansion, you discover that the primary environmental clearance (EC) is signed but currently challenged in the National Green Tribunal (NGT). What is your credit action?",
     options: [
-      "Retail investors have entirely stopped buying public equity shares, forcing companies to rely exclusively on foreign loans.",
-      "Indian commercial banks have completely monopolized the domestic underwriting market, pushing investment banks out of the IPO space.",
-      "The Indian corporate landscape has matured from simple domestic fundraising to high-value global expansions and sophisticated private capital deals.",
-      "SEBI has imposed strict statutory caps on public IPO fees, making traditional listing transactions unprofitable for investment banks."
+      "Disburse only the land-building component immediately.",
+      "Hold all disbursements until the NGT issues a final order.",
+      "Increase the interest rate by 150 bps to price the risk.",
+      "Demand a personal guarantee to override the clearance hold."
     ],
-    correctAnswer: 2,
-    reason: "The evolution of the Modern Global Era (2000s–present) reflects a sophisticated economy. Corporations are no longer just looking to raise basic debt or equity locally; they are actively engaging in cross-border expansions, industry consolidation, and working with complex alternative private pools of capital."
+    correctAnswer: 1,
+    reason: "Active legal challenges to regulatory clearances introduce severe execution risk. If the NGT revokes the clearance mid-way, the asset becomes stranded. Disbursements must be frozen."
   },
   {
     id: 3,
-    question: "A leading Indian entertainment conglomerate wants to completely buy out a smaller, regional digital streaming app to eliminate competition and gain access to their subscriber base. They hire an elite investment banking team to handle the deal. What is the primary tactical role of the investment bankers acting within the scope of Corporate Advisory services for this transaction?",
+    question: "A promoter provides a TEV study showing a project break-even point at 35% utilization. Your internal review reveals they omitted fixed annual licensing renewals and escalated O&M costs by only 2% against a historical 6% inflation trend. What is the impact?",
     options: [
-      "Lending the bank's own corporate treasury cash to pay for the streaming app's outstanding liabilities.",
-      "Valuation of the target app, designing the deal structure, and negotiating the final purchase price.",
-      "Managing the daily software integration and customer service transition of the acquired digital application.",
-      "Registering the transaction as a public sector amalgamation directly with the Reserve Bank of India."
+      "The true operational break-even remains completely unchanged.",
+      "The project's Debt Equity Ratio requires a structural recasting.",
+      "The real break-even point shifts significantly upward.",
+      "The base Internal Rate of Return (IRR) expands artificially."
     ],
-    correctAnswer: 1,
-    reason: "Within the scope of Corporate Advisory (M&A), investment bankers act as strategic intermediaries. They do not lend money or manage operations; their job is to value the target business, structure the financial terms of the deal, and negotiate the best price for their client."
+    correctAnswer: 2,
+    reason: "Understating fixed operating expenses and inflation artificially lowers the projected break-even point. Recalculating with realistic figures pushes the break-even higher, compressing the safety margin."
   },
   {
     id: 4,
-    question: "Before a private developer breaks ground on a massive Public-Private Partnership (PPP) greenfield seaport in India, they hire an investment banking team to perform comprehensive Project Advisory services. What is the core objective of the investment banking team executing this specific project advisory mandate?",
+    question: "Under the latest project finance guidelines, an infrastructure project's financial closure is legally recognized only when which condition is fully satisfied?",
     options: [
-      "Building a comprehensive long-term financial model to test feasibility and ensure the project is bankable for investors.",
-      "Hiring the physical engineering workforce and purchasing the construction materials for the port.",
-      "Guaranteeing that the stock market price of the port will double within the first six months of operation.",
-      "Underwriting a short-term public equity issue to sell port tickets directly to retail consumers."
+      "The draft Inter-Creditor Agreement (ICA) is circulated.",
+      "The lead bank issues an in-principle sanction letter.",
+      "At least 50% of the working capital lines are tied up.",
+      "100% of the debt and equity funding is legally tied up."
     ],
-    correctAnswer: 0,
-    reason: "Project Advisory happens before a capital-intensive asset is built. Bankers create rigorous, multi-decade financial projection models to evaluate cash flows, assess financial risks, and ensure the project structure can successfully attract large-scale institutional investment."
+    correctAnswer: 3,
+    reason: "True financial closure requires all financing sources—both equity and debt lines across the entire consortium—to be legally executed, committed, and ready for deployment."
   },
   {
     id: 5,
-    question: "An Indian consumer electronics company has appointed an investment bank to manage its upcoming IPO. Instead of fixing a single rigid share price on day one, the investment bank decides to discover the fair market price by inviting institutional buyers to bid within a specific price range. What is the formal financial name for this modern dynamic pricing mechanism managed by the investment bank?",
+    question: "A corporate client requests a ₹15 Crore term loan for a brownfield factory expansion. Their provisional balance sheet displays an asset revaluation reserve of ₹8 Crore, which they count toward their Tangible Net Worth (TNW) to lower their leverage ratio. How do you assess this?",
     options: [
-      "Fixed Price Equity Allocation (FPEA)",
-      "Book Building Process, where the final price is determined based on real-time market demand within a price band.",
-      "Private Placement Rationing (PPR), where the corporate issuer forces retail buyers to accept predefined values.",
-      "Margin Safety Arbitrage (MSA), where stock exchange clearing houses automatically fix public trading costs."
+      "Deduct the revaluation reserve completely from the TNW.",
+      "Accept 50% of the revaluation reserve as tier-2 equity.",
+      "Allow it if verified by an empanelled valuer.",
+      "Permit it provided the post-loan TOL/TNW stays under 3.0x."
     ],
-    correctAnswer: 1,
-    reason: "Book building is the standard process where an investment bank determines the final IPO share price by collecting bids from institutional and retail investors within a designated floor price and cap price band, matching it against actual demand."
+    correctAnswer: 0,
+    reason: "Revaluation reserves are non-cash accounting adjustments. They do not represent real tangible capital available to service debt or absorb losses. They must be deducted to find the true TNW."
   },
   {
     id: 6,
-    question: "A corporate renewable energy firm launches a public issue to raise ₹800 Crore. Due to sudden, unexpected political instability, regular market investors become hesitant, creating a major risk that the public issue will not be fully subscribed by the closing deadline. How does the investment bank's contract of \"Underwriting\" protect the energy company from this capital-raising failure?",
+    question: "An existing borrower uses an active ₹5 Crore short-term trade advance received from an overseas group company as their upfront equity margin for a new term loan. How do you evaluate the fund flow?",
     options: [
-      "The investment bank forces the Indian central government to legally buy all the remaining unsold corporate assets.",
-      "The investment bank legally cancels the entire transaction and returns all application monies without charging fees.",
-      "The investment bank legally binds itself to purchase the remaining unsold shares or bonds using its own institutional capital.",
-      "The investment bank automatically converts the public equity issue into a short-term commercial bank cash credit line."
+      "Accept it because the cash is visible inside the account.",
+      "Reject it as it introduces high short-term call-back risk.",
+      "Classify it as a long-term subordinated promoter debt line.",
+      "Condition approval on a rolling 1-year rollover agreement."
     ],
-    correctAnswer: 2,
-    reason: "Underwriting is a risk-mitigation service where the investment bank guarantees the successful sale of the issue. If the public does not buy 100% of the minimum required shares, the underwriter steps in and buys the remainder using its own funds."
+    correctAnswer: 1,
+    reason: "Trade advances from group companies are short-term liabilities, not permanent equity. If the advance is recalled, it creates a funding gap mid-construction. Equity must be long-term and unencumbered."
   },
   {
     id: 7,
-    question: "A major automobile manufacturing company has been successfully listed on the National Stock Exchange (NSE) for over ten years. To finance a new electric vehicle engine factory, they hire an investment bank to launch a massive new equity share sale to the public. Which specific financial instrument will the investment bank structure to manage this subsequent public equity capital-raising exercise?",
+    question: "When reviewing a project's cost structure, you find the promoter has listed \"Machinery Contingencies\" at 25% of the total equipment cost, well above the standard 5-10% industry norm. What is the hidden risk?",
     options: [
-      "Initial Public Offering (IPO)",
-      "Follow-on Public Offer (FPO)",
-      "Qualified Private Placement (QPP)",
-      "Mezzanine Debt Syndication (MDS)"
+      "The project will run into sudden working capital shortages.",
+      "The debt service capability improves through excess buffers.",
+      "The promoter is inflating project costs to reduce their equity contribution.",
+      "The average maturity structure of the loan collapses."
     ],
-    correctAnswer: 1,
-    reason: "When an already listed public company issues fresh or additional shares to the general public to raise extra capital, the transaction is structurally classified as a Follow-on Public Offer (FPO), as opposed to an IPO, which is only for a company's very first listing."
+    correctAnswer: 2,
+    reason: "Artificially high contingency lines inflate the total project cost. This allows promoters to borrow more from the bank while keeping their own actual cash investment low."
   },
   {
     id: 8,
-    question: "A top-tier Indian housing finance corporation wants to raise ₹300 Crore through corporate bonds. To save time and avoid the heavy legal expenses of printing public prospectuses and launching national marketing campaigns, they want to bypass the general public entirely. Which specific distribution channel within the scope of debt management allows the investment bank to sell these bonds directly to a select group of institutional investors?",
+    question: "A listed corporate borrower requests a term loan. Their parent company provides a \"Letter of Comfort\" instead of a formal Corporate Guarantee. What is the legal enforcement value of this document?",
     options: [
-      "Retail Book Building Route (RBBR)",
-      "Public Debt Issuance Program (PDIP)",
-      "Private Placement, where securities are sold directly to a select group of sophisticated institutional investors like insurance funds.",
-      "Main-Board Public Underwriting (MBPU), where bonds are auctioned directly via automated retail stock exchange screens."
+      "It holds the exact same legal weight as a co-obligant note.",
+      "It allows the bank to automatically freeze parent accounts.",
+      "It obligates the parent company to clear all payment shortfalls.",
+      "It is an expression of intent with zero direct legal obligation."
     ],
-    correctAnswer: 2,
-    reason: "A Private Placement allows a corporate issuer to sell debt or equity instruments directly to a small, pre-selected group of sophisticated institutional investors (like banks, pension funds, or insurance firms), completely bypassing the expensive and time-consuming regulatory requirements of a mass public offer."
+    correctAnswer: 3,
+    reason: "A Letter of Comfort is a non-binding statement of awareness and support. Unlike a corporate guarantee, it cannot be legally enforced to recover outstanding debt payments during a default."
   },
   {
     id: 9,
-    question: "An investment banker is valuing an Indian quick-commerce startup with high revenue growth, an active customer app interface, but massive net losses due to heavy initial marketing spending. The startup owns no physical land, warehouses, or delivery fleets. Which primary valuation methodology should the corporate advisory team use to find the intrinsic value of this asset-light tech company?",
+    question: "A financial model projects a baseline DSCR of 1.45x. Your stress test shows that if capacity utilization falls by 15%, the DSCR drops to 0.95x. What does this sensitivity indicate?",
     options: [
-      "Net Asset Value (NAV) method, by calculating the liquidation value of the startup's physical assets and office equipment.",
-      "Discounted Cash Flow (DCF) method, by forecasting future long-term free cash flows and discounting them to present value.",
-      "Comparable Transaction Multiples, by applying a price-to-earnings (P/E) multiple benchmark based on legacy retail supermarkets.",
-      "Book Value Optimization, by adjusting historical balance sheet numbers to reflect current brand equity margins."
+      "High operating leverage and high vulnerability to demand drops.",
+      "Low financial leverage with comfortable debt-servicing buffers.",
+      "Excellent capacity to absorb input cost shocks.",
+      "High working capital efficiency across operational cycles."
     ],
-    correctAnswer: 1,
-    reason: "For asset-light, loss-making tech companies, traditional asset-backed methods or historical profit multiples fail. The DCF method is the correct tool for finding intrinsic value because it looks forward, evaluating the present value of the firm's future cash flows once it scales and turns profitable."
+    correctAnswer: 0,
+    reason: "A sharp drop in DSCR below unity from a modest utilization decline reveals a rigid fixed-cost structure. The project relies on near-perfect performance to meet its debt obligations."
   },
   {
     id: 10,
-    question: "A foreign institutional investor quietly buys up a 14% stake in a listed Indian infrastructure company from the open market and announces plans to launch a bid to remove the current founders. The current founders own only 22% of the equity and want to block this unwanted takeover. Which protective defense strategy should the corporate advisory desk recommend to the current founders?",
+    question: "A promoter structures a ₹20 Crore term loan with equal monthly principal repayments over 5 years, combined with a 6-month moratorium. What happens to the Average Maturity of the loan asset?",
     options: [
-      "Request SEBI to permanently freeze all open-market trading screens for infrastructure sector stocks.",
-      "Execute a \"White Knight\" strategy, bringing in a friendly, allied investment partner to buy shares and outbid the hostile raider.",
-      "Voluntarily trigger an immediate legal liquidation of all physical corporate assets to deny the raider any equity value.",
-      "Force all retail public shareholders to surrender their voting proxies to the board of directors without compensation."
+      "It expands past the door-to-door tenor limit.",
+      "It shortens compared to a structured ballooning profile.",
+      "It remains completely identical to a bullet model.",
+      "It increases the bank's exposure to long-term tail-risk."
     ],
     correctAnswer: 1,
-    reason: "A \"White Knight\" defense is a classic corporate advisory strategy where a target company invites a friendly investor or corporation to acquire a stake and help outbid a hostile raider, allowing the company to avoid a forced takeover."
+    reason: "Equal principal repayments return cash to the bank faster than a ballooning schedule. This shortens the asset's average maturity, reducing the bank's risk exposure over time."
   },
   {
     id: 11,
-    question: "The board of directors of an Indian pharmaceutical company is preparing to sell its core generic medicine portfolio to a global healthcare group. The board wants to insulate itself from potential future lawsuits by minority shareholders who might claim the assets were sold too cheaply. Which critical document must the corporate advisory team arrange to protect the board from this specific legal risk?",
+    question: "A highway project operating under the Hybrid Annuity Model (HAM) encounters land acquisition delays. The construction phase extends by 12 months. Which regulatory flexibility can prevent a technical NPA classification?",
     options: [
-      "An official corporate tax exemption certificate stamped by the Central Board of Direct Taxes.",
-      "A formal Fairness Opinion issued by an independent investment bank, validating that the transaction price is financially reasonable.",
-      "A registered underwriting solvency guarantee signed by the National Stock Exchange's clearing corporation.",
-      "A mandatory debenture covenant waiver issued by the lead commercial bank's credit risk management committee."
+      "Immediate conversion of the loan into a Working Capital demand line.",
+      "Automatic write-off of the accrued interest during construction.",
+      "A formal shift in the DCCO within allowed regulatory limits.",
+      "Reducing the standard provisioning requirement to 0.25%."
     ],
-    correctAnswer: 1,
-    reason: "A Fairness Opinion is a professional, independent report that evaluates the financial terms of a transaction. It provides objective evidence to shareholders that the board acted in good faith and secured a fair price, protecting the directors from breach-of-fiduciary-duty lawsuits."
+    correctAnswer: 2,
+    reason: "Banking guidelines allow lenders to extend a project's DCCO by up to 2 years for infrastructure projects due to non-promoter delays, keeping the asset standard without triggering a restructuring penalty."
   },
   {
     id: 12,
-    question: "Two dominant Indian cement manufacturing giants announce an agreement to merge their operations. Their corporate advisors warn them that the unified company will control nearly 58% of the cement supply in Western India, potentially giving them unfair price-fixing power. Which Indian statutory regulatory body has the legal authority to review, alter, or block this corporate advisory transaction?",
+    question: "A manufacturing project report displays a high accounting Net Profit margin but a negative Operating Cash Flow statement. What does this variance reveal about its debt service capability?",
     options: [
-      "The Securities and Exchange Board of India (SEBI), under the provisions of the Insider Trading Regulations.",
-      "The Reserve Bank of India (RBI), under the strict guidelines of the Foreign Exchange Management Act.",
-      "The Competition Commission of India (CCI), under the provisions of the Competition Act, to prevent anti-competitive combinations.",
-      "The National Company Law Tribunal (NCLT), acting strictly as an international tax arbitration clearinghouse."
+      "The project maintains excellent liquidity to clear long-term loans.",
+      "The asset depreciation lifecycle is extended too far.",
+      "The business requires an immediate debt equity conversion.",
+      "Profits are tied up in inventory or unpaid receivables."
     ],
-    correctAnswer: 2,
-    reason: "The Competition Commission of India (CCI) is tasked with reviewing large mergers and acquisitions to ensure they do not result in an Appreciable Adverse Effect on Competition (AAEC) or create an unfair monopoly within the Indian market."
+    correctAnswer: 3,
+    reason: "High paper profits cannot service debt if cash is trapped in raw inventory or delayed customer payments. Lenders must look at free cash flows, not just net accounting profits."
   },
   {
     id: 13,
-    question: "A state government wants to build a new metro rail line. They want a private infrastructure company to construct and maintain it, but the government wants to eliminate the private company's risk of losing money if passenger ticket sales are low. The advisory desk structures a model where the government pays the developer a fixed, guaranteed biannual fee for 20 years just for keeping the tracks operational, while the government collects the actual ticket cash. Which standard Public-Private Partnership (PPP) framework has the project advisory team implemented here?",
+    question: "A project's financial model shows an Equity IRR of 22% and a Project IRR of 11%. The bank's term loan interest rate is 9.5%. What does this divergence tell you?",
     options: [
-      "Merchant Facility Model, where the private developer takes 100% of the long-term traffic and commercial pricing risk.",
-      "Annuity Model, where the government removes traffic risk by making fixed, periodic payments to the developer for building the asset.",
-      "Leveraged Capital Grant Model, where the government pays for the entire construction upfront using physical gold reserves.",
-      "Delisting Carve-out Model, where the metro line is converted into a private corporate entity on the stock exchange."
+      "The project uses high debt leverage to boost equity returns.",
+      "The project is structurally unviable and cannot cover its interest costs.",
+      "The promoter's upfront cash investment is too high.",
+      "The economic asset life cycle is underestimated."
     ],
-    correctAnswer: 1,
-    reason: "In an Annuity PPP model, the concessionaire (private developer) does not bear the risk of fluctuating user traffic. The government makes regular, fixed payments (annuities) to the developer over a set period, providing a highly predictable and low-risk return structure for investors."
+    correctAnswer: 0,
+    reason: "When the Project IRR exceeds the cost of debt, borrowing heavily boosts the Equity IRR. This financial leverage creates high returns for shareholders but increases the bank's default risk if cash flows drop."
   },
   {
     id: 14,
-    question: "An infrastructure developer is building a high-speed rail corridor in India. They are sourcing heavy locomotives and specialized tracks from a Japanese manufacturing company, requiring a massive payment in Japanese Yen (JPY) in exactly 24 months. The project advisory team is worried that if the Indian Rupee (INR) weakens against the Yen over the next two years, the project's construction costs will spiral out of control. Which proactive risk-management solution should the project advisory team integrate into the financial plan?",
+    question: "You run a sensitivity stress model for an industrial unit. A 10% increase in raw material costs drops the Project IRR from 15% to 8%, below the loan's interest rate. What is your credit mitigation requirement?",
     options: [
-      "Force the Japanese manufacturer to accept physical Indian retail shopping vouchers as full payment for the trains.",
-      "Arrange a Currency Forward or Swap contract through a financial desk to lock in the INR-to-JPY exchange rate right now.",
-      "Advise the developer to stop construction for 24 months and wait for global currency markets to naturally stabilize.",
-      "Convert the entire railway project into a short-term venture capital startup to bypass local foreign exchange laws."
+      "Extend the loan tenor to lower the annual principal dues.",
+      "Mandate a long-term supply agreement with locked input prices.",
+      "Convert the entire floating rate loan into a fixed rate asset.",
+      "Scale down the primary collateral requirement by 20%."
     ],
     correctAnswer: 1,
-    reason: "Project advisors use financial derivatives like forward contracts or currency swaps to manage macroeconomic risks. By locking in the exchange rate ahead of time, they eliminate currency volatility risk, ensuring that sudden fluctuations won't cause a project budget blowout."
+    reason: "When a project's viability is highly sensitive to raw material costs, the bank must stabilize those margins. Enforcing a locked-price input contract removes the pricing volatility threat."
   },
   {
     id: 15,
-    question: "An Indian solar energy developer requires ₹3,500 Crore to build a mega solar farm. A single private commercial bank likes the project but refuses to lend the entire amount alone because doing so would breach their statutory single-borrower exposure limits set by the RBI. How does the mechanism of a syndicated loan solve this operational risk control challenge for both the bank and the borrower?",
+    question: "When checking a cash flow model, you note the promoter included non-operating rental income from an unrelated family property to calculate the project's Net Present Value (NPV). How should you handle this?",
     options: [
-      "It automatically forces the Reserve Bank of India to provide interest-free sovereign cash grants to cover the balance.",
-      "It allows the lead bank to distribute chunks of the single large loan across a group of multiple banks, spreading the default risk.",
-      "It splits the energy company into 20 tiny independent firms so each can apply for a small retail bank loan.",
-      "It legally converts the entire long-term debt package into an active equity initial public offering (IPO) overnight."
+      "Approve it if the property is formally mortgaged to the bank.",
+      "Accept it but apply a 20% haircut to the rental revenue line.",
+      "Remove non-project revenues completely from the model calculations.",
+      "Increase the project's internal hurdle rate by 100 bps."
     ],
-    correctAnswer: 1,
-    reason: "Loan syndication allows multiple financial institutions to fund different portions of a single, massive loan facility. This enables individual banks to participate in large transactions without exceeding their internal credit risk exposure boundaries."
+    correctAnswer: 2,
+    reason: "A project's financial feasibility must stand on its own operational cash flows. Including outside income distorts the project's true viability and hides its core operational risks."
   },
   {
     id: 16,
-    question: "An investment bank is syndicating a ₹1,800 Crore debt package for a new pharmaceutical manufacturing lab. The lead arranger compiles a highly detailed, 150-page document containing the company's audited financials, project cash projections, asset valuations, and risk factors to present to potential participating banks. What is the formal financial name and conceptual purpose of this primary syndication document?",
+    question: "Why is a project's Net Present Value (NPV) a more reliable credit metric for long-term lending decisions than the accounting Payback Period?",
     options: [
-      "Red Herring Equity Prospectus, designed to market public shares directly to regular retail individual investors.",
-      "Information Memorandum (or IM), designed to provide potential syndicate member banks with the necessary data to perform credit evaluations.",
-      "Mandatory Debt Covenant Waiver, designed to legally excuse the borrower from making future interest payments.",
-      "Article of Association Addendum, designed to change the corporate promoter voting rights on the stock exchange."
+      "The Payback Period tracks cash flows after the loan is cleared.",
+      "NPV completely ignores the compound time value of money.",
+      "The Payback Period automatically adjusts for macro interest rate resets.",
+      "NPV factors in the timing and risk of all future cash inflows."
     ],
-    correctAnswer: 1,
-    reason: "The Information Memorandum (IM) is the confidential document created by the Lead Arranger. It outlines the financial and operational health of the borrower, allowing other banks to conduct their internal due diligence before joining the syndicate."
+    correctAnswer: 3,
+    reason: "The Payback Period simply tracks how fast the initial investment is recovered, ignoring cash flows after that point. NPV discounts all future cash flows over the loan's lifespan, giving a clearer view of long-term debt-servicing capacity."
   },
   {
     id: 17,
-    question: "An Indian infrastructure company that borrowed ₹3,000 Crore through a syndicated loan faces a severe cash-flow crisis due to an economic downturn. They realize they cannot make their upcoming quarterly principal repayment and request an emergency 2-year extension on the loan tenure. How must the lead agent bank handle this operational decision according to standard syndication rules?",
+    question: "Under a standard Trust and Retention Account (TRA) cash waterfall agreement, which payment has the absolute highest priority?",
     options: [
-      "The agent bank can automatically grant the 2-year extension on its own without informing any other syndicate member.",
-      "The agent bank must immediately sue the borrower in bankruptcy court and liquidate all assets without a vote.",
-      "The agent bank must call a vote among all syndicate members, as changing core repayment terms requires majority or unanimous lender consent.",
-      "The agent bank must force the borrower to convert the entire infrastructure project into an interest-free government grant."
+      "Statutory government taxes and land dues.",
+      "Bank term loan monthly principal installments.",
+      "Promoter equity dividend distributions.",
+      "Secondary vendor raw material procurement clearings."
     ],
-    correctAnswer: 2,
-    reason: "A syndicated loan is a collective agreement. Material changes to core loan terms—such as modifying the interest rate, extending maturity, or releasing primary collateral—cannot be decided by one bank; they require a vote and formal consent from the syndicate members according to the loan agreement rules."
+    correctAnswer: 0,
+    reason: "Statutory dues and taxes always sit at the top of a legal cash waterfall. Unpaid taxes can cause regulators to shut down operations, so they must be cleared before operational expenses or debt service."
   },
   {
     id: 18,
-    question: "A logistics company is midway through a ₹2,000 Crore loan syndication process. Suddenly, the government passes a law that outlaws the company's primary transport fleet mechanism, instantly wiping out 70% of its projected future revenues. The lead arranger immediately invokes the \"Material Adverse Change\" (MAC) clause in the credit agreement. What is the tactical purpose of a MAC clause within a loan syndication transaction?",
+    question: "A corporate borrower requests a loan restructure. They ask to convert unpaid construction interest into a Funded Interest Term Loan (FITL). How should you structure the FITL's maturity?",
     options: [
-      "It allows lenders to legally withdraw from their funding commitments or declare a default if the borrower suffers a catastrophic financial decline.",
-      "It forces the borrower to automatically double the salary of all working factory laborers using bank treasury funds.",
-      "It legally exempts the borrowing company from ever having to pay corporate income taxes to the central government.",
-      "It requires the stock exchange to permanently halt all trading activities for the borrower's public retail stock."
+      "It must match the amortization profile of the working capital lines.",
+      "Its tenor must fit within the remaining economic life of the asset.",
+      "It should be structured as a bullet payment due in Year 15.",
+      "Its maturity must extend past the primary loan's door-to-door tenor."
     ],
-    correctAnswer: 0,
-    reason: "A Material Adverse Change (MAC) clause is a crucial protective covenant. It gives lenders the legal right to stop funding or cancel a loan facility if a drastic, unforeseen event occurs that severely threatens the borrower's ability to repay the debt."
+    correctAnswer: 1,
+    reason: "An FITL is a deferred debt obligation. Its repayment timeline must fit within the asset's productive, revenue-generating lifespan to ensure there is active cash flow available to clear it."
   },
   {
     id: 19,
-    question: "A food-tech startup raised a Series A round at a share price of ₹100. One year later, due to a severe economic slowdown and intense competition, the company is running out of cash and is forced to raise a Series B round at a lower share price of ₹60 (a \"Down Round\"). The Series A VC investor invokes their \"Anti-Dilution\" clause. What is the practical purpose of an Anti-Dilution clause within a venture capital shareholder agreement?",
+    question: "A borrower has been regular on their term loan payments, but their working capital account has been overdrawn for 45 consecutive days due to inventory delays. What is the correct regulatory classification?",
     options: [
-      "It protects early investors from economic loss by adjusting their share conversion ratio if the company issues shares at a lower price in later rounds.",
-      "It legally forces the startup founders to return 100% of all past investment cash to the investors immediately in physical gold.",
-      "It automatically requires the stock exchanges to permanently ban the company from ever launching a public IPO.",
-      "It converts all employee stock options into short-term high-interest debt liabilities backed by parent company real estate."
+      "The entire exposure remains a Standard, regular account.",
+      "The account must be downgraded to Sub-Standard immediately.",
+      "The account must be flagged as an SMA-1 credit asset.",
+      "The branch must place the term loan in a technical non-accrual hold."
     ],
-    correctAnswer: 0,
-    reason: "An anti-dilution clause protects early venture capital investors if the startup falls into a \"down round\" (selling shares cheaper than before). The clause recalculates the conversion price or issues extra fractional shares to the early investor, shielding their capital from a severe loss of value."
+    correctAnswer: 2,
+    reason: "Overdue accounts or continuous overdrafts between 31 and 60 days require an automatic classification as Special Mention Account-1 (SMA-1). This applies across all facilities held by the borrower."
   },
   {
     id: 20,
-    question: "A VC fund is about to invest ₹10 Crore in a revolutionary drone startup. The fund is terrified that the genius tech co-founder might take the investment cash on day one, quit the company, and start a rival business while still keeping his massive 40% equity stake. Which standard venture capital structural mechanism must the VC build into the legal term sheet to ensure the co-founder stays aligned with the business long-term?",
+    question: "Under Basel-III regulatory capital guidelines, how does a loan restructuring affect the bank's internal balance sheet?",
     options: [
-      "Immediate Public Delisting Order",
-      "Stock Vesting Schedule, which requires founders to earn their equity allocation gradually over a multi-year period of continuous work.",
-      "Debt Service Coverage Covenant",
-      "Reverse Book-Building Allotment"
+      "It reduces the credit risk-weighting to a flat 50%.",
+      "It increases the bank's available Tier-1 capital surplus.",
+      "It eliminates the need to maintain standard provisioning buffers.",
+      "It locks up more core capital by increasing risk-weights and provisions."
     ],
-    correctAnswer: 1,
-    reason: "Equity vesting is a mandatory standard in venture capital. Founders do not own 100% of their shares unconditionally on day one; instead, they \"earn\" ownership monthly or yearly over a set period (typically 4 years). If a founder leaves early, they forfeit their unvested shares back to the company."
+    correctAnswer: 3,
+    reason: "Restructuring an account signals higher credit risk. Regulators require banks to increase provisioning and assign higher risk-weights, which locks up more core capital and limits lending capacity."
   },
   {
     id: 21,
-    question: "An MBA student is analyzing how a venture capital firm operates. She notes that the firm consists of two entities: wealthy institutions (like pension funds) that provide 99% of the investment cash but do not pick startups, and professional fund managers who select the startups and run daily fund operations. Based on corporate structures in venture finance, what are the formal industry titles of these two separate fund participants?",
+    question: "A consortium introduces an Inter-Creditor Agreement (ICA) vote to restructure a stressed steel asset. Banks representing 80% of the value and 55% of the total number of lenders approve the plan. Is this decision legally binding?",
     options: [
-      "Retail Individual Broker and Lead Clearinghouse Broker",
-      "Underwritten Book Runner and Participating Institutional Underwriter",
-      "Limited Partners (LPs) who provide the capital, and General Partners (GPs) who manage the investment fund.",
-      "Primary Secured Creditor and Secondary Subordinated Creditor"
+      "No, because it requires approval from 60% of the lenders by number.",
+      "Yes, because the value vote exceeds the 75% regulatory threshold.",
+      "No, because value approval must reach a 90% supermajority.",
+      "Yes, provided the lead bank signs an unconditional waiver."
     ],
-    correctAnswer: 2,
-    reason: "Venture capital funds are typically structured as limited partnerships. The Limited Partners (LPs) are the passive investors who supply the cash (endowments, family offices), while the General Partners (GPs) are the professional venture capitalists who source, evaluate, and manage the startup investments."
+    correctAnswer: 0,
+    reason: "Under current resolution frameworks, a restructuring plan requires a dual majority: at least 75% by total outstanding value AND at least 60% by total number of lenders. Missing either threshold defeats the vote."
   },
   {
     id: 22,
-    question: "An AI startup secures a Series A cash injection of ₹12 Crore. The startup's monthly fixed operational expenses (salaries, office space, server costs) total ₹50 Lakh, and they generate zero revenue. Their project advisory desk calculates that the startup has a \"Runway\" of exactly 24 months before they hit zero cash. What is the formal financial name for this monthly rate of cash consumption in a venture-backed startup?",
+    question: "A promoter requests a 6-month extension on a manufacturing loan's moratorium. They offer to pledge additional family-owned agricultural land as collateral. How do you assess this security top-up?",
     options: [
-      "Amortization Spread Ratio",
-      "Liquidation Arbitrage Margin",
-      "Dividend Yield Capacity",
-      "Burn Rate, which measures the net speed at which a pre-revenue company consumes its capital reserves to fund daily operations."
+      "Accept it because agricultural land value remains highly stable.",
+      "Reject it as agricultural land is difficult to liquidate due to local legal restrictions.",
+      "Accept it but apply a standard 75% haircut to its valuation.",
+      "Allow it if the land is converted to commercial status within 30 days."
     ],
-    correctAnswer: 3,
-    reason: "The \"Burn Rate\" represents the speed at which a startup spends its cash reserves to cover operational overheads before generating positive cash flow from operations. Monitoring the burn rate helps founders calculate their remaining operational runway."
+    correctAnswer: 1,
+    reason: "Agricultural land faces strict legal restrictions on foreclosure and sale to non-agriculturists in many jurisdictions. This makes it an illiquid and ineffective collateral option for recovering commercial bank loans."
   },
   {
     id: 23,
-    question: "A PE firm wants to buy a mature, cash-generating Indian plastic packaging company for ₹500 Crore. Instead of using ₹500 Crore of their own money, the PE firm puts up ₹100 Crore of its own cash and borrows the remaining ₹400 Crore from commercial banks, using the packaging company's physical machinery as collateral. Which classic Private Equity transaction model is being executed in this situation?",
+    question: "A corporate borrower opens a collection account with a non-consortium bank to deposit cash sales, bypassing the primary Escrow account. What credit risk signal does this action trigger?",
     options: [
-      "Leveraged Buyout (LBO), which uses a high percentage of borrowed money secured by the target's assets to fund the purchase.",
-      "Angel Placement Allocation, which connects wealthy family offices with pre-revenue smartphone apps.",
-      "Follow-on Public Offer (FPO), which issues fresh equities to regular individual retail buyers on the NSE.",
-      "Mezzanine Lease Swap, which trades short-term supplier bills for retail shopping vouchers."
+      "An indicator of rapid working capital turnover.",
+      "A positive sign of cash diversification across banking lines.",
+      "An Early Warning Signal (EWS) indicating potential fund diversion.",
+      "A technical breach that lowers the bank's capital adequacy requirements."
     ],
-    correctAnswer: 0,
-    reason: "A Leveraged Buyout (LBO) is a defining strategy of Private Equity. The PE firm uses a heavy mix of debt (leverage) to buy control of a mature company. The target company's steady cash flows are then used to pay off the bank loans over time."
+    correctAnswer: 2,
+    reason: "Routing revenue outside the agreed consortium escrow account is a major red flag. It indicates the borrower is hiding cash to evade debt servicing obligations or divert funds to unapproved projects."
   },
   {
     id: 24,
-    question: "An MBA student is comparing two private investment funds. Fund X completely avoids raw tech prototypes, focusing instead on buying massive controlling stakes in mature, cash-generating dairy businesses. Fund Y focuses on buying minor 5% stakes in unproven, high-growth AI software apps. Based on standard introductory definitions, how should the student classify Fund X and Fund Y?",
+    question: "When appraising a port project, you note the concession agreement includes a \"Termination Payment\" clause where the government covers 90% of the debt if the contract is canceled. How does this affect your credit decision?",
     options: [
-      "Fund X is a Public Sector Unit; Fund Y is a Distressed Asset Consortium.",
-      "Fund X is a Private Equity Fund; Fund Y is a Venture Capital Fund.",
-      "Fund X is a Subordinated Debt Desk; Fund Y is an Underwritten Book Runner.",
-      "Both funds represent identical early-stage angel brackets backed by sovereign gold reserves."
+      "It requires the bank to double its standard provisioning rate.",
+      "It forces the promoter to increase their upfront cash equity to 50%.",
+      "It eliminates the need to set up a TRA waterfall mechanism.",
+      "It lowers the project's default risk by providing a strong safety net."
     ],
-    correctAnswer: 1,
-    reason: "Traditional Private Equity (PE) targets mature, stable, and profitable companies with established cash flows. Venture Capital (VC) is a subset of PE that specifically targets early-stage, high-risk, pre-profit startups that have massive exponential growth potential."
+    correctAnswer: 3,
+    reason: "A sovereign-backed termination payment covers the bank's debt if the project fails due to regulatory shifts. This structural guarantee lowers the bank's ultimate loss exposure and improves the credit profile."
   },
   {
     id: 25,
-    question: "A Private Equity firm raises ₹1,000 Crore from large pension funds. The fund's legal contract contains a clause stating that the professional PE managers will receive zero performance bonuses unless they first manage to deliver a minimum annualized return of at least 8% to their pension fund backers. What is the introductory industry term for this minimum baseline return threshold required by investors?",
+    question: "A company shows a current ratio of 2.1x but a quick ratio of 0.6x. What does this gap tell you about their financial position?",
     options: [
-      "Dividend Yield Target",
-      "Debt Service Coverage Ratio",
-      "Hurdle Rate",
-      "Treasury Bill Discount Rate"
+      "Liquidity is heavily trapped in slow-moving raw inventory.",
+      "The company maintains excellent cash balances to cover short-term debt.",
+      "The firm is highly over-leveraged on its long-term borrowing.",
+      "Receivables are being collected faster than industry averages."
     ],
-    correctAnswer: 2,
-    reason: "The Hurdle Rate is the minimum rate of return that a private equity fund must achieve for its investors (Limited Partners) before the fund managers (General Partners) are allowed to take their share of the performance profits."
+    correctAnswer: 0,
+    reason: "A high current ratio alongside a low quick ratio shows that short-term assets are dominated by inventory rather than liquid cash or receivables. If sales slow down, the company will face an immediate liquidity crunch."
   },
   {
     id: 26,
-    question: "A large steel mill in India falls into deep financial distress, defaults on its commercial loans, and enters bankruptcy proceedings. A specialized private equity fund steps in and buys up these unpaid bank loans at a deep 60% discount, aiming to convert that debt into a controlling equity stake and turn the factory around. Which private equity strategy describes this process of investing in the cheap liabilities of failing corporations?",
+    question: "A promoter injects equity capital into an SPV via an unsecured loan from their parent company. The loan agreement allows the parent to withdraw funds if its own credit rating drops. How do you treat this loan?",
     options: [
-      "Pre-Seed Angel Allocation",
-      "Greenfield Project Advisory",
-      "Distressed Debt",
-      "Follow-on Public Underwriting"
+      "Count it as clean promoter equity because the cash is inside the SPV.",
+      "Reject it unless the loan is fully subordinated and cannot be withdrawn during the bank loan's tenor.",
+      "Charge an extra 50 bps on the term loan to cover the rating risk.",
+      "Permit it if the parent company maintains a standard TOL/TNW under 2.0x."
     ],
-    correctAnswer: 2,
-    reason: "Distressed debt investing involves buying up the credit or debt papers of troubled or near-bankrupt companies at a fraction of their face value. The PE firm uses this debt ownership position to swap the liabilities for equity control during bankruptcy or restructuring court procedures."
+    correctAnswer: 1,
+    reason: "Unsecured loans with call-back options are unstable. To count as equity margin, the loan must be fully subordinated, interest-free, and locked in place until the bank's term loan is completely repaid."
   },
   {
     id: 27,
-    question: "Two prominent Indian quick-commerce delivery apps complete a friendly merger. Their investment banking advisors demonstrate that by sharing the same physical delivery fleets, unifying local dark stores, and using a single technical server grid, the combined company can save ₹200 Crore annually. What is the formal financial term for these specific cost-saving benefits generated by combining the two firms?",
-    options: ["Revenue Synergies", "Financial Arbitrage", "Cost Synergies", "Liquidity Premiums"],
+    question: "During sensitivity analysis for a toll road project, you find that a 5% drop in heavy truck traffic cuts the operating EBITDA by 25%. What type of risk does this reveal?",
+    options: [
+      "High raw material price risk across international markets.",
+      "Excellent capacity to absorb variable cost spikes.",
+      "High operating leverage where fixed maintenance costs squeeze margins.",
+      "A compressed loan asset maturity structure that accelerates cash recovery."
+    ],
     correctAnswer: 2,
-    reason: "Cost synergies refer to the duplicate operating expenses that a combined company can cut out after an M&A transaction to maximize operating profit margins."
+    reason: "When a small revenue drop causes a large fall in EBITDA, it reveals high operating leverage. Fixed costs (like road maintenance) remain constant, meaning any revenue dip directly squeezes the cash available for debt service."
   },
   {
     id: 28,
-    question: "An Indian private bank acquires a premium health insurance company. The bank's marketing directors plan to immediately pitch insurance policies directly to the bank's existing 15 million credit card holders, aiming to boost total group revenue. Which specific synergy type are the corporate advisors trying to unlock for the bank group?",
-    options: ["Capital Structure Synergies", "Revenue Synergies", "Production Scale Synergies", "Regulatory Tax Arbitrage"],
-    correctAnswer: 1,
-    reason: "Revenue synergies are achieved when the combined company generates higher total sales than the two firms could manage independently, typically via cross-selling products to an expanded customer base."
+    question: "A firm requests a term loan to replace an old manufacturing asset. The replacement will reduce power consumption by 30% but will not expand total production capacity. How should you structure the repayment?",
+    options: [
+      "Schedule a steep ballooning profile that relies on future market expansion.",
+      "Require a 100% upfront promoter equity contribution to eliminate risk.",
+      "Structure a bullet repayment due at the end of Year 10.",
+      "Match repayments directly with the verified cost savings generated by the new machine."
+    ],
+    correctAnswer: 3,
+    reason: "Since this investment saves on costs rather than expanding sales, the loan must be amortized using those verified energy savings. This aligns the repayment schedule with the project's actual source of cash."
   },
   {
     id: 29,
-    question: "During a high-profile corporate transaction negotiation reported on the business news, an analyst refers to a global private equity fund as \"The Bidder.\" In the basic terminology of mergers and acquisitions, which entity does \"The Bidder\" represent?",
-    options: ["The Target Company", "The Intermediary Bank", "The Regulatory Watchdog", "The Acquiring Company"],
-    correctAnswer: 3,
-    reason: "In M&A terminology, the bidding company (or acquirer) is the entity initiating the transaction and attempting to purchase a piece of another business."
+    question: "Under current Large Exposure Framework (LEF) rules, a bank's maximum exposure to a single connected corporate group is capped at what percentage of its Tier-1 Eligible Capital Base?",
+    options: [
+      "25%",
+      "15%",
+      "40%",
+      "10%"
+    ],
+    correctAnswer: 0,
+    reason: "Regulatory frameworks cap a bank's maximum exposure to any single interconnected group of companies at 25% of its Tier-1 capital. This concentration limit protects the banking system from systemic shocks."
   },
   {
     id: 30,
-    question: "A legacy Indian consumer goods conglomerate is evaluating whether to sell its organic skincare division to a foreign buyer. In the investment banking pitch documents, this specific division is labeled as \"The Target.\" Based on introductory financial definitions, what does \"The Target\" signify?",
-    options: ["The regulatory clearance desk", "The company being acquired", "The underwritten book runner", "The lead syndication arranger"],
+    question: "A bank finances a real estate project. The promoter requests a 12-month extension on the DCCO because local building approvals were delayed. What is the standard provisioning requirement for this asset while it is extended?",
+    options: [
+      "The provisioning rate falls to a flat 0.25%.",
+      "The asset stays standard but carries a 1.00% provisioning rate.",
+      "The loan requires an automatic 15% sub-standard provision.",
+      "Provisions must increase by 20% every quarter until construction resumes."
+    ],
     correctAnswer: 1,
-    reason: "\"The Target\" is the standard term used to identify the specific corporate entity, subsidiary, or asset pool that an acquirer wants to buy."
+    reason: "Commercial Real Estate (CRE) projects that extend their DCCO due to non-promoter delays can maintain a Standard classification, but they carry a higher 1.00% provisioning rate to account for the execution risk."
   },
   {
     id: 31,
-    question: "A wealthy investment group starts buying up public shares of an Indian software developer from the open market. The group announces a plan to replace the board of directors, even though the current founders and management strongly oppose the buyout. How should the corporate advisory desk classify this type of acquisition attempt?",
-    options: ["Friendly Takeover", "Hostile Takeover", "Voluntary Amalgamation", "Concentric Divestiture"],
-    correctAnswer: 1,
-    reason: "A hostile takeover occurs when an acquirer bypasses management and attempts to gain control of a target company against the explicit wishes of its current board of directors."
+    question: "A corporate borrower requests a term loan to purchase shares in an international tech startup. Can a commercial bank fund this transaction under current lending guidelines?",
+    options: [
+      "Yes, if the shares are pledged as primary collateral.",
+      "Yes, provided the borrower maintains a net worth above ₹100 Crore.",
+      "No, commercial banks are generally banned from funding equity investments or share purchases.",
+      "Yes, if the loan is structured with a short 2-year average maturity."
+    ],
+    correctAnswer: 2,
+    reason: "Clean banking regulations prevent commercial banks from providing term loans to corporations for speculative share purchases or equity investments, as these activities carry high market risk."
   },
   {
     id: 32,
-    question: "The founders of a premium tea estate brand realize they need global capital to scale up. They approach a major beverage conglomerate, share their financial books willingly, and both corporate boards mutually agree on a fair stock swap deal. What is the correct financial classification for this corporate transaction style?",
-    options: ["Open Market Raid", "Proxy Contest Buyout", "Friendly Takeover", "Leveraged Carve-out"],
-    correctAnswer: 2,
-    reason: "A friendly takeover happens when the target company's management and board of directors approve the transaction terms and advise their shareholders to accept the acquisition offer."
+    question: "A borrower's term loan account falls into arrears and is classified as a Sub-Standard asset on March 31. What baseline provisioning must the bank immediately allocate against the unsecured portion of this loan?",
+    options: [
+      "15%",
+      "100%",
+      "40%",
+      "25%"
+    ],
+    correctAnswer: 3,
+    reason: "When a loan slides into the Sub-Standard category, the bank must immediately apply a 15% provision on the secured portion and a higher 25% provision on any unsecured shortfall."
   },
   {
     id: 33,
-    question: "A high-frequency trading desk notices that a company's stock is trading at ₹500 on the Bombay Stock Exchange (BSE) and simultaneously trading at ₹501.50 on the National Stock Exchange (NSE). The financial engineer programs an automated algorithm to instantly buy shares on the BSE and sell them on the NSE to lock in a risk-free profit. What fundamental financial concept is this algorithmic strategy exploiting?",
-    options: ["Speculation", "Arbitrage", "Hedging", "Leverage"],
-    correctAnswer: 1,
-    reason: "Arbitrage is the simultaneous purchase and sale of an asset in different markets to exploit small price differences and lock in a riskless profit."
+    question: "A forensic audit shows a company's long-term bank loan increased by ₹10 Crore, while its fixed assets remained flat and net working capital contracted. What does this fund flow indicate?",
+    options: [
+      "High risk that long-term loan funds were diverted to unapproved uses.",
+      "Efficient use of capital to scale up production.",
+      "A healthy restructuring of the short-term debt portfolio.",
+      "An expansion of the company's tangible net worth base."
+    ],
+    correctAnswer: 0,
+    reason: "If long-term debt rises while fixed assets and working capital stay flat or shrink, the cash has left the core business. This pattern strongly indicates the borrower is diverting funds outside the approved project."
   },
   {
     id: 34,
-    question: "A proprietary trader believes that a sudden political event next week will cause the price of gold to crash. He buys a large volume of high-risk derivative contracts to bet on this downward price movement, hoping to turn a massive profit using minimal upfront capital. In the context of financial engineering market participants, how is this trader classified?",
-    options: ["Hedger", "Speculator", "Arbitrageur", "Underwriter"],
+    question: "A promoter requests a term loan and offers a first charge on a factory building that sits on leased government land with a remaining lease tenor of 5 years. The loan repayment schedule spans 7 years. What is your credit decision?",
+    options: [
+      "Approve it if the promoter provides a personal guarantee.",
+      "Reject the collateral as the lease expires before the loan is fully repaid.",
+      "Accept it but apply a standard 60% haircut to the building's valuation.",
+      "Condition approval on a 50 bps increase in the floating interest rate."
+    ],
     correctAnswer: 1,
-    reason: "Speculators knowingly take on high market risks to profit from anticipated price movements, often utilizing the leverage provided by derivative contracts."
+    reason: "Security sitting on leased land must have a lease tenor that extends well past the loan's maturity. If the lease expires in 5 years on a 7-year loan, the bank loses its primary security before the debt is cleared."
   },
   {
     id: 35,
-    question: "A corporate financial engineer uses a small ₹5 Lakh margin deposit to secure an active futures contract position controlling ₹1 Crore worth of steel commodities. A sudden 6% drop in steel prices wipes out the company's entire initial margin and triggers massive additional losses. Which core feature of derivative engineering creates this amplified risk profile?",
-    options: ["Tokenization", "Hedging", "Leverage", "Arbitrage"],
+    question: "A data center project relies on an enterprise client contract that allows the client to terminate the lease with a 30-day notice. How should the credit team value this contract during appraisal?",
+    options: [
+      "Value it as a guaranteed, long-term cash flow line.",
+      "Accept it if backed by a standard performance bond.",
+      "Treat it as a highly volatile revenue stream that cannot guarantee long-term debt service.",
+      "Triple the project's internal asset depreciation rate."
+    ],
     correctAnswer: 2,
-    reason: "Leverage involves using a relatively small amount of capital (margin) to control a much larger underlying asset position, which magnifies both potential profits and potential losses."
+    reason: "Short-notice termination clauses remove income predictability. Lenders cannot rely on these volatile revenue streams to service a long-term, high-value term loan asset."
   },
   {
     id: 36,
-    question: "A large infrastructure firm needs a highly customized derivative contract to hedge against an unusual mix of local cement prices and freight inflation. They negotiate the exact terms directly over the telephone with a specific private investment bank, bypassing the public exchange completely. How should the financial engineer classify the delivery channel of this customized contract?",
-    options: ["Over-the-Counter Contract", "Exchange-Traded Contract", "Standardized Futures Contract", "Public Cleared Option"],
-    correctAnswer: 0,
-    reason: "Over-the-Counter (OTC) derivatives are private, custom-tailored financial contracts negotiated directly between two counterparties without the intermediation of a public stock or commodity exchange."
+    question: "A corporate group requests a new project loan from Bank of India. Cross-checking the Central Repository of Information on Large Credits (CRILC) database reveals their group company holds an active SMA-2 status at another commercial bank. What is your underwriting action?",
+    options: [
+      "Process the loan independently if the local entity's account is clean.",
+      "Increase the collateral coverage requirement to 200% and approve.",
+      "Defer principal repayments by an extra 12 months to provide a buffer.",
+      "Hold the application; group stress indicates high contagion and default risk."
+    ],
+    correctAnswer: 3,
+    reason: "An SMA-2 status inside the corporate group reveals systemic liquidity stress. Funding a new project while an affiliated entity is on the verge of default creates severe contagion risk for the bank's capital."
   },
   {
     id: 37,
-    question: "An institutional fund manager buys 500 gold futures contracts on a regulated commodities exchange. The manager is highly confident that even if the unknown seller on the other side of the contract goes bankrupt tomorrow, the exchange itself will step in to guarantee that the transaction is settled. Which specific structural entity within the exchange framework eliminates this counterparty risk?",
-    options: ["Credit Rating Registry", "Central Clearinghouse", "Underwriting Syndicate", "Asset Escrow Board"],
-    correctAnswer: 1,
-    reason: "The Central Clearinghouse acts as the intermediary for exchange-traded derivatives, becoming the buyer to every seller and the seller to every buyer, thereby eliminating individual counterparty default risk."
+    question: "A chemical manufacturing unit appraisal shows a Debt-to-Equity ratio of 4.0x, an average DSCR of 1.12x, and a project IRR of 9.0%. The market interest rate for industrial credit resets to 9.5%. What is the fundamental credit defect?",
+    options: [
+      "Negative real financial leverage where borrowing costs outpace asset returns.",
+      "Excellent equity capitalization with comfortable cash cushions.",
+      "High capacity to handle sudden market utilization shocks.",
+      "An over-extended loan asset maturity structure that accelerates debt recovery."
+    ],
+    correctAnswer: 0,
+    reason: "When a project's IRR falls below the interest rate on its debt, the leverage becomes destructive. Every rupee borrowed costs more than it earns, draining cash flow and making the structure highly unsafe."
   },
   {
     id: 38,
-    question: "A jewelry manufacturer signs a forward contract with a bullion dealer to buy 10 kg of silver at ₹80,000 per kg in exactly 60 days. On the settlement date, the market price of silver drops to ₹70,000 per kg. The manufacturer complains that they do not want to buy at the contract price anymore. Based on introductory legal and financial engineering rules, what is the manufacturer's obligation under this contract?",
+    question: "A promoter requests a term loan to build a private jetty. They offer a negative pledge on their corporate headquarters instead of a formal mortgage. What protection does this pledge provide to the bank?",
     options: [
-      "They can pay a small penalty fee to automatically cancel the deal.",
-      "They can convert the forward contract into a discretionary call option.",
-      "They must buy the silver at ₹80,000 as a forward contract is a binding obligation.",
-      "They can request the central bank to provide a pricing bailout grant."
+      "It grants the bank a direct right to seize and liquidate the headquarters.",
+      "It only prevents the borrower from mortgaging the building to another lender.",
+      "It automatically upgrades the asset classification to a super-secured status.",
+      "It requires the bank to lower its capital adequacy reserve by 15%."
     ],
-    correctAnswer: 2,
-    reason: "Unlike options, forward and futures contracts create a binding, mutual legal obligation on both parties to execute the transaction at the pre-agreed price on the settlement date, regardless of where the spot market moves."
+    correctAnswer: 1,
+    reason: "A negative pledge is a restrictive covenant, not a property mortgage. It stops the borrower from giving a charge to another bank, but it does not give the lender a direct claim to seize or liquidate the asset during a default."
   },
   {
     id: 39,
-    question: "An investment banking conglomerate is handling two sensitive operations. Desk X is advising a client company on how to smoothly acquire a listed competitor. At the same time, Desk Y operates a proprietary trading floor that actively buys and sells the competitor's shares to generate short-term market profits. Which critical structural boundary or internal information barrier must the bank enforce to ensure compliance and prevent illegal information leaks between these desks?",
-    options: ["Public Clearing Portal", "Chinese Wall", "Debt Escrow Covenant", "Assignment Registry"],
-    correctAnswer: 1,
-    reason: "A \"Chinese Wall\" (or information barrier) is a strict regulatory and structural isolation protocol within an investment bank. It legally prevents confidential, non-public inside information from corporate advisory desks (Front Office) from leaking to trading desks (Sales & Trading) to prevent insider trading."
+    question: "You are checking an infrastructure loan proposal. The financial model calculates the DSCR by adding interest on working capital to the denominator. How does this adjustment affect the metric?",
+    options: [
+      "It artificially inflates the project's apparent safety margin.",
+      "It extends the loan asset's calculated average maturity profile.",
+      "It lowers the calculated DSCR, giving a stricter view of cash availability.",
+      "It reduces the bank's standard provisioning requirement by 10%."
+    ],
+    correctAnswer: 2,
+    reason: "Adding short-term working capital interest to the denominator increases the total debt service line. This lowers the calculated DSCR, forcing the model to show a more conservative and strict view of cash availability."
   },
   {
     id: 40,
-    question: "A financial professional inside a large investment bank spends her day analyzing the trading desk's daily exposure limits, stress-testing portfolios against sudden interest rate shifts, and ensuring that traders comply with SEBI's strict net-worth capitalization rules. Within the organizational structure of the investment bank, where does this risk-control function sit?",
-    options: ["Middle Office", "Front Office", "Back Office", "Principal Desk"],
-    correctAnswer: 0,
-    reason: "The Middle Office acts as the risk-management and compliance engine of an investment bank. It does not generate revenue directly (unlike the Front Office) or settle daily paperwork (unlike the Back Office); instead, it monitors market risk, credit risk, and compliance."
+    question: "A company seeks a term loan to fund an acquisition. Their consolidated balance sheet shows goodwill makes up 45% of their total asset base, while their tangible asset cover sits at 0.55x. What is the underwriting concern?",
+    options: [
+      "The company maintains excellent liquid reserves to handle market drops.",
+      "The asset depreciation timeline is compressed too far.",
+      "The business requires an immediate debt equity conversion.",
+      "Balance sheet value relies heavily on intangible assets that provide no default recovery protection."
+    ],
+    correctAnswer: 3,
+    reason: "Goodwill is an intangible asset that often disappears during business stress. If a borrower lacks tangible assets (like land or machinery), the bank has no effective collateral to liquidate to recover its funds if the acquisition fails."
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Introduction to Banking in India",
+  subtitle: "Term Loan & Project Finance",
   professor: "ANIL AGGARWAL",
-  date: "25th June",
+  date: "16th JULY",
   totalQuestions: 40,
   totalMarks: 160,
   marksPerQuestion: 4,
