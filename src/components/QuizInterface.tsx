@@ -43,10 +43,10 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
         }
       });
     } else {
-      // Structure 1: correct/incorrect scoring
+      // Structure 1: correct/incorrect scoring (per-question marks supported)
       answers.forEach((answer, index) => {
         if (answer === quizQuestions[index].correctAnswer) {
-          score += quizInfo.marksPerQuestion;
+          score += quizQuestions[index].marks ?? quizInfo.marksPerQuestion;
         }
       });
     }
