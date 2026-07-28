@@ -83,6 +83,7 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
               const correctAnswer = question.correctAnswer ?? -1;
               const isCorrect = userAnswer === correctAnswer;
               const isUnanswered = userAnswer === null;
+              const qMarks = question.marks ?? quizInfo.marksPerQuestion;
               
               return (
                 <div key={index} className={`p-4 rounded-lg border-2 ${
@@ -94,7 +95,15 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
                       {index + 1}
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-medium mb-3 leading-relaxed">{question.question}</h4>
+                      {question.caseStudy && (
+                        <div className="mb-3 p-3 rounded-md bg-primary/5 border border-primary/20 max-h-56 overflow-y-auto">
+                          <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Case Study Context</div>
+                          <div className="text-xs leading-relaxed whitespace-pre-line text-foreground/80">
+                            {question.caseStudy}
+                          </div>
+                        </div>
+                      )}
+                      <h4 className="font-medium mb-3 leading-relaxed whitespace-pre-line">{question.question}</h4>
                       
                       <div className="space-y-2 mb-3">
                         {question.options.map((option, optIdx) => {
@@ -117,14 +126,14 @@ const ResultsScreen: React.FC<ResultsScreenProps> = ({ results, onRestart }) => 
 
                       <div className="flex items-center gap-3 text-sm">
                         {isUnanswered ? (
-                          <Badge variant="outline" className="text-muted-foreground">Not Answered — 0/{quizInfo.marksPerQuestion} marks</Badge>
+                          <Badge variant="outline" className="text-muted-foreground">Not Answered — 0/{qMarks} marks</Badge>
                         ) : isCorrect ? (
                           <Badge className="bg-success/10 text-success border-success/30">
-                            <CheckCircle className="w-3 h-3 mr-1" /> Correct — {quizInfo.marksPerQuestion}/{quizInfo.marksPerQuestion} marks
+                            <CheckCircle className="w-3 h-3 mr-1" /> Correct — {qMarks}/{qMarks} marks
                           </Badge>
                         ) : (
                           <Badge className="bg-destructive/10 text-destructive border-destructive/30">
-                            <XCircle className="w-3 h-3 mr-1" /> Wrong — 0/{quizInfo.marksPerQuestion} marks
+                            <XCircle className="w-3 h-3 mr-1" /> Wrong — 0/{qMarks} marks
                           </Badge>
                         )}
                       </div>
