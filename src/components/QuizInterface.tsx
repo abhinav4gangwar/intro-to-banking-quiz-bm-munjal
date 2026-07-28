@@ -220,9 +220,22 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
       {/* Question */}
       <div className="max-w-4xl mx-auto">
         <Card className="shadow-[var(--shadow-card)]">
+          {currentQ.caseStudy && (
+            <div className="px-6 pt-6">
+              <div className="p-4 rounded-lg bg-primary/5 border border-primary/20 max-h-80 overflow-y-auto">
+                <div className="text-xs font-semibold text-primary uppercase tracking-wide mb-2">Case Study Context</div>
+                <div className="text-sm leading-relaxed whitespace-pre-line text-foreground/90">
+                  {currentQ.caseStudy}
+                </div>
+              </div>
+            </div>
+          )}
           <CardHeader>
-            <CardTitle className="text-xl leading-relaxed">
+            <CardTitle className="text-xl leading-relaxed whitespace-pre-line">
               Q{currentQ.id}. {currentQ.question}
+              {currentQ.marks && (
+                <span className="ml-2 text-sm font-normal text-muted-foreground">({currentQ.marks} marks)</span>
+              )}
             </CardTitle>
           </CardHeader>
           
