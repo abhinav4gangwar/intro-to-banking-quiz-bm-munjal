@@ -6,6 +6,7 @@ export interface QuizQuestion {
   reason?: string;
   marks?: number;
   caseStudy?: string;
+  part?: string;
 }
 
 // Structure 2: Scoring weights by option index (unused in Structure 1)
@@ -32,767 +33,544 @@ export const getScoreInterpretation = (score: number): ScoreInterpretation => {
   return scoreInterpretations[3];
 };
 
-const caseStudy1 = `You have recently joined as the Branch Manager of ICICI Bank, Chandauli Rural Branch (Uttar Pradesh). The Regional Office has instructed the branch to increase Priority Sector Lending and strengthen SHG financing under the Financial Inclusion initiative.
-
-One morning, "Sakhi Mahila Self Help Group", promoted by the Uttar Pradesh State Rural Livelihood Mission (UPSRLM), visits your branch requesting a ₹6 lakh Bank Linkage Loan for expanding dairy and mushroom cultivation activities. The SHG consists of 12 women and has been functioning for 24 months.
-
-Positive Findings:
-• Monthly savings have been regular for two years.
-• Meetings are held every month with attendance above 90%.
-• Internal lending has been active since inception.
-• Earlier internal loans have been repaid on time.
-• Cash Book, Minutes Register and Loan Ledger are properly maintained.
-• Members already earn income through dairy and tailoring.
-• The SHG maintains its Savings Account with your branch.
-
-Concerns:
-• Two members already have loans from a local Microfinance Institution.
-• One member recently borrowed from a Gold Loan NBFC.
-• The proposed dairy project estimates look optimistic.
-• The NGO representative is pressing for immediate sanction before month-end.
-
-The Credit Officer says, "Sir, repayment history is excellent. We should sanction today itself." You decide to examine the proposal more carefully.`;
-
-const caseStudy2 = `Bank: ICICI Bank  |  Branch: Karnal Rural Branch  |  Date of Visit: 18 August 2026
-
-Borrower: M/s Fresh Milk Foods, Karnal (Haryana)
-Constitution: Proprietorship  |  Proprietor: Mr. Rajesh Kumar, Age 42
-
-Loan Requested: Term Loan ₹55 lakh, Cash Credit ₹20 lakh
-Purpose: Purchase of Milk Pasteurization Plant, Packing Machine, Chilling Tank, and Working Capital for Milk Procurement.
-
-Business Background: The borrower has been collecting raw milk from nearby villages for the last 8 years and currently supplies raw milk to a private dairy in Karnal. He now proposes to start his own small milk processing unit for selling Pasteurized Milk, Curd, Paneer, and Ghee under the brand "Fresh Village Dairy".`;
+const P1 = "Part 1";
+const P2 = "Part 2: Financial Feasibility & Means of Finance";
+const P3 = "Part 3: Commercial Viability & Debt Metrics";
+const P4 = "Part 4: Cost Benefit Analysis & IRR Dynamics";
+const P5 = "Part 5: Risk Mitigation & Escrow Architecture";
+const P6 = "Part 6: Complex Restructuring & Project Finance Mechanics";
+const P7 = "Part 7: Advanced Balance Sheet & Sensitivity Appraisals";
+const P8 = "Part 8: Regulatory Compliance & Prudential Norms";
+const P9 = "Part 9: Forensic Fund Flow & Credit Security Analysis";
+const P10 = "Part 10: Advanced Technical Case Scenarios";
 
 export const quizQuestions: QuizQuestion[] = [
   {
     id: 1,
-    question: "Ms. Sunita Devi, a school teacher from Bihar Sharif, visits HDFC Bank and deposits ₹2,50,000 in her Savings Account. She asks, \"Now that I have deposited my money, you are keeping it safely for me. So you are my trustee, correct?\" Which response is legally the most appropriate?",
+    part: P1,
+    question: "A promoter submits a DPR for a 50-MW solar plant. They include a ₹4.50 Crore central subsidy as part of the upfront equity margin. The subsidy guidelines state it is \"disbursed post-stabilization.\" How must you treat this?",
     options: [
-      "The bank is a trustee because the money belongs to the customer.",
-      "The bank is a debtor and the customer is the creditor after accepting the deposit.",
-      "The bank becomes the customer's agent for all banking transactions.",
-      "The relationship changes every day depending upon account balance."
+      "Exclude the subsidy from the upfront margin calculation.",
+      "Accept it if backed by a corporate guarantee.",
+      "Treat it as a quasi-equity loan option.",
+      "Deduct it directly from the primary loan amount."
     ],
-    correctAnswer: 1,
-    reason: "Once money is deposited into a bank account, ownership transfers to the bank. The bank becomes the debtor and the depositor becomes the creditor, obligated to repay on demand as per account terms."
+    correctAnswer: 0,
+    reason: "Back-ended subsidies cannot bridge upfront construction capital. Treating them as upfront margin creates an immediate funding deficit. Lenders must demand real cash equity upfront."
   },
   {
     id: 2,
-    question: "Mr. Rajesh Gupta and his wife Meena maintain a joint Savings Account with mandate \"Either or Survivor\". Rajesh requests closure as they are shifting abroad. Meena later phones and does NOT agree to close. What should the Branch Manager do?",
+    part: P1,
+    question: "During a TEV study for a greenfield chemical plant expansion, you discover that the primary environmental clearance (EC) is signed but currently challenged in the National Green Tribunal (NGT). What is your credit action?",
     options: [
-      "Close the account because either holder can independently operate it.",
-      "Freeze all debit transactions immediately.",
-      "Refuse closure unless both account holders jointly consent.",
-      "Close the account after obtaining an indemnity from Rajesh."
+      "Disburse only the land-building component immediately.",
+      "Hold all disbursements until the NGT issues a final order.",
+      "Increase the interest rate by 150 bps to price the risk.",
+      "Demand a personal guarantee to override the clearance hold."
     ],
-    correctAnswer: 2,
-    reason: "\"Either or Survivor\" permits operation during the account's existence, but closure changes the contractual relationship and generally requires consent of all account holders unless the mandate specifically provides otherwise."
+    correctAnswer: 1,
+    reason: "Active legal challenges to regulatory clearances introduce severe execution risk. If the NGT revokes the clearance mid-way, the asset becomes stranded. Disbursements must be frozen."
   },
   {
     id: 3,
-    question: "At Kotputli Rural Branch, 14-year-old Aarav Sharma visits alone to open a Savings Account using his Aadhaar and school ID. The bank's policy permits minors above 10 years to independently operate Savings Accounts subject to KYC. What should the officer do?",
+    part: P1,
+    question: "A promoter provides a TEV study showing a project break-even point at 35% utilization. Your internal review reveals they omitted fixed annual licensing renewals and escalated O&M costs by only 2% against a historical 6% inflation trend. What is the impact?",
     options: [
-      "Reject the application because every minor account requires a guardian.",
-      "Open the account only after obtaining permission from RBI.",
-      "Open only a Fixed Deposit account in the minor's name.",
-      "Open the Savings Account after complying with the bank's policy and KYC requirements."
+      "The true operational break-even remains completely unchanged.",
+      "The project's Debt Equity Ratio requires a structural recasting.",
+      "The real break-even point shifts significantly upward.",
+      "The base Internal Rate of Return (IRR) expands artificially."
     ],
-    correctAnswer: 3,
-    reason: "Many banks permit self-operated Savings Accounts for minors above a specified age (commonly 10 years), provided KYC norms and internal policy requirements are satisfied."
+    correctAnswer: 2,
+    reason: "Understating fixed operating expenses and inflation artificially lowers the projected break-even point. Recalculating with realistic figures pushes the break-even higher, compressing the safety margin."
   },
   {
     id: 4,
-    question: "Mrs. Kamla Bai, a widow from Sehore, refuses to provide nomination while opening a Fixed Deposit, saying \"It is my money. I don't want to nominate anyone.\" The executive insists nomination is compulsory. Which action is appropriate?",
+    part: P1,
+    question: "Under the latest project finance guidelines, an infrastructure project's financial closure is legally recognized only when which condition is fully satisfied?",
     options: [
-      "Refuse account opening because nomination is mandatory.",
-      "Obtain a written declaration that the customer declines nomination and proceed.",
-      "Ask the customer to nominate the legal heir compulsorily.",
-      "Open the account but internally assign the nearest relative as nominee."
+      "The draft Inter-Creditor Agreement (ICA) is circulated.",
+      "The lead bank issues an in-principle sanction letter.",
+      "At least 50% of the working capital lines are tied up.",
+      "100% of the debt and equity funding is legally tied up."
     ],
-    correctAnswer: 1,
-    reason: "Nomination should always be offered, but cannot be forced. If the customer declines, the bank should obtain a written declaration regarding refusal and retain it in records."
+    correctAnswer: 3,
+    reason: "True financial closure requires all financing sources—both equity and debt lines across the entire consortium—to be legally executed, committed, and ready for deployment."
   },
   {
     id: 5,
-    question: "Inspector Ajay Verma visits Axis Bank, Jhansi and verbally asks for the Savings Account statement of Mr. Mohan Yadav, saying an inquiry is in progress. No written order is produced. What should the Branch Manager do?",
+    part: P2,
+    question: "A corporate client requests a ₹15 Crore term loan for a brownfield factory expansion. Their provisional balance sheet displays an asset revaluation reserve of ₹8 Crore, which they count toward their Tangible Net Worth (TNW) to lower their leverage ratio. How do you assess this?",
     options: [
-      "Immediately provide the statement to support the police investigation.",
-      "Share only the last three months' transactions.",
-      "Politely decline and provide information only upon receipt of valid legal authority or as permitted under law.",
-      "Ask the customer first and provide the statement if he verbally agrees over the phone."
+      "Deduct the revaluation reserve completely from the TNW.",
+      "Accept 50% of the revaluation reserve as tier-2 equity.",
+      "Allow it if verified by an empanelled valuer.",
+      "Permit it provided the post-loan TOL/TNW stays under 3.0x."
     ],
-    correctAnswer: 2,
-    reason: "A bank owes a duty of confidentiality to its customers. Information can be disclosed only where required by law, in public duty, in the bank's own interest, or with the customer's consent. A mere verbal police request is insufficient."
+    correctAnswer: 0,
+    reason: "Revaluation reserves are non-cash accounting adjustments. They do not represent real tangible capital available to service debt or absorb losses. They must be deducted to find the true TNW."
   },
   {
     id: 6,
-    question: "At Axis Bank, Barmer Branch, Mrs. Savitri Devi instructs the bank to collect the proceeds of a dividend warrant issued by a listed company and credit it to her Savings Account. Which relationship best describes the bank's role?",
-    options: ["Debtor", "Trustee", "Bailee", "Agent"],
-    correctAnswer: 3,
-    reason: "When the bank collects cheques, dividend warrants, ECS credits, or other instruments on behalf of a customer, it acts as the Agent of the customer."
+    part: P2,
+    question: "An existing borrower uses an active ₹5 Crore short-term trade advance received from an overseas group company as their upfront equity margin for a new term loan. How do you evaluate the fund flow?",
+    options: [
+      "Accept it because the cash is visible inside the account.",
+      "Reject it as it introduces high short-term call-back risk.",
+      "Classify it as a long-term subordinated promoter debt line.",
+      "Condition approval on a rolling 1-year rollover agreement."
+    ],
+    correctAnswer: 1,
+    reason: "Trade advances from group companies are short-term liabilities, not permanent equity. If the advance is recalled, it creates a funding gap mid-construction. Equity must be long-term and unencumbered."
   },
   {
     id: 7,
-    question: "At Kotak Mahindra Bank, Satna Branch, Mr. Harish Verma (individual locker holder) passes away. His daughter produces the key and claims access as legal heir. Bank records show his wife Mrs. Neha Verma is the registered nominee. What should the Branch Manager do?",
+    part: P2,
+    question: "When reviewing a project's cost structure, you find the promoter has listed \"Machinery Contingencies\" at 25% of the total equipment cost, well above the standard 5-10% industry norm. What is the hidden risk?",
     options: [
-      "Permit the daughter because she possesses the locker key.",
-      "Ask both family members to decide mutually before permitting access.",
-      "Refuse access to everyone until a succession certificate is produced.",
-      "Follow the nomination procedure and provide access to the nominee as per applicable rules and documentation."
+      "The project will run into sudden working capital shortages.",
+      "The debt service capability improves through excess buffers.",
+      "The promoter is inflating project costs to reduce their equity contribution.",
+      "The average maturity structure of the loan collapses."
     ],
-    correctAnswer: 3,
-    reason: "The bank should follow the registered nomination for operational purposes. Nomination facilitates settlement by the bank and does not by itself determine ultimate ownership under succession law."
+    correctAnswer: 2,
+    reason: "Artificially high contingency lines inflate the total project cost. This allows promoters to borrow more from the bank while keeping their own actual cash investment low."
   },
   {
     id: 8,
-    question: "At HDFC Bank, Sitapur Branch, Mr. Imran Khan (declared as farmer) has his Savings Account receiving 25-30 cash deposits daily and monthly credits over ₹18 lakh. He admits he runs a wholesale pesticide business through this account because \"there are no charges.\" What should the Branch Manager do?",
+    part: P2,
+    question: "A listed corporate borrower requests a term loan. Their parent company provides a \"Letter of Comfort\" instead of a formal Corporate Guarantee. What is the legal enforcement value of this document?",
     options: [
-      "Allow the operations since the customer is maintaining a high balance.",
-      "Advise the customer to open a Current Account and take action as per the bank's policy for misuse of the Savings Account.",
-      "Immediately freeze the account permanently.",
-      "Convert the Savings Account into a Current Account without obtaining the customer's consent."
+      "It holds the exact same legal weight as a co-obligant note.",
+      "It allows the bank to automatically freeze parent accounts.",
+      "It obligates the parent company to clear all payment shortfalls.",
+      "It is an expression of intent with zero direct legal obligation."
     ],
-    correctAnswer: 1,
-    reason: "Savings Accounts are intended for personal savings, not regular business transactions. The banker should counsel the customer and follow the bank's policy regarding misuse, including migration to an appropriate account type."
+    correctAnswer: 3,
+    reason: "A Letter of Comfort is a non-binding statement of awareness and support. Unlike a corporate guarantee, it cannot be legally enforced to recover outstanding debt payments during a default."
   },
   {
     id: 9,
-    question: "At IndusInd Bank, Gaya Branch, 75-year-old Mr. Raghunath Singh deposits ₹9,80,000 in cash into his Savings Account, explaining he sold ancestral agricultural land. The teller is uncertain. What should the branch do?",
+    part: P3,
+    question: "A financial model projects a baseline DSCR of 1.45x. Your stress test shows that if capacity utilization falls by 15%, the DSCR drops to 0.95x. What does this sensitivity indicate?",
     options: [
-      "Refuse the cash because the amount is unusually large.",
-      "Accept the cash without asking any questions because the customer is a senior citizen.",
-      "Accept the cash and ignore the source since the account belongs to the customer.",
-      "Accept the cash after following the bank's cash acceptance procedures, recording the customer's explanation, and complying with applicable KYC/AML requirements."
+      "High operating leverage and high vulnerability to demand drops.",
+      "Low financial leverage with comfortable debt-servicing buffers.",
+      "Excellent capacity to absorb input cost shocks.",
+      "High working capital efficiency across operational cycles."
     ],
-    correctAnswer: 3,
-    reason: "Large cash transactions require appropriate customer due diligence and KYC/AML compliance. A genuine explanation should be documented, but the transaction should not be refused merely because it is large."
+    correctAnswer: 0,
+    reason: "A sharp drop in DSCR below unity from a modest utilization decline reveals a rigid fixed-cost structure. The project relies on near-perfect performance to meet its debt obligations."
   },
   {
     id: 10,
-    question: "At Axis Bank, Muzaffarpur Branch, Mr. Suresh Yadav, a progressive farmer with daily wholesaler receipts and frequent cheques to transporters and fertilizer dealers, wants a Current Account. The CSE says, \"Current Accounts are only for businessmen.\" As Branch Manager, what should you do?",
+    part: P3,
+    question: "A promoter structures a ₹20 Crore term loan with equal monthly principal repayments over 5 years, combined with a 6-month moratorium. What happens to the Average Maturity of the loan asset?",
     options: [
-      "Refuse the request because only registered business entities can open Current Accounts.",
-      "Open only a Savings Account because agriculture is not considered business.",
-      "Open a Current Account after completing KYC and satisfying yourself that the nature of transactions genuinely requires frequent banking operations.",
-      "Ask him to first obtain a GST registration and then return for account opening."
+      "It expands past the door-to-door tenor limit.",
+      "It shortens compared to a structured ballooning profile.",
+      "It remains completely identical to a bullet model.",
+      "It increases the bank's exposure to long-term tail-risk."
     ],
-    correctAnswer: 2,
-    reason: "A Current Account is meant for customers requiring frequent banking transactions, irrespective of whether they are traders, professionals, institutions, or large farmers. The decision should be based on the nature of operations."
+    correctAnswer: 1,
+    reason: "Equal principal repayments return cash to the bank faster than a ballooning schedule. This shortens the asset's average maturity, reducing the bank's risk exposure over time."
   },
   {
     id: 11,
-    question: "At IndusInd Bank, Deoria Branch, M/s Shakti Seeds (partnership) applies to open a Current Account. Two partners are present; the third is abroad. The deed authorises any two partners jointly to operate. KYC is complete for all. What is most appropriate?",
+    part: P3,
+    question: "A highway project operating under the Hybrid Annuity Model (HAM) encounters land acquisition delays. The construction phase extends by 12 months. Which regulatory flexibility can prevent a technical NPA classification?",
     options: [
-      "Open the account because the operating mandate in the partnership deed has been satisfied.",
-      "Refuse to open the account until all partners are physically present.",
-      "Open the account in the names of only the two partners who visited the branch.",
-      "Open a Savings Account temporarily until the third partner returns."
+      "Immediate conversion of the loan into a Working Capital demand line.",
+      "Automatic write-off of the accrued interest during construction.",
+      "A formal shift in the DCCO within allowed regulatory limits.",
+      "Reducing the standard provisioning requirement to 0.25%."
     ],
-    correctAnswer: 0,
-    reason: "Where the partnership deed clearly authorizes any two partners to operate, and KYC and documentation are complete, the branch may proceed as per its account-opening procedures."
+    correctAnswer: 2,
+    reason: "Banking guidelines allow lenders to extend a project's DCCO by up to 2 years for infrastructure projects due to non-promoter delays, keeping the asset standard without triggering a restructuring penalty."
   },
   {
     id: 12,
-    question: "At Axis Bank, Nanded Branch, Mr. Shankar Rao had an FD of ₹8 lakh. He passes away before maturity. Bank records show his wife Mrs. Lata Rao is the registered nominee. His son claims the amount should not be released to the nominee. What should the Branch Manager do?",
+    part: P3,
+    question: "A manufacturing project report displays a high accounting Net Profit margin but a negative Operating Cash Flow statement. What does this variance reveal about its debt service capability?",
     options: [
-      "Follow the bank's procedure for settlement in favour of the registered nominee after completing the prescribed formalities.",
-      "Refuse payment until all legal heirs jointly submit a declaration.",
-      "Insist on a succession certificate in every case.",
-      "Keep the deposit until its maturity and then seek legal advice."
+      "The project maintains excellent liquidity to clear long-term loans.",
+      "The asset depreciation lifecycle is extended too far.",
+      "The business requires an immediate debt equity conversion.",
+      "Profits are tied up in inventory or unpaid receivables."
     ],
-    correctAnswer: 0,
-    reason: "With a valid nomination, the bank settles the deposit with the nominee after prescribed formalities. Nomination enables settlement and does not itself determine ultimate succession rights."
+    correctAnswer: 3,
+    reason: "High paper profits cannot service debt if cash is trapped in raw inventory or delayed customer payments. Lenders must look at free cash flows, not just net accounting profits."
   },
   {
     id: 13,
-    question: "At Kotak Mahindra Bank, Dharwad Branch, a customer's FD matured 15 days ago. At booking, he had opted for Auto-Renewal. He now asks why it was renewed instead of credited to his Savings Account. What is the most appropriate response?",
+    part: P4,
+    question: "A project's financial model shows an Equity IRR of 22% and a Project IRR of 11%. The bank's term loan interest rate is 9.5%. What does this divergence tell you?",
     options: [
-      "Reverse the renewal immediately without checking the original instructions.",
-      "Explain that the renewal was carried out according to the customer's mandate and process any further request in accordance with the bank's applicable rules.",
-      "Apologize and pay additional compensation because renewal was a bank error.",
-      "Close the deposit without applying any premature closure rules."
+      "The project uses high debt leverage to boost equity returns.",
+      "The project is structurally unviable and cannot cover its interest costs.",
+      "The promoter's upfront cash investment is too high.",
+      "The economic asset life cycle is underestimated."
     ],
-    correctAnswer: 1,
-    reason: "Where a customer has given an Auto-Renewal mandate, the bank is expected to act accordingly. Any later request should be handled under the applicable premature closure and operational rules."
+    correctAnswer: 0,
+    reason: "When the Project IRR exceeds the cost of debt, borrowing heavily boosts the Equity IRR. This financial leverage creates high returns for shareholders but increases the bank's default risk if cash flows drop."
   },
   {
     id: 14,
-    question: "At Equitas Small Finance Bank, Varanasi Branch, Mr. Mohan Patel (furniture workshop owner) seeks a ₹12 lakh term loan for CNC cutting machines. His friend claims SFBs can only lend to SHGs and small farmers. What should you advise?",
+    part: P4,
+    question: "You run a sensitivity stress model for an industrial unit. A 10% increase in raw material costs drops the Project IRR from 15% to 8%, below the loan's interest rate. What is your credit mitigation requirement?",
     options: [
-      "The customer should approach only a Public Sector Bank because SFBs cannot finance MSMEs.",
-      "The bank can consider the proposal because financing MSMEs is one of the objectives of a Small Finance Bank, subject to credit appraisal.",
-      "The bank can finance only loans below ₹5 lakh.",
-      "The bank should advise him to convert his business into a company before applying."
+      "Extend the loan tenor to lower the annual principal dues.",
+      "Mandate a long-term supply agreement with locked input prices.",
+      "Convert the entire floating rate loan into a fixed rate asset.",
+      "Scale down the primary collateral requirement by 20%."
     ],
     correctAnswer: 1,
-    reason: "SFBs are established to promote financial inclusion by providing banking services to small businesses, MSMEs, small and marginal farmers, micro industries, and the unorganized sector, subject to normal credit appraisal."
+    reason: "When a project's viability is highly sensitive to raw material costs, the bank must stabilize those margins. Enforcing a locked-price input contract removes the pricing volatility threat."
   },
   {
     id: 15,
-    question: "At AU Small Finance Bank, Ajmer Branch, Mrs. Sunita Sharma wants to place ₹25 lakh in a 3-year FD and asks if an SFB can legally accept FDs like other scheduled banks. How should the RM respond?",
+    part: P4,
+    question: "When checking a cash flow model, you note the promoter included non-operating rental income from an unrelated family property to calculate the project's Net Present Value (NPV). How should you handle this?",
     options: [
-      "No. Small Finance Banks cannot accept Fixed Deposits.",
-      "Yes. They can accept deposits, including Fixed Deposits, in accordance with RBI regulations.",
-      "Only Savings Accounts are permitted.",
-      "Only Current Accounts are permitted."
+      "Approve it if the property is formally mortgaged to the bank.",
+      "Accept it but apply a 20% haircut to the rental revenue line.",
+      "Remove non-project revenues completely from the model calculations.",
+      "Increase the project's internal hurdle rate by 100 bps."
     ],
-    correctAnswer: 1,
-    reason: "SFBs are licensed to undertake both deposit-taking and lending activities, unlike Payments Banks which have a more restricted operating model."
+    correctAnswer: 2,
+    reason: "A project's financial feasibility must stand on its own operational cash flows. Including outside income distorts the project's true viability and hides its core operational risks."
   },
   {
     id: 16,
-    question: "At Ujjivan SFB, Hubballi Branch, a large automobile company requests a ₹450 crore working capital facility. The new Credit Officer believes it will significantly boost business. What should the Credit Head consider first?",
+    part: P4,
+    question: "Why is a project's Net Present Value (NPV) a more reliable credit metric for long-term lending decisions than the accounting Payback Period?",
     options: [
-      "Sanction the loan because all scheduled banks have identical lending objectives.",
-      "Reject the proposal because Small Finance Banks are prohibited from lending to companies.",
-      "Evaluate whether sanctioning such a large exposure aligns with the bank's regulatory mandate, exposure norms, and business model before taking a credit decision.",
-      "Sanction the loan after obtaining approval from the customer."
+      "The Payback Period tracks cash flows after the loan is cleared.",
+      "NPV completely ignores the compound time value of money.",
+      "The Payback Period automatically adjusts for macro interest rate resets.",
+      "NPV factors in the timing and risk of all future cash inflows."
     ],
-    correctAnswer: 2,
-    reason: "Although SFBs may lend to companies, their primary objective is financial inclusion. They must operate within RBI's prudential norms, concentration limits, and their approved business model."
+    correctAnswer: 3,
+    reason: "The Payback Period simply tracks how fast the initial investment is recovered, ignoring cash flows after that point. NPV discounts all future cash flows over the loan's lifespan, giving a clearer view of long-term debt-servicing capacity."
   },
   {
     id: 17,
-    question: "At Jana SFB, Belagavi Branch, a trainee asks why the bank sanctions many loans to dairy farmers, street vendors, SHGs, and small enterprises. Which statement best explains this?",
+    part: P5,
+    question: "Under a standard Trust and Retention Account (TRA) cash waterfall agreement, which payment has the absolute highest priority?",
     options: [
-      "Small Finance Banks primarily focus on serving underserved segments and maintaining the required Priority Sector Lending obligations.",
-      "Small Finance Banks cannot lend outside rural areas.",
-      "RBI permits SFBs to lend only to agriculture.",
-      "Only women borrowers are eligible for loans from SFBs."
+      "Statutory government taxes and land dues.",
+      "Bank term loan monthly principal installments.",
+      "Promoter equity dividend distributions.",
+      "Secondary vendor raw material procurement clearings."
     ],
     correctAnswer: 0,
-    reason: "Financial inclusion is the cornerstone of the SFB model. They are expected to maintain significant Priority Sector lending while also serving other eligible customer segments within the regulatory framework."
+    reason: "Statutory dues and taxes always sit at the top of a legal cash waterfall. Unpaid taxes can cause regulators to shut down operations, so they must be cleared before operational expenses or debt service."
   },
   {
     id: 18,
-    question: "At HDFC Bank, Nagpur Rural Branch, Mr. Ramesh Patil says, \"Why should I open a Savings Account here? I already have an account with Bajaj Finance Ltd. It is also a bank.\" How should the Branch Manager respond?",
+    part: P5,
+    question: "A corporate borrower requests a loan restructure. They ask to convert unpaid construction interest into a Funded Interest Term Loan (FITL). How should you structure the FITL's maturity?",
     options: [
-      "Bajaj Finance is a commercial bank and offers all banking services.",
-      "Bajaj Finance is a Shadow Banking institution (NBFC). It provides financial services but is not a bank and cannot offer the full range of banking services such as demand deposits.",
-      "Bajaj Finance is regulated by SEBI, not RBI.",
-      "Bajaj Finance can issue cheque books exactly like any scheduled commercial bank."
+      "It must match the amortization profile of the working capital lines.",
+      "Its tenor must fit within the remaining economic life of the asset.",
+      "It should be structured as a bullet payment due in Year 15.",
+      "Its maturity must extend past the primary loan's door-to-door tenor."
     ],
     correctAnswer: 1,
-    reason: "NBFCs are part of the shadow banking system because they perform several bank-like financial functions, but they are not banks and cannot accept demand deposits like Savings or Current Accounts."
+    reason: "An FITL is a deferred debt obligation. Its repayment timeline must fit within the asset's productive, revenue-generating lifespan to ensure there is active cash flow available to clear it."
   },
   {
     id: 19,
-    question: "At Axis Bank, Salem Branch, Mrs. Lakshmi Narayanan says, \"I obtained a gold loan from Muthoot Finance, so I assumed they were a bank.\" What is the most accurate explanation?",
+    part: P5,
+    question: "A borrower has been regular on their term loan payments, but their working capital account has been overdrawn for 45 consecutive days due to inventory delays. What is the correct regulatory classification?",
     options: [
-      "Gold loan companies are commercial banks.",
-      "Gold loan companies are insurance companies.",
-      "Many gold loan companies operate as NBFCs within the shadow banking system, providing loans against gold but not functioning as full-service banks.",
-      "Gold loan companies are cooperative banks."
+      "The entire exposure remains a Standard, regular account.",
+      "The account must be downgraded to Sub-Standard immediately.",
+      "The account must be flagged as an SMA-1 credit asset.",
+      "The branch must place the term loan in a technical non-accrual hold."
     ],
     correctAnswer: 2,
-    reason: "Major gold loan institutions operate as NBFCs. They specialize in secured lending but do not provide the full suite of banking services available from commercial banks."
+    reason: "Overdue accounts or continuous overdrafts between 31 and 60 days require an automatic classification as Special Mention Account-1 (SMA-1). This applies across all facilities held by the borrower."
   },
   {
     id: 20,
-    question: "During induction, a trainee says, \"Shadow Banking means these institutions operate illegally or secretly.\" Which response is most appropriate?",
+    part: P5,
+    question: "Under Basel-III regulatory capital guidelines, how does a loan restructuring affect the bank's internal balance sheet?",
     options: [
-      "They are called Shadow Banks because they operate without RBI's knowledge.",
-      "They are called Shadow Banks because they conduct illegal financial activities.",
-      "They are called Shadow Banks because they perform several bank-like financial intermediation functions outside the traditional banking model, while operating under their applicable regulatory framework.",
-      "They are called Shadow Banks because they do not maintain any records."
+      "It reduces the credit risk-weighting to a flat 50%.",
+      "It increases the bank's available Tier-1 capital surplus.",
+      "It eliminates the need to maintain standard provisioning buffers.",
+      "It locks up more core capital by increasing risk-weights and provisions."
     ],
-    correctAnswer: 2,
-    reason: "The term Shadow Banking does not imply illegality. It refers to institutions performing credit intermediation and other financial services outside the traditional banking structure, while remaining subject to their applicable regulatory framework."
+    correctAnswer: 3,
+    reason: "Restructuring an account signals higher credit risk. Regulators require banks to increase provisioning and assign higher risk-weights, which locks up more core capital and limits lending capacity."
   },
   {
     id: 21,
-    question: "At AU SFB, Kota, Mr. Deepak Jain asks whether an NBFC deposit offering higher return has the same deposit insurance protection as a bank deposit. What should the RM advise?",
+    part: P6,
+    question: "A consortium introduces an Inter-Creditor Agreement (ICA) vote to restructure a stressed steel asset. Banks representing 80% of the value and 55% of the total number of lenders approve the plan. Is this decision legally binding?",
     options: [
-      "Yes. Every NBFC deposit enjoys the same deposit insurance as a bank deposit.",
-      "No. Deposit insurance applicable to eligible bank deposits should not be assumed to extend to investments or deposits with NBFCs. Customers should understand the product and associated risks before investing.",
-      "Only housing finance companies provide deposit insurance.",
-      "RBI guarantees repayment of every NBFC investment."
+      "No, because it requires approval from 60% of the lenders by number.",
+      "Yes, because the value vote exceeds the 75% regulatory threshold.",
+      "No, because value approval must reach a 90% supermajority.",
+      "Yes, provided the lead bank signs an unconditional waiver."
     ],
-    correctAnswer: 1,
-    reason: "Customers should not assume that protections available for eligible bank deposits automatically apply to NBFC products. The nature of the product, regulatory treatment, and associated risks should be clearly understood."
+    correctAnswer: 0,
+    reason: "Under current resolution frameworks, a restructuring plan requires a dual majority: at least 75% by total outstanding value AND at least 60% by total number of lenders. Missing either threshold defeats the vote."
   },
   {
     id: 22,
-    question: "At ICICI Bank, Gonda Rural Branch, Mrs. Rekha Devi applies for a ₹1.20 lakh micro-enterprise loan while already repaying loans from CreditAccess Grameen and her SHG. The Credit Officer wants to sanction immediately. As Branch Manager, what should you do?",
+    part: P6,
+    question: "A promoter requests a 6-month extension on a manufacturing loan's moratorium. They offer to pledge additional family-owned agricultural land as collateral. How do you assess this security top-up?",
     options: [
-      "Sanction immediately because good repayment always justifies another loan.",
-      "Reject the proposal because customers with MFI loans should never receive bank loans.",
-      "Assess the customer's total indebtedness, repayment capacity, cash flows, and follow the bank's responsible lending policy before taking a credit decision.",
-      "Sanction only if the customer closes her MFI loan first."
+      "Accept it because agricultural land value remains highly stable.",
+      "Reject it as agricultural land is difficult to liquidate due to local legal restrictions.",
+      "Accept it but apply a standard 75% haircut to its valuation.",
+      "Allow it if the land is converted to commercial status within 30 days."
     ],
-    correctAnswer: 2,
-    reason: "Responsible lending requires assessing overall repayment capacity, not merely repayment history. Existing obligations to MFIs, SHGs, or other lenders should be considered before sanctioning fresh credit."
+    correctAnswer: 1,
+    reason: "Agricultural land faces strict legal restrictions on foreclosure and sale to non-agriculturists in many jurisdictions. This makes it an illiquid and ineffective collateral option for recovering commercial bank loans."
   },
   {
     id: 23,
-    question: "At AU SFB, Bikaner, a trainee asks why an MFI insists that five women from the same village attend weekly meetings together, even though each has an individual loan. Which explanation is most appropriate?",
+    part: P6,
+    question: "A corporate borrower opens a collection account with a non-consortium bank to deposit cash sales, bypassing the primary Escrow account. What credit risk signal does this action trigger?",
     options: [
-      "Because RBI permits lending only to groups.",
-      "Because group meetings improve repayment discipline, customer engagement, and operational efficiency, even where loans are individually sanctioned.",
-      "Because group members automatically become legal guarantors for each other's loans.",
-      "Because banks cannot verify individual borrowers."
+      "An indicator of rapid working capital turnover.",
+      "A positive sign of cash diversification across banking lines.",
+      "An Early Warning Signal (EWS) indicating potential fund diversion.",
+      "A technical breach that lowers the bank's capital adequacy requirements."
     ],
-    correctAnswer: 1,
-    reason: "Modern microfinance often uses group-based methodologies to encourage repayment discipline, financial literacy, and operational convenience. Individual borrowers are not automatically legal guarantors for one another."
+    correctAnswer: 2,
+    reason: "Routing revenue outside the agreed consortium escrow account is a major red flag. It indicates the borrower is hiding cash to evade debt servicing obligations or divert funds to unapproved projects."
   },
   {
     id: 24,
-    question: "A borrower reports that a recovery officer of another finance company threatened to publicly announce his name in the village if he missed the week's instalment. As a banker, what is your response?",
+    part: P6,
+    question: "When appraising a port project, you note the concession agreement includes a \"Termination Payment\" clause where the government covers 90% of the debt if the contract is canceled. How does this affect your credit decision?",
     options: [
-      "Such practices are acceptable because recovery is important.",
-      "Public humiliation is an acceptable recovery tool in rural areas.",
-      "Recovery agents may use any method if the loan agreement has been signed.",
-      "Recovery should always follow fair practices, applicable regulations, and the lender's approved recovery policy while respecting the dignity of the borrower."
+      "It requires the bank to double its standard provisioning rate.",
+      "It forces the promoter to increase their upfront cash equity to 50%.",
+      "It eliminates the need to set up a TRA waterfall mechanism.",
+      "It lowers the project's default risk by providing a strong safety net."
     ],
     correctAnswer: 3,
-    reason: "Banks and MFIs are expected to follow fair recovery practices. Coercion, intimidation, or public humiliation is inconsistent with responsible lending and customer protection principles."
+    reason: "A sovereign-backed termination payment covers the bank's debt if the project fails due to regulatory shifts. This structural guarantee lowers the bank's ultimate loss exposure and improves the credit profile."
   },
   {
     id: 25,
-    question: "At HDFC Bank, Balrampur Branch, women borrowers say the local MFI sanctions loans within three days while the bank asks them to visit several times. What is the best response?",
+    part: P7,
+    question: "A company shows a current ratio of 2.1x but a quick ratio of 0.6x. What does this gap tell you about their financial position?",
     options: [
-      "Explain the bank's procedures, improve turnaround time where possible, and simplify customer service without compromising credit appraisal or compliance.",
-      "Promise same-day sanction for every applicant.",
-      "Advise customers not to borrow from MFIs.",
-      "Reduce documentation requirements below the bank's policy."
+      "Liquidity is heavily trapped in slow-moving raw inventory.",
+      "The company maintains excellent cash balances to cover short-term debt.",
+      "The firm is highly over-leveraged on its long-term borrowing.",
+      "Receivables are being collected faster than industry averages."
     ],
     correctAnswer: 0,
-    reason: "Banks should compete through efficient processes and good service, not by bypassing regulatory or internal credit controls."
+    reason: "A high current ratio alongside a low quick ratio shows that short-term assets are dominated by inventory rather than liquid cash or receivables. If sales slow down, the company will face an immediate liquidity crunch."
   },
   {
     id: 26,
-    question: "At Axis Bank, Jaunpur Rural Branch, Mr. Raju Nishad, a street food vendor, applies for a ₹80,000 Micro Enterprise Loan. He states ₹40,000 for a new food cart and utensils, ₹40,000 for his daughter's wedding. What should the Branch Manager do?",
+    part: P7,
+    question: "A promoter injects equity capital into an SPV via an unsecured loan from their parent company. The loan agreement allows the parent to withdraw funds if its own credit rating drops. How do you treat this loan?",
     options: [
-      "Sanction the entire loan because the customer has disclosed the purpose honestly.",
-      "Reject the proposal because marriage expenses are not eligible under any micro loan.",
-      "Appraise the productive business requirement and sanction the eligible business portion in accordance with the bank's product guidelines.",
-      "Sanction the loan after obtaining a guarantor."
+      "Count it as clean promoter equity because the cash is inside the SPV.",
+      "Reject it unless the loan is fully subordinated and cannot be withdrawn during the bank loan's tenor.",
+      "Charge an extra 50 bps on the term loan to cover the rating risk.",
+      "Permit it if the parent company maintains a standard TOL/TNW under 2.0x."
     ],
-    correctAnswer: 2,
-    reason: "Micro enterprise loans are intended primarily for income-generating activities. The banker should separate the productive business requirement from personal consumption and process the proposal as per product norms."
+    correctAnswer: 1,
+    reason: "Unsecured loans with call-back options are unstable. To count as equity margin, the loan must be fully subordinated, interest-free, and locked in place until the bank's term loan is completely repaid."
   },
   {
     id: 27,
-    question: "At HDFC Bank, Purnia, Mrs. Shanti Devi (three buffaloes) applies for a ₹2 lakh Dairy Loan. She has no formal income statements or GST records. The trainee recommends rejection. What should the Credit Officer do?",
+    part: P7,
+    question: "During sensitivity analysis for a toll road project, you find that a 5% drop in heavy truck traffic cuts the operating EBITDA by 25%. What type of risk does this reveal?",
     options: [
-      "Reject the proposal due to the absence of audited financial statements.",
-      "Assess household and business cash flows, milk production, expenses, and repayment capacity using field appraisal methods.",
-      "Sanction the loan solely because she owns livestock.",
-      "Approve the loan only after obtaining Income Tax Returns."
+      "High raw material price risk across international markets.",
+      "Excellent capacity to absorb variable cost spikes.",
+      "High operating leverage where fixed maintenance costs squeeze margins.",
+      "A compressed loan asset maturity structure that accelerates cash recovery."
     ],
-    correctAnswer: 1,
-    reason: "Micro loan appraisal relies heavily on cash-flow assessment, field verification, and repayment capacity, rather than formal financial statements."
+    correctAnswer: 2,
+    reason: "When a small revenue drop causes a large fall in EBITDA, it reveals high operating leverage. Fixed costs (like road maintenance) remain constant, meaning any revenue dip directly squeezes the cash available for debt service."
   },
   {
     id: 28,
-    question: "At ICICI Bank, Bahraich, Mrs. Farzana Begum applies for a ₹1 lakh tailoring loan. Verification shows she already has an SHG loan, an MFI loan, and a gold loan — all regular. What should the Branch Manager do?",
+    part: P7,
+    question: "A firm requests a term loan to replace an old manufacturing asset. The replacement will reduce power consumption by 30% but will not expand total production capacity. How should you structure the repayment?",
     options: [
-      "Sanction immediately because all existing loans are regular.",
-      "Reject because borrowers with more than one loan are automatically ineligible.",
-      "Recommend closure of all existing loans before considering the application.",
-      "Evaluate her total repayment obligations, household income, and ability to service another loan before taking a decision."
+      "Schedule a steep ballooning profile that relies on future market expansion.",
+      "Require a 100% upfront promoter equity contribution to eliminate risk.",
+      "Structure a bullet repayment due at the end of Year 10.",
+      "Match repayments directly with the verified cost savings generated by the new machine."
     ],
     correctAnswer: 3,
-    reason: "The key issue is repayment capacity, not merely the number of loans. Responsible lending requires assessment of overall indebtedness and sustainable cash flows."
+    reason: "Since this investment saves on costs rather than expanding sales, the loan must be amortized using those verified energy savings. This aligns the repayment schedule with the project's actual source of cash."
   },
   {
     id: 29,
-    question: "At Kotak Mahindra Bank, Balasore, Mr. Mahesh Swain requests a ₹5 lakh micro business loan to expand his bicycle repair shop. Field verification shows his surplus supports only about ₹2.50 lakh. He insists on ₹5 lakh \"for the future.\" What should be recommended?",
-    options: [
-      "Sanction ₹5 lakh because the customer may expand later.",
-      "Sanction the amount supported by the business requirement and repayment capacity after appraisal.",
-      "Reject the application entirely.",
-      "Sanction ₹5 lakh after obtaining two guarantors."
-    ],
-    correctAnswer: 1,
-    reason: "Micro lending should be need-based and cash-flow driven. Sanctioning more than the justified requirement increases the risk of diversion and repayment stress."
+    part: P8,
+    question: "Under current Large Exposure Framework (LEF) rules, a bank's maximum exposure to a single connected corporate group is capped at what percentage of its Tier-1 Eligible Capital Base?",
+    options: ["25%", "15%", "40%", "10%"],
+    correctAnswer: 0,
+    reason: "Regulatory frameworks cap a bank's maximum exposure to any single interconnected group of companies at 25% of its Tier-1 capital. This concentration limit protects the banking system from systemic shocks."
   },
   {
     id: 30,
-    question: "At SBI, Sitapur Rural Branch, \"Sakhi Mahila SHG\" (12 women) seeks a ₹3 lakh SHG loan. It was formed only 3 months ago, has irregular savings, incomplete minutes, and negligible internal lending. The promoting NGO wants immediate sanction. What should you do?",
+    part: P8,
+    question: "A bank finances a real estate project. The promoter requests a 12-month extension on the DCCO because local building approvals were delayed. What is the standard provisioning requirement for this asset while it is extended?",
     options: [
-      "Sanction the loan because the NGO has recommended the group.",
-      "Reject the application permanently.",
-      "Assess the group's maturity, savings discipline, meeting records, internal lending, and eligibility under the bank's SHG financing guidelines before taking a decision.",
-      "Sanction half the amount without appraisal."
+      "The provisioning rate falls to a flat 0.25%.",
+      "The asset stays standard but carries a 1.00% provisioning rate.",
+      "The loan requires an automatic 15% sub-standard provision.",
+      "Provisions must increase by 20% every quarter until construction resumes."
     ],
-    correctAnswer: 2,
-    reason: "SHG lending is based on the group's financial discipline and maturity, not merely NGO recommendation. Savings regularity, meetings, records, and internal lending indicate repayment capacity."
+    correctAnswer: 1,
+    reason: "Commercial Real Estate (CRE) projects that extend their DCCO due to non-promoter delays can maintain a Standard classification, but they carry a higher 1.00% provisioning rate to account for the execution risk."
   },
   {
     id: 31,
-    question: "Three months after sanctioning a ₹4 lakh SHG loan for goat rearing, tailoring and grocery, the Branch Manager finds a significant portion was used for a family wedding. What should you do?",
+    part: P8,
+    question: "A corporate borrower requests a term loan to purchase shares in an international tech startup. Can a commercial bank fund this transaction under current lending guidelines?",
     options: [
-      "Ignore the matter because instalments are being paid.",
-      "Verify and document the end-use, discuss the deviation with the SHG, and take action as per the loan agreement and the bank's monitoring policy.",
-      "Immediately blacklist every SHG member.",
-      "Sanction another loan so that the original purpose can be completed."
+      "Yes, if the shares are pledged as primary collateral.",
+      "Yes, provided the borrower maintains a net worth above ₹100 Crore.",
+      "No, commercial banks are generally banned from funding equity investments or share purchases.",
+      "Yes, if the loan is structured with a short 2-year average maturity."
     ],
-    correctAnswer: 1,
-    reason: "Monitoring the end-use of funds is an important responsibility. Any deviation should be verified and addressed in accordance with the bank's policy."
+    correctAnswer: 2,
+    reason: "Clean banking regulations prevent commercial banks from providing term loans to corporations for speculative share purchases or equity investments, as these activities carry high market risk."
   },
   {
     id: 32,
-    question: "At Bank of India, Hardoi Rural Branch, \"Pragati Mahila SHG\" (14 months old, regular savings, active internal lending, excellent records) applies for its first ₹2.50 lakh bank linkage loan. The NGO wants quick sanction. What should you do?",
-    options: [
-      "Sanction immediately because the NGO has recommended the group.",
-      "Reject because first-time SHGs are too risky.",
-      "Complete the bank's appraisal of group maturity, financial discipline, records, repayment behaviour, and eligibility before sanctioning under the SHG-Bank Linkage Programme.",
-      "Ask each member to apply individually."
-    ],
-    correctAnswer: 2,
-    reason: "Bank linkage is based on the quality of the SHG, not merely its age or NGO recommendation. Proper appraisal ensures sustainable credit."
+    part: P8,
+    question: "A borrower's term loan account falls into arrears and is classified as a Sub-Standard asset on March 31. What baseline provisioning must the bank immediately allocate against the unsecured portion of this loan?",
+    options: ["15%", "100%", "40%", "25%"],
+    correctAnswer: 3,
+    reason: "When a loan slides into the Sub-Standard category, the bank must immediately apply a 15% provision on the secured portion and a higher 25% provision on any unsecured shortfall."
   },
   {
     id: 33,
-    question: "At HDFC Bank, Indore, Mr. Akash Yadav says a local NBFC approved his tractor loan in one day while the bank is still processing. What should the Branch Manager do?",
+    part: P9,
+    question: "A forensic audit shows a company's long-term bank loan increased by ₹10 Crore, while its fixed assets remained flat and net working capital contracted. What does this fund flow indicate?",
     options: [
-      "Promise immediate disbursement without completing appraisal.",
-      "Criticize the NBFC's lending practices.",
-      "Explain the bank's appraisal process, improve turnaround time where possible, and compete through efficient service while maintaining prudent credit standards.",
-      "Reject the customer's application because he also approached an NBFC."
+      "High risk that long-term loan funds were diverted to unapproved uses.",
+      "Efficient use of capital to scale up production.",
+      "A healthy restructuring of the short-term debt portfolio.",
+      "An expansion of the company's tangible net worth base."
     ],
-    correctAnswer: 2,
-    reason: "Banks should compete with NBFCs through customer service, timely processing, and prudent lending, not by compromising appraisal standards."
+    correctAnswer: 0,
+    reason: "If long-term debt rises while fixed assets and working capital stay flat or shrink, the cash has left the core business. This pattern strongly indicates the borrower is diverting funds outside the approved project."
   },
   {
     id: 34,
-    question: "At Bank of Baroda, Bhavnagar, a customer asks whether an NBFC offering a much higher return than a bank FD is \"exactly the same\" as a bank FD. How should the RM advise?",
+    part: P9,
+    question: "A promoter requests a term loan and offers a first charge on a factory building that sits on leased government land with a remaining lease tenor of 5 years. The loan repayment schedule spans 7 years. What is your credit decision?",
     options: [
-      "Yes. Both products carry identical regulatory protections.",
-      "Customers should understand that NBFC products and bank deposits are governed by different regulatory frameworks and may not provide the same protections. Product terms and risks should be understood before investing.",
-      "RBI guarantees repayment of every NBFC investment.",
-      "Banks and NBFCs follow identical deposit regulations."
+      "Approve it if the promoter provides a personal guarantee.",
+      "Reject the collateral as the lease expires before the loan is fully repaid.",
+      "Accept it but apply a standard 60% haircut to the building's valuation.",
+      "Condition approval on a 50 bps increase in the floating interest rate."
     ],
     correctAnswer: 1,
-    reason: "Customers should understand the nature of the product, applicable regulations, and associated risks rather than assuming it is identical to a bank Fixed Deposit."
+    reason: "Security sitting on leased land must have a lease tenor that extends well past the loan's maturity. If the lease expires in 5 years on a 7-year loan, the bank loses its primary security before the debt is cleared."
   },
   {
     id: 35,
-    question: "At Canara Bank, Salem, Mrs. Meena Krishnan says she already has an NBFC gold loan and asks if the bank can still consider her dairy loan. What should the Credit Officer do?",
+    part: P9,
+    question: "A data center project relies on an enterprise client contract that allows the client to terminate the lease with a 30-day notice. How should the credit team value this contract during appraisal?",
     options: [
-      "Reject because customers with NBFC loans are ineligible.",
-      "Sanction automatically because she has already obtained credit elsewhere.",
-      "Assess her total indebtedness, repayment capacity, and cash flows before deciding, in line with the bank's credit policy.",
-      "Advise her to repay the gold loan immediately before discussing any new proposal."
+      "Value it as a guaranteed, long-term cash flow line.",
+      "Accept it if backed by a standard performance bond.",
+      "Treat it as a highly volatile revenue stream that cannot guarantee long-term debt service.",
+      "Triple the project's internal asset depreciation rate."
     ],
     correctAnswer: 2,
-    reason: "The existence of an NBFC loan neither automatically disqualifies nor qualifies a borrower. The key consideration is the customer's overall repayment capacity."
+    reason: "Short-notice termination clauses remove income predictability. Lenders cannot rely on these volatile revenue streams to service a long-term, high-value term loan asset."
   },
   {
     id: 36,
-    question: "The District Collector meets the Lead Bank Manager regarding a major rural irrigation canal. A trainee says, \"Banks should finance the project directly from branch deposits.\" Which response is most appropriate?",
+    part: P9,
+    question: "A corporate group requests a new project loan from Bank of India. Cross-checking the Central Repository of Information on Large Credits (CRILC) database reveals their group company holds an active SMA-2 status at another commercial bank. What is your underwriting action?",
     options: [
-      "Large rural infrastructure projects may be supported through appropriate government financing mechanisms such as those involving NABARD's rural infrastructure initiatives, depending on eligibility and applicable schemes.",
-      "Every branch should finance such projects directly.",
-      "Only private companies can finance irrigation projects.",
-      "Such projects cannot receive institutional financial support."
+      "Process the loan independently if the local entity's account is clean.",
+      "Increase the collateral coverage requirement to 200% and approve.",
+      "Defer principal repayments by an extra 12 months to provide a buffer.",
+      "Hold the application; group stress indicates high contagion and default risk."
     ],
-    correctAnswer: 0,
-    reason: "NABARD has played a major role in supporting rural infrastructure development, including irrigation and other eligible projects, through appropriate financing mechanisms."
+    correctAnswer: 3,
+    reason: "An SMA-2 status inside the corporate group reveals systemic liquidity stress. Funding a new project while an affiliated entity is on the verge of default creates severe contagion risk for the bank's capital."
   },
   {
     id: 37,
-    question: "At Bank of India, Nashik Rural Branch, grape growers want to form a Farmer Producer Organisation (FPO). How is NABARD relevant?",
+    part: P10,
+    question: "A chemical manufacturing unit appraisal shows a Debt-to-Equity ratio of 4.0x, an average DSCR of 1.12x, and a project IRR of 9.0%. The market interest rate for industrial credit resets to 9.5%. What is the fundamental credit defect?",
     options: [
-      "NABARD has no role in Farmer Producer Organisations.",
-      "NABARD has actively supported the promotion and development of Farmer Producer Organisations as part of rural development and farmer collectivisation initiatives.",
-      "Only SEBI regulates FPO promotion.",
-      "FPOs can be financed only after becoming listed companies."
+      "Negative real financial leverage where borrowing costs outpace asset returns.",
+      "Excellent equity capitalization with comfortable cash cushions.",
+      "High capacity to handle sudden market utilization shocks.",
+      "An over-extended loan asset maturity structure that accelerates debt recovery."
     ],
-    correctAnswer: 1,
-    reason: "NABARD has significantly contributed to FPO promotion, capacity building, and strengthening farmer collectives to improve rural livelihoods."
+    correctAnswer: 0,
+    reason: "When a project's IRR falls below the interest rate on its debt, the leverage becomes destructive. Every rupee borrowed costs more than it earns, draining cash flow and making the structure highly unsafe."
   },
   {
     id: 38,
-    question: "At Axis Bank, Bijnor, Mr. Rakesh Kumar says, \"I already have an account with Baroda UP Bank. That is a Cooperative Bank, isn't it?\" What should the officer say?",
+    part: P10,
+    question: "A promoter requests a term loan to build a private jetty. They offer a negative pledge on their corporate headquarters instead of a formal mortgage. What protection does this pledge provide to the bank?",
     options: [
-      "Yes. Every Regional Rural Bank is a Cooperative Bank.",
-      "No. A Regional Rural Bank is a scheduled commercial bank established under a separate legal framework to serve rural areas and promote financial inclusion.",
-      "Regional Rural Banks are private sector banks.",
-      "Regional Rural Banks operate only during crop seasons."
+      "It grants the bank a direct right to seize and liquidate the headquarters.",
+      "It only prevents the borrower from mortgaging the building to another lender.",
+      "It automatically upgrades the asset classification to a super-secured status.",
+      "It requires the bank to lower its capital adequacy reserve by 15%."
     ],
     correctAnswer: 1,
-    reason: "RRBs are scheduled commercial banks established under the Regional Rural Banks Act, 1976. They are distinct from Cooperative Banks and are designed to serve rural and semi-urban areas."
+    reason: "A negative pledge is a restrictive covenant, not a property mortgage. It stops the borrower from giving a charge to another bank, but it does not give the lender a direct claim to seize or liquidate the asset during a default."
   },
   {
     id: 39,
-    question: "At HDFC Bank, Karnal Rural Branch, a trainee remarks, \"RRBs can sanction crop loans without following appraisal norms.\" What should the Branch Manager explain?",
+    part: P10,
+    question: "You are checking an infrastructure loan proposal. The financial model calculates the DSCR by adding interest on working capital to the denominator. How does this adjustment affect the metric?",
     options: [
-      "RRBs are exempt from credit appraisal.",
-      "RRBs follow the same RBI regulations as commercial banks.",
-      "RRBs appraise agricultural loans under applicable RBI guidelines and their own lending policies, just like other banks.",
-      "RRBs sanction loans only after approval from NABARD."
+      "It artificially inflates the project's apparent safety margin.",
+      "It extends the loan asset's calculated average maturity profile.",
+      "It lowers the calculated DSCR, giving a stricter view of cash availability.",
+      "It reduces the bank's standard provisioning requirement by 10%."
     ],
     correctAnswer: 2,
-    reason: "RRBs follow RBI's regulatory framework and their own board-approved credit policies. They conduct appraisal before sanctioning agricultural and other loans."
+    reason: "Adding short-term working capital interest to the denominator increases the total debt service line. This lowers the calculated DSCR, forcing the model to show a more conservative and strict view of cash availability."
   },
   {
     id: 40,
-    question: "At a village financial literacy camp, farmers say they prefer the nearby RRB because staff understands their crops, local market and harvesting cycle. Which answer is most appropriate?",
+    part: P10,
+    question: "A company seeks a term loan to fund an acquisition. Their consolidated balance sheet shows goodwill makes up 45% of their total asset base, while their tangible asset cover sits at 0.55x. What is the underwriting concern?",
     options: [
-      "RRBs generally have a strong rural presence and specialize in serving agriculture and rural communities while following commercial banking principles.",
-      "RRBs provide interest-free loans.",
-      "RRBs never recover overdue loans.",
-      "RRBs lend without documentation."
-    ],
-    correctAnswer: 0,
-    reason: "RRBs were created to strengthen rural banking with deep local outreach and expertise in agriculture and rural livelihoods."
-  },
-  {
-    id: 41,
-    question: "During a financial literacy camp, farmers state they prefer the nearby RRB because staff understands local farming realities. The Credit Officer asks why this perception exists. Which answer is most appropriate?",
-    options: [
-      "RRBs generally have a strong rural presence and specialize in serving agriculture and rural communities while following commercial banking principles.",
-      "RRBs provide interest-free loans.",
-      "RRBs never recover overdue loans.",
-      "RRBs lend without documentation."
-    ],
-    correctAnswer: 0,
-    reason: "RRBs were established to strengthen rural banking, with strong local outreach and expertise in agriculture and rural livelihoods."
-  },
-  {
-    id: 42,
-    question: "At ICICI Bank, Rohtak Rural Branch, Mr. Dharampal Singh applies for a ₹9 lakh loan to purchase 10 high-yielding milch buffaloes. The trainee remarks that only crop loans qualify under PSL. What should the Branch Manager do?",
-    options: [
-      "Treat it as a normal commercial loan because livestock is not agriculture.",
-      "Explain that eligible dairy activities form part of agricultural lending under Priority Sector norms, subject to appraisal and RBI guidelines.",
-      "Reject because only farmers owning agricultural land qualify.",
-      "Advise the customer to approach NABARD directly."
-    ],
-    correctAnswer: 1,
-    reason: "Eligible animal husbandry and dairy activities are covered under the agriculture component of Priority Sector Lending, subject to RBI guidelines and normal credit appraisal."
-  },
-  {
-    id: 43,
-    question: "At Axis Bank, Begusarai, Mrs. Sunita Devi (village grocery shop) applies for a ₹6 lakh working capital loan. The Credit Officer is unsure about PSL eligibility. What should you advise?",
-    options: [
-      "Small eligible MSME loans may qualify under Priority Sector Lending, subject to RBI norms and proper appraisal.",
-      "Only agriculture qualifies under PSL.",
-      "Every Current Account holder automatically qualifies for PSL.",
-      "Retail trade can never qualify for PSL."
-    ],
-    correctAnswer: 0,
-    reason: "Eligible MSME borrowers, including many small business enterprises, may qualify under PSL in accordance with RBI guidelines."
-  },
-  {
-    id: 44,
-    question: "At HDFC Bank, Jaipur, Mr. Pawan Sharma applies for a housing loan for his first residential house. The trainee says, \"Housing loans are never Priority Sector Loans.\" What should the Branch Manager explain?",
-    options: [
-      "All housing loans are automatically Priority Sector Loans.",
-      "Housing loans can qualify as Priority Sector Loans only if they meet the applicable RBI eligibility conditions and prescribed limits.",
-      "Housing loans are financed only by Housing Finance Companies.",
-      "Priority Sector applies only in rural areas."
-    ],
-    correctAnswer: 1,
-    reason: "Certain housing loans qualify under PSL only if they satisfy RBI's eligibility criteria, including applicable limits and conditions."
-  },
-  {
-    id: 45,
-    question: "At Bank of Baroda, Chhindwara, Mrs. Kiran Bai seeks a gold loan pledging jewellery for her daughter's marriage. The trainee says gold loans automatically qualify as PSL. What should you decide?",
-    options: [
-      "Every gold loan qualifies under PSL.",
-      "Gold loans qualify under PSL irrespective of the purpose.",
-      "A gold loan taken for personal marriage expenses does not qualify merely because gold is pledged. Eligibility depends on the underlying purpose and applicable RBI guidelines.",
-      "Every secured loan qualifies under PSL."
-    ],
-    correctAnswer: 2,
-    reason: "PSL classification depends on the eligible end-use and RBI guidelines, not merely on the security offered. A personal gold loan for marriage does not become PSL simply because it is secured by gold."
-  },
-  {
-    id: 46,
-    question: "At Kotak Mahindra Bank, Lucknow, Mr. Vivek Srivastava complains that ₹2.80 lakh has been debited from his Current Account through a cheque with a forged drawer's signature (though the cheque leaf was genuine). What should the Branch Manager decide?",
-    options: [
-      "The bank is protected because the cheque leaf belonged to the customer.",
-      "The bank should ordinarily bear responsibility because payment on a forged drawer's signature is not a valid mandate from the customer.",
-      "The customer must bear the loss because the cheque book was issued by the bank.",
-      "Liability should automatically be shared equally between the bank and the customer."
-    ],
-    correctAnswer: 1,
-    reason: "A forged signature is not the customer's mandate. If a bank pays on a forged drawer's signature, it generally cannot debit the customer's account merely because the cheque leaf was genuine."
-  },
-  {
-    id: 47,
-    question: "At PNB, Meerut, Mr. Ashok Gupta dies on Monday night. On Tuesday morning, before the branch receives any notice of death, a genuine cheque issued by him is presented — funds are available and particulars are in order. What is the legal position?",
-    options: [
-      "The cheque must always be dishonoured.",
-      "If the bank has not yet received notice of the customer's death, payment may be made in accordance with the normal legal principles governing mandates.",
-      "The cheque should be paid only after obtaining consent from the nominee.",
-      "The cheque should be referred to RBI."
-    ],
-    correctAnswer: 1,
-    reason: "The customer's mandate is ordinarily revoked when the bank receives notice of death. If the bank has no knowledge of the death at the time of payment, the legal position differs from a case where notice has already been received."
-  },
-  {
-    id: 48,
-    question: "At ICICI Bank, Muzaffarpur, marginal farmer Mr. Manoj Kumar says his neighbour claims only RRBs provide agricultural loans. What should you advise?",
-    options: [
-      "Only Regional Rural Banks can finance agriculture.",
-      "Only Cooperative Banks can finance agriculture.",
-      "Explain that Commercial Banks, Regional Rural Banks, Cooperative Banks, and other eligible institutions may provide agricultural loans, subject to their lending policies and applicable guidelines.",
-      "Advise the customer to approach NABARD directly."
-    ],
-    correctAnswer: 2,
-    reason: "Agricultural finance is not the exclusive domain of RRBs. Commercial Banks, RRBs, Cooperative Banks and other eligible financial institutions all play important roles."
-  },
-  {
-    id: 49,
-    question: "At a financial literacy camp, villagers ask, \"Why are there so many different types of banks instead of just one?\" Which answer best reflects the Indian banking system?",
-    options: [
-      "Different types of banks exist because each category serves specific customer segments, developmental objectives, and business needs while operating under the overall regulatory framework.",
-      "Different banks exist only because states requested separate banks.",
-      "Every bank performs exactly the same function.",
-      "Different banks are created only to increase competition."
-    ],
-    correctAnswer: 0,
-    reason: "India has multiple categories of banks because the financial needs of farmers, MSMEs, corporates, rural households, urban customers and financially excluded groups differ significantly. Specialized institutions help improve financial inclusion and economic development."
-  },
-  {
-    id: 50,
-    question: "At Axis Bank, Gorakhpur, Mr. Ram Pratap asks for the RBI office address so he can get a cheaper crop loan directly since RBI has reduced the Repo Rate. What should the Branch Manager explain?",
-    options: [
-      "RBI sanctions crop loans directly to farmers.",
-      "RBI normally does not lend directly to individual customers. It regulates banks, formulates monetary policy, and provides liquidity to the banking system.",
-      "RBI finances only corporate borrowers.",
-      "RBI sanctions all Priority Sector Loans directly."
-    ],
-    correctAnswer: 1,
-    reason: "The RBI is India's central bank, not a retail lending institution. Customers obtain loans from banks and eligible financial institutions, while RBI influences credit conditions through monetary policy and regulation."
-  },
-
-  // ===== Case Study 1: SHG Bank Linkage (Q51-54) =====
-  {
-    id: 51,
-    marks: 2.5,
-    caseStudy: caseStudy1,
-    question: "Which is the MOST important concern before sanctioning the SHG loan?",
-    options: [
-      "The NGO wants quick sanction.",
-      "The SHG has maintained its Savings Account with your branch.",
-      "The dairy project appears profitable.",
-      "Whether the proposed loan is within the SHG's overall repayment capacity after considering existing indebtedness and projected cash flows."
+      "The company maintains excellent liquid reserves to handle market drops.",
+      "The asset depreciation timeline is compressed too far.",
+      "The business requires an immediate debt equity conversion.",
+      "Balance sheet value relies heavily on intangible assets that provide no default recovery protection."
     ],
     correctAnswer: 3,
-    reason: "Excellent repayment history is positive, but responsible lending requires assessment of total indebtedness, household cash flows, and repayment capacity. Multiple borrowings by members do not automatically justify rejection but require careful analysis."
-  },
-  {
-    id: 52,
-    marks: 2.5,
-    caseStudy: caseStudy1,
-    question: "During field verification you discover two members have existing MFI loans that were not disclosed in the first interview. What should be your next step?",
-    options: [
-      "Reject the SHG immediately.",
-      "Ignore the information because the SHG has good repayment history.",
-      "Reassess member-wise indebtedness, verify repayment obligations, discuss the findings with the SHG, and then take a credit decision.",
-      "Ask the NGO to certify that repayment will be regular."
-    ],
-    correctAnswer: 2,
-    reason: "Non-disclosure should trigger additional verification, not automatic rejection. A prudent banker reassesses the proposal based on complete information before deciding."
-  },
-  {
-    id: 53,
-    marks: 2.5,
-    caseStudy: caseStudy1,
-    question: "The NGO representative repeatedly says, \"Every other bank sanctions SHG loans within two days. If you delay, the group will shift to another bank.\" What is the most appropriate response?",
-    options: [
-      "Sanction immediately to retain the customer.",
-      "Explain that the bank supports SHGs but will complete appraisal, documentation, and due diligence before sanctioning.",
-      "Reject the proposal because the NGO is exerting pressure.",
-      "Ask the Regional Office to sanction the loan directly."
-    ],
-    correctAnswer: 1,
-    reason: "Customer service and business growth are important, but credit appraisal cannot be compromised due to external pressure."
-  },
-  {
-    id: 54,
-    marks: 2.5,
-    caseStudy: caseStudy1,
-    question: "After detailed appraisal you conclude: SHG functioning is excellent, existing borrowings are manageable, cash-flow estimates need slight revision, and dairy activity is viable after moderating projected income. What is the best credit decision?",
-    options: [
-      "Reject the proposal because multiple borrowings exist.",
-      "Sanction the entire ₹6 lakh without modification.",
-      "Reduce the loan to ₹3 lakh without explaining the reasons.",
-      "Sanction an appropriate amount based on revised cash-flow assessment, document the rationale, and plan periodic end-use monitoring."
-    ],
-    correctAnswer: 3,
-    reason: "Good banking combines business growth with prudent risk management. The loan amount should reflect actual repayment capacity, and post-disbursement monitoring should be planned from the outset."
-  },
-
-  // ===== Case Study 2: Fresh Milk Foods (Q55-58) =====
-  {
-    id: 55,
-    marks: 2.5,
-    caseStudy: caseStudy2,
-    question: "During the visit the proprietor explains the plant's processing capacity, but the Credit Officer spends nearly 45 minutes talking to milk suppliers in nearby villages. Why?",
-    options: [
-      "To verify whether farmers are happy with the bank.",
-      "To assess whether a reliable and sustainable milk procurement network actually exists, as uninterrupted raw material supply is critical for the project's success.",
-      "To find out whether farmers require crop loans.",
-      "To estimate the market price of buffaloes."
-    ],
-    correctAnswer: 1,
-    reason: "An experienced Credit Officer knows a dairy plant without assured milk supply is only a building with machines. Supplier relationships and payment discipline are often more important than installed capacity."
-  },
-  {
-    id: 56,
-    marks: 2.5,
-    caseStudy: caseStudy2,
-    question: "The Credit Officer asks, \"Where will your finished milk be sold tomorrow morning?\" Why is this question important?",
-    options: [
-      "The bank wants to know the selling price of milk.",
-      "Processing capacity alone does not generate repayment. The Credit Officer must verify the marketing and distribution arrangements that convert production into cash flows.",
-      "RBI requires every borrower to disclose retail prices.",
-      "Because GST registration depends upon retailers."
-    ],
-    correctAnswer: 1,
-    reason: "Many projects fail not because production is weak, but because sales are weak. Credit officers finance cash flows, not machines."
-  },
-  {
-    id: 57,
-    marks: 2.5,
-    caseStudy: caseStudy2,
-    question: "The Credit Officer notices no diesel generator is installed although power failures are common. The borrower says he will buy it after receiving the loan. What should be the approach?",
-    options: [
-      "Ignore the issue because the generator is a small item.",
-      "Treat it as an operational risk, assess its impact on preservation of milk, and evaluate whether project implementation should include adequate backup power before full operations commence.",
-      "Reject the proposal immediately.",
-      "Reduce the Cash Credit limit."
-    ],
-    correctAnswer: 1,
-    reason: "A smart Credit Officer looks beyond fixed assets and identifies operational bottlenecks. A few hours without refrigeration can spoil inventory and disrupt cash flows."
-  },
-  {
-    id: 58,
-    marks: 2.5,
-    caseStudy: caseStudy2,
-    question: "The borrower projects milk procurement will grow from 3,200 to 5,000 litres per day within one year. Which is the best verification method during the field visit?",
-    options: [
-      "Accept the projection because the promoter has experience.",
-      "Verify procurement records, supplier capacity, collection routes, village-wise milk availability, and discuss future procurement with major suppliers.",
-      "Compare the estimate with another dairy plant.",
-      "Ask only the Chartered Accountant."
-    ],
-    correctAnswer: 1,
-    reason: "Good projections require independent validation. Field verification with suppliers and procurement records is more reliable than relying solely on management statements."
+    reason: "Goodwill is an intangible asset that often disappears during business stress. If a borrower lacks tangible assets (like land or machinery), the bank has no effective collateral to liquidate to recover its funds if the acquisition fails."
   }
 ];
 
 export const quizInfo = {
   title: "Quiz by Anil Aggarwal",
-  subtitle: "Axis Bank Bharat Banking — Batch 4",
   professor: "ANIL AGGARWAL",
-  date: "28.07.2026",
-  totalQuestions: 58,
-  totalMarks: 120,
-  marksPerQuestion: 2,
-  timeLimit: 60,
+  date: "Aug 3, 2026",
+  totalQuestions: 40,
+  totalMarks: 100,
+  marksPerQuestion: 2.5,
+  timeLimit: 40,
   isStructure2: false,
   rules: [
     "Read each question carefully before answering",
-    "Questions 1–50 carry 2 marks each (100 marks)",
-    "Questions 51–58 are case-study based and carry 2.5 marks each (20 marks)",
-    "Total marks: 120  •  Total time: 1 hour",
-    "Only one submission per roll number allowed",
+    "All 40 questions carry 2.5 marks each (total 100 marks)",
+    "Total time: 40 minutes",
+    "You can navigate between questions and change your answers before submitting",
     "Click 'Submit Quiz' to finish, or the quiz will auto-submit when time expires"
   ]
 };
