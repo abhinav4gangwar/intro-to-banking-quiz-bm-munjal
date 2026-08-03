@@ -228,6 +228,11 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
             </div>
           )}
           <CardHeader>
+            {currentQ.part && (
+              <div className="inline-flex self-start items-center rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-semibold mb-2">
+                {currentQ.part}
+              </div>
+            )}
             <CardTitle className="text-xl leading-relaxed whitespace-pre-line">
               Q{currentQ.id}. {currentQ.question}
               {currentQ.marks && (
