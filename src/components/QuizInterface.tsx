@@ -188,9 +188,6 @@ const QuizInterface: React.FC<QuizInterfaceProps> = ({ studentInfo, onComplete }
               <div>
                 <h1 className="text-lg font-semibold text-primary">{studentInfo.name}</h1>
                 <p className="text-sm text-muted-foreground">{quizInfo.title}</p>
-                {quizInfo.subtitle && (
-                  <p className="text-xs text-muted-foreground">{quizInfo.subtitle}</p>
-                )}
               </div>
               
               <div className="flex items-center gap-4">
